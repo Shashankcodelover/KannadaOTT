@@ -4,6 +4,7 @@ export interface Movie {
   id: number;
   title: string;
   original_title: string;
+  kannadaTitle?: string;
   original_language: string;
   overview: string;
   poster_path: string | null;
@@ -14,6 +15,16 @@ export interface Movie {
   genre_ids: number[];
   popularity: number;
   adult: boolean;
+  age_rating?: string;
+  quality?: string;
+  audio?: string;
+  subtitles?: string;
+  highlights?: string[];
+  director?: string;
+  cast?: string[];
+  trailer_youtube_id?: string;
+  hero_name?: string;
+  scene_clip?: string;
 }
 
 export interface MovieDetails extends Movie {
@@ -50,6 +61,7 @@ export interface WatchProvider {
   provider_id: number;
   provider_name: string;
   display_priority: number;
+  directUrl?: string;
 }
 
 export interface WatchProviderResult {
@@ -77,6 +89,7 @@ export interface TMDBResponse<T> {
 export interface MovieWithProviders extends Movie {
   watchProviders?: WatchProviderResult;
   isKannada?: boolean;
+  hasKannadaDub?: boolean;
 }
 
 export interface FilterState {

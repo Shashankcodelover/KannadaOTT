@@ -13,7 +13,7 @@ interface OTTBadgeProps {
 
 export default function OTTBadge({ provider, movieLink, size = 'md' }: OTTBadgeProps) {
   const platform = OTT_PLATFORM_MAP.get(provider.provider_id);
-  const targetUrl = movieLink || platform?.webUrl || '#';
+  const targetUrl = provider.directUrl || movieLink || platform?.webUrl || '#';
 
   const sizeClasses = {
     sm: 'px-2 py-1 text-xs gap-1',

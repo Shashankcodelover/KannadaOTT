@@ -1,69 +1,395 @@
-import Image from "next/image";
+// Home Page — updated with Kannada dubbed movies + Superstar Hub + Comedy/Feel-Good Focus
+import HeroSection from '@/components/HeroSection';
+import MovieRow from '@/components/MovieRow';
+import {
+  getTrendingMovies,
+  getKannadaOriginals,
+  getKannadaDubbedHindi,
+  getKannadaDubbedTamil,
+  getKannadaDubbedTelugu,
+  getFeelGoodMovies,
+  getRealisticDramas,
+  getMoviesByGenre,
+  getUpcomingMovies,
+  getSuperstarMovies,
+  enrichMoviesWithProviders,
+  getWatchProviders,
+} from '@/lib/tmdb';
+import { GENRES, OTT_PLATFORM_MAP } from '@/lib/constants';
+import { MovieWithProviders } from '@/lib/types';
 
-export default function Home() {
+// Revalidate every hour
+export const revalidate = 3600;
+
+async function getHeroMovie(): Promise<MovieWithProviders | null> {
+  try {
+    const trending = await getTrendingMovies();
+    const candidate = trending.results.find(
+      (m) =>
+        m.backdrop_path &&
+        m.vote_average >= 7.0 &&
+        m.overview &&
+        !m.genre_ids.includes(36)
+    );
+    const chosen = (candidate || trending.results[0]) as MovieWithProviders;
+    if (!chosen) return null;
+
+    if (chosen.watchProviders && chosen.watchProviders.flatrate?.length) {
+      return chosen;
+    }
+
+    const providers = await getWatchProviders(chosen.id);
+    const inProviders = providers.results?.IN;
+    if (inProviders?.flatrate) {
+      inProviders.flatrate = inProviders.flatrate.filter((p) =>
+        OTT_PLATFORM_MAP.has(p.provider_id)
+      );
+    }
+    return {
+      ...chosen,
+      watchProviders: inProviders,
+      isKannada: chosen.original_language === 'kn',
+      hasKannadaDub: chosen.original_language !== 'kn',
+    };
+  } catch {
+    return null;
+  }
+}
+
+export default async function HomePage() {
+  // Fetch all movie rows in parallel
+  const [
+    trendingRaw,
+    kannadaOriginalRaw,
+    superstarsRaw,
+    prabhasRaw,
+    alluRaw,
+    ntrRaw,
+    vijayRaw,
+    maheshRaw,
+    venkyRaw,
+    ramCharanRaw,
+    dulquerRaw,
+    kannadaHindiRaw,
+    kannadaTamilRaw,
+    kannadaTeluguRaw,
+    feelGoodRaw,
+    dramaRaw,
+    comedyRaw,
+    familyRaw,
+    upcomingRaw,
+    heroMovie,
+  ] = await Promise.allSettled([
+    getTrendingMovies(),
+    getKannadaOriginals(),
+    getSuperstarMovies(),
+    getSuperstarMovies('Prabhas'),
+    getSuperstarMovies('Allu Arjun'),
+    getSuperstarMovies('Jr. NTR'),
+    getSuperstarMovies('Thalapathy Vijay'),
+    getSuperstarMovies('Mahesh Babu'),
+    getSuperstarMovies('Victory Venkatesh'),
+    getSuperstarMovies('Ram Charan'),
+    getSuperstarMovies('Dulquer Salmaan'),
+    getKannadaDubbedHindi(),
+    getKannadaDubbedTamil(),
+    getKannadaDubbedTelugu(),
+    getFeelGoodMovies(),
+    getRealisticDramas(),
+    getMoviesByGenre(GENRES.COMEDY),
+    getMoviesByGenre(GENRES.FAMILY),
+    getUpcomingMovies(),
+    getHeroMovie(),
+  ]);
+
+  // Enrich with OTT provider data (parallel)
+  const [
+    trending,
+    kannadaOriginals,
+    superstars,
+    prabhasMovies,
+    alluMovies,
+    ntrMovies,
+    vijayMovies,
+    maheshMovies,
+    venkyMovies,
+    ramCharanMovies,
+    dulquerMovies,
+    kannadaHindi,
+    kannadaTamil,
+    kannadaTelugu,
+    feelGood,
+    drama,
+    comedy,
+    family,
+    upcoming,
+  ] = await Promise.all([
+    trendingRaw.status === 'fulfilled'
+      ? enrichMoviesWithProviders(trendingRaw.value.results.slice(0, 15))
+      : Promise.resolve([]),
+    kannadaOriginalRaw.status === 'fulfilled'
+      ? enrichMoviesWithProviders(kannadaOriginalRaw.value.results.slice(0, 15))
+      : Promise.resolve([]),
+    superstarsRaw.status === 'fulfilled'
+      ? enrichMoviesWithProviders(superstarsRaw.value.results)
+      : Promise.resolve([]),
+    prabhasRaw.status === 'fulfilled'
+      ? enrichMoviesWithProviders(prabhasRaw.value.results)
+      : Promise.resolve([]),
+    alluRaw.status === 'fulfilled'
+      ? enrichMoviesWithProviders(alluRaw.value.results)
+      : Promise.resolve([]),
+    ntrRaw.status === 'fulfilled'
+      ? enrichMoviesWithProviders(ntrRaw.value.results)
+      : Promise.resolve([]),
+    vijayRaw.status === 'fulfilled'
+      ? enrichMoviesWithProviders(vijayRaw.value.results)
+      : Promise.resolve([]),
+    maheshRaw.status === 'fulfilled'
+      ? enrichMoviesWithProviders(maheshRaw.value.results)
+      : Promise.resolve([]),
+    venkyRaw.status === 'fulfilled'
+      ? enrichMoviesWithProviders(venkyRaw.value.results)
+      : Promise.resolve([]),
+    ramCharanRaw.status === 'fulfilled'
+      ? enrichMoviesWithProviders(ramCharanRaw.value.results)
+      : Promise.resolve([]),
+    dulquerRaw.status === 'fulfilled'
+      ? enrichMoviesWithProviders(dulquerRaw.value.results)
+      : Promise.resolve([]),
+    kannadaHindiRaw.status === 'fulfilled'
+      ? enrichMoviesWithProviders(kannadaHindiRaw.value.results.slice(0, 15))
+      : Promise.resolve([]),
+    kannadaTamilRaw.status === 'fulfilled'
+      ? enrichMoviesWithProviders(kannadaTamilRaw.value.results.slice(0, 15))
+      : Promise.resolve([]),
+    kannadaTeluguRaw.status === 'fulfilled'
+      ? enrichMoviesWithProviders(kannadaTeluguRaw.value.results.slice(0, 15))
+      : Promise.resolve([]),
+    feelGoodRaw.status === 'fulfilled'
+      ? enrichMoviesWithProviders(feelGoodRaw.value.results.slice(0, 15))
+      : Promise.resolve([]),
+    dramaRaw.status === 'fulfilled'
+      ? enrichMoviesWithProviders(dramaRaw.value.results.slice(0, 15))
+      : Promise.resolve([]),
+    comedyRaw.status === 'fulfilled'
+      ? enrichMoviesWithProviders(comedyRaw.value.results.slice(0, 15))
+      : Promise.resolve([]),
+    familyRaw.status === 'fulfilled'
+      ? enrichMoviesWithProviders(familyRaw.value.results.slice(0, 15))
+      : Promise.resolve([]),
+    upcomingRaw.status === 'fulfilled'
+      ? enrichMoviesWithProviders(upcomingRaw.value.results.slice(0, 10))
+      : Promise.resolve([]),
+  ]);
+
+  const hero = heroMovie.status === 'fulfilled' ? heroMovie.value : null;
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <div className="pb-10">
+      {/* Hero */}
+      {hero && (
+        <div className="mb-8">
+          <HeroSection movie={hero} />
+        </div>
+      )}
+
+      {/* Catalog Status Bar */}
+      <div className="mx-4 sm:mx-6 lg:mx-8 mb-6 flex flex-wrap items-center justify-between gap-3 bg-zinc-900/90 border border-zinc-800 rounded-xl px-4 py-3">
+        <div className="flex items-center gap-2">
+          <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
+          <span className="text-white text-xs sm:text-sm font-medium">
+            Kannada OTT Catalog Active: Original Kannada &amp; Kannada Dubbed Releases
+          </span>
+        </div>
+        <div className="flex items-center gap-2 text-xs text-zinc-400">
+          <span>Streaming on:</span>
+          <span className="bg-blue-600/20 text-blue-400 px-2 py-0.5 rounded font-semibold">JioHotstar</span>
+          <span className="bg-purple-600/20 text-purple-400 px-2 py-0.5 rounded font-semibold">Zee5</span>
+          <span className="bg-sky-600/20 text-sky-400 px-2 py-0.5 rounded font-semibold">SonyLIV</span>
+          <span className="bg-cyan-600/20 text-cyan-400 px-2 py-0.5 rounded font-semibold">JioCinema</span>
+        </div>
+      </div>
+
+      {/* Superstar Category Highlights */}
+      <div className="mx-4 sm:mx-6 lg:mx-8 mb-6 p-4 bg-gradient-to-r from-amber-950/40 via-zinc-900 to-zinc-900 border border-amber-500/30 rounded-2xl">
+        <div className="flex items-center gap-2 mb-2">
+          <span className="text-amber-400 text-lg">👑</span>
+          <h2 className="text-white font-black text-sm sm:text-base tracking-wide">
+            Superstars in Kannada Dubbed — Watch on Indian OTTs
+          </h2>
+          <span className="bg-amber-500/20 text-amber-300 text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-amber-500/30">
+            Verified Audio
+          </span>
+        </div>
+        <p className="text-xs text-zinc-400 mb-3">
+          Blockbuster releases starring Indian cinema’s biggest heroes with high quality Kannada dubbed audio tracks on JioHotstar, Zee5, SonyLIV &amp; JioCinema.
+        </p>
+        <div className="flex flex-wrap gap-2 text-xs">
+          <span className="bg-zinc-800/80 border border-zinc-700 text-zinc-300 px-3 py-1 rounded-lg">
+            ⚔️ <strong>Prabhas</strong> (Salaar, Radhe Shyam)
+          </span>
+          <span className="bg-zinc-800/80 border border-zinc-700 text-zinc-300 px-3 py-1 rounded-lg">
+            🪓 <strong>Allu Arjun</strong> (Pushpa, Ala Vaikunthapurramuloo)
+          </span>
+          <span className="bg-zinc-800/80 border border-zinc-700 text-zinc-300 px-3 py-1 rounded-lg">
+            🐅 <strong>Jr. NTR</strong> (RRR, Devara)
+          </span>
+          <span className="bg-zinc-800/80 border border-zinc-700 text-zinc-300 px-3 py-1 rounded-lg">
+            ⚡ <strong>Thalapathy Vijay</strong> (Leo, Varisu)
+          </span>
+          <span className="bg-zinc-800/80 border border-zinc-700 text-zinc-300 px-3 py-1 rounded-lg">
+            🌶️ <strong>Mahesh Babu</strong> (Guntur Kaaram, Sarkaru Vaari Paata)
+          </span>
+          <span className="bg-zinc-800/80 border border-zinc-700 text-zinc-300 px-3 py-1 rounded-lg">
+            🕶️ <strong>Victory Venkatesh</strong> (Saindhav, F3)
+          </span>
+          <span className="bg-zinc-800/80 border border-zinc-700 text-zinc-300 px-3 py-1 rounded-lg">
+            🏹 <strong>Ram Charan</strong> (RRR, Vinaya Vidheya Rama)
+          </span>
+          <span className="bg-zinc-800/80 border border-zinc-700 text-zinc-300 px-3 py-1 rounded-lg">
+            💰 <strong>Dulquer Salmaan</strong> (Lucky Baskhar, Sita Ramam)
+          </span>
+        </div>
+      </div>
+
+      {/* Movie Rows */}
+      <div className="pt-2 sm:pt-4 space-y-2">
+        {/* Superstar Spotlight Rows */}
+        <MovieRow
+          title="Superstar Hits (Dubbed into Kannada)"
+          emoji="👑"
+          movies={superstars}
+          emptyMessage="No superstar dubbed releases found."
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+
+        <MovieRow
+          title="Star Spotlight: Prabhas (ಕನ್ನಡ Dubbed)"
+          emoji="⚔️"
+          movies={prabhasMovies}
+          emptyMessage="No Prabhas movies found."
+        />
+
+        <MovieRow
+          title="Star Spotlight: Allu Arjun (ಕನ್ನಡ Dubbed)"
+          emoji="🪓"
+          movies={alluMovies}
+          emptyMessage="No Allu Arjun movies found."
+        />
+
+        <MovieRow
+          title="Star Spotlight: Jr. NTR (ಕನ್ನಡ Dubbed)"
+          emoji="🐅"
+          movies={ntrMovies}
+          emptyMessage="No Jr. NTR movies found."
+        />
+
+        <MovieRow
+          title="Star Spotlight: Thalapathy Vijay (ಕನ್ನಡ Dubbed)"
+          emoji="⚡"
+          movies={vijayMovies}
+          emptyMessage="No Thalapathy Vijay movies found."
+        />
+
+        <MovieRow
+          title="Star Spotlight: Mahesh Babu (ಕನ್ನಡ Dubbed)"
+          emoji="🌶️"
+          movies={maheshMovies}
+          emptyMessage="No Mahesh Babu movies found."
+        />
+
+        <MovieRow
+          title="Star Spotlight: Victory Venkatesh (ಕನ್ನಡ Dubbed)"
+          emoji="🕶️"
+          movies={venkyMovies}
+          emptyMessage="No Victory Venkatesh movies found."
+        />
+
+        <MovieRow
+          title="Star Spotlight: Ram Charan (ಕನ್ನಡ Dubbed)"
+          emoji="🏹"
+          movies={ramCharanMovies}
+          emptyMessage="No Ram Charan movies found."
+        />
+
+        <MovieRow
+          title="Star Spotlight: Dulquer Salmaan (ಕನ್ನಡ Dubbed)"
+          emoji="💰"
+          movies={dulquerMovies}
+          emptyMessage="No Dulquer Salmaan movies found."
+        />
+
+        {/* Regular Curated Rows */}
+        <MovieRow
+          title="Trending in India"
+          emoji="🔥"
+          movies={trending}
+          emptyMessage="Could not load trending movies. Check your API key."
+        />
+
+        <MovieRow
+          title="ಕನ್ನಡ Originals"
+          emoji="🌟"
+          movies={kannadaOriginals}
+          emptyMessage="No Kannada originals found on these OTTs right now."
+        />
+
+        <MovieRow
+          title="Hindi Movies (Kannada Dubbed on OTT)"
+          emoji="🎬"
+          movies={kannadaHindi}
+          emptyMessage="No Hindi dubbed movies found."
+        />
+
+        <MovieRow
+          title="Tamil Movies (Kannada Dubbed on OTT)"
+          emoji="🎭"
+          movies={kannadaTamil}
+          emptyMessage="No Tamil dubbed movies found."
+        />
+
+        <MovieRow
+          title="Telugu Movies (Kannada Dubbed on OTT)"
+          emoji="🌺"
+          movies={kannadaTelugu}
+          emptyMessage="No Telugu dubbed movies found."
+        />
+
+        <MovieRow
+          title="Feel Good & Comedy"
+          emoji="😄"
+          movies={feelGood}
+          emptyMessage="No feel-good movies found."
+        />
+
+        <MovieRow
+          title="Realistic Drama"
+          emoji="🎭"
+          movies={drama}
+          emptyMessage="No drama movies found."
+        />
+
+        <MovieRow
+          title="Pure Comedy"
+          emoji="😂"
+          movies={comedy}
+          emptyMessage="No comedy movies found."
+        />
+
+        <MovieRow
+          title="Family Picks"
+          emoji="👨‍👩‍👧"
+          movies={family}
+          emptyMessage="No family movies found."
+        />
+
+        <MovieRow
+          title="Coming Soon"
+          emoji="📅"
+          movies={upcoming}
+          emptyMessage="No upcoming movies found."
+        />
+      </div>
     </div>
   );
 }

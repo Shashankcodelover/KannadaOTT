@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="750" viewBox="0 0 500 750" fill="none">
+  <defs>
+    <linearGradient id="bg-606" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14532d"/>
+      <stop offset="60%" stop-color="#052e16"/>
+      <stop offset="100%" stop-color="#09090b"/>
+    </linearGradient>
+    <radialGradient id="glow-606" cx="50%" cy="35%" r="40%">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="overlay-606" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.2"/>
+      <stop offset="50%" stop-color="#000000" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.95"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="750" fill="url(#bg-606)"/>
+  <rect width="500" height="750" fill="url(#glow-606)"/>
+  <rect width="500" height="750" fill="url(#overlay-606)"/>
+  
+  <!-- Outer border -->
+  <rect x="14" y="14" width="472" height="722" rx="18" stroke="#22c55e" stroke-opacity="0.3" stroke-width="2"/>
+
+  <!-- Language Badge -->
+  <rect x="30" y="32" width="165" height="30" rx="15" fill="#059669"/>
+  <text x="112" y="52" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="800" text-anchor="middle" fill="#ffffff">
+    ಕನ್ನಡ Dubbed (Mahesh Babu)
+  </text>
+
+  <!-- Rating Badge -->
+  <rect x="385" y="32" width="85" height="30" rx="15" fill="#000000" fill-opacity="0.75" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="427" y="52" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="900" text-anchor="middle" fill="#fbbf24">
+    ★ 7.2
+  </text>
+
+  <!-- Visual Center Icon -->
+  <circle cx="250" cy="270" r="85" fill="#000000" fill-opacity="0.4" stroke="#22c55e" stroke-width="3" stroke-dasharray="6 4"/>
+  <text x="250" y="295" font-family="system-ui, -apple-system, sans-serif" font-size="75" text-anchor="middle">
+    🏦
+  </text>
+
+  <!-- Quality Badges -->
+  <g transform="translate(135, 385)">
+    <rect x="0" y="0" width="65" height="22" rx="6" fill="#27272a" fill-opacity="0.9"/>
+    <text x="32" y="15" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#e4e4e7">U/A 13+</text>
+
+    <rect x="75" y="0" width="75" height="22" rx="6" fill="#27272a" fill-opacity="0.9"/>
+    <text x="112" y="15" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#38bdf8">4K UHD</text>
+
+    <rect x="160" y="0" width="75" height="22" rx="6" fill="#27272a" fill-opacity="0.9"/>
+    <text x="197" y="15" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#34d399">Dolby 5.1</text>
+  </g>
+
+  <!-- Kannada Title -->
+  <text x="250" y="460" font-family="system-ui, 'Noto Sans Kannada', sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#22c55e">
+    ಸರ್ಕಾರು ವಾರಿ ಪಾಟ (ಕನ್ನಡ)
+  </text>
+
+  <!-- English Title -->
+  <text x="250" y="505" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="900" text-anchor="middle" fill="#ffffff">
+    Sarkaru Vaari Paata
+  </text>
+
+  <!-- Genre & Year -->
+  <text x="250" y="540" font-family="system-ui, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#d4d4d8">
+    Action Comedy • Mahesh Babu • 2022
+  </text>
+
+  <!-- Audio Verification Tag -->
+  <rect x="130" y="565" width="240" height="28" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"/>
+  <text x="250" y="583" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#7dd3fc">
+    🔊 Audio: ಕನ್ನಡ (Kannada) Verified
+  </text>
+
+  <!-- Watch Button / OTT Strip -->
+  <rect x="40" y="625" width="420" height="60" rx="14" fill="#0082EF" fill-opacity="0.25" stroke="#0082EF" stroke-width="2"/>
+  <text x="250" y="662" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="800" text-anchor="middle" fill="#ffffff">
+    ▶ Watch on JioCinema
+  </text>
+</svg>

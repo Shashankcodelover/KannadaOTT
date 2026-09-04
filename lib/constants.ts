@@ -19,28 +19,11 @@ export const TMDB_BACKDROP_SIZES = {
 
 // ─── Indian OTT Platforms ────────────────────────────────────────
 // Provider IDs sourced from TMDB/JustWatch for India (watch_region=IN)
+// NOTE: Netflix & Amazon Prime excluded by user preference — free/regional OTTs only
 export const OTT_PLATFORMS: OTTPlatform[] = [
   {
-    id: 8,
-    name: 'Netflix',
-    shortName: 'Netflix',
-    color: '#E50914',
-    bgColor: '#141414',
-    logo: '🔴',
-    webUrl: 'https://www.netflix.com',
-  },
-  {
-    id: 119,
-    name: 'Amazon Prime Video',
-    shortName: 'Prime',
-    color: '#00A8E1',
-    bgColor: '#0F1111',
-    logo: '🔵',
-    webUrl: 'https://www.primevideo.com',
-  },
-  {
     id: 122,
-    name: 'Disney+ Hotstar',
+    name: 'JioHotstar',
     shortName: 'Hotstar',
     color: '#0B76DA',
     bgColor: '#040E16',
@@ -60,9 +43,9 @@ export const OTT_PLATFORMS: OTTPlatform[] = [
     id: 237,
     name: 'SonyLIV',
     shortName: 'SonyLIV',
-    color: '#FFFFFF',
+    color: '#4A90D9',
     bgColor: '#0F2A4A',
-    logo: '⚪',
+    logo: '🔷',
     webUrl: 'https://www.sonyliv.com',
   },
   {
@@ -100,15 +83,16 @@ export const GENRES = {
   WAR: 10752,
 } as const;
 
+// Genre list — ordered by user preference: comedy/family/realistic first
 export const GENRE_LIST = [
   { id: GENRES.COMEDY, name: 'Comedy', emoji: '😂' },
-  { id: GENRES.ACTION, name: 'Action', emoji: '💥' },
-  { id: GENRES.FAMILY, name: 'Family', emoji: '👨‍👩‍👧' },
   { id: GENRES.DRAMA, name: 'Drama', emoji: '🎭' },
+  { id: GENRES.FAMILY, name: 'Family', emoji: '👨‍👩‍👧' },
   { id: GENRES.ROMANCE, name: 'Romance', emoji: '❤️' },
-  { id: GENRES.THRILLER, name: 'Thriller', emoji: '😱' },
   { id: GENRES.ADVENTURE, name: 'Adventure', emoji: '🗺️' },
-  { id: GENRES.FANTASY, name: 'Fantasy', emoji: '✨' },
+  { id: GENRES.MUSIC, name: 'Music', emoji: '🎵' },
+  { id: GENRES.ANIMATION, name: 'Animation', emoji: '🎨' },
+  { id: GENRES.MYSTERY, name: 'Mystery', emoji: '🔍' },
 ];
 
 // ─── Language Codes ──────────────────────────────────────────────
