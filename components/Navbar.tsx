@@ -5,10 +5,12 @@ import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
 import { useState, useRef, KeyboardEvent } from 'react';
 import { OTT_PLATFORMS } from '@/lib/constants';
+import { useWatched } from '@/context/WatchedContext';
 
 export default function Navbar() {
   const router = useRouter();
   const pathname = usePathname();
+  const { watchedList, setDraftsOpen, hideWatched, setHideWatched } = useWatched();
   const [searchQuery, setSearchQuery] = useState('');
   const [showSearch, setShowSearch] = useState(false);
   const searchRef = useRef<HTMLInputElement>(null);
@@ -117,6 +119,20 @@ export default function Navbar() {
               </svg>
             </button>
           )}
+
+          {/* Watched / Drafts Button */}
+          <button
+            onClick={() => setDraftsOpen(true)}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-zinc-900 border border-zinc-700 hover:border-zinc-500 text-zinc-300 hover:text-white transition-all cursor-pointer shadow"
+            title="View watched movies stored in drafts"
+          >
+            <span>📋 Watched</span>
+            {watchedList.length > 0 && (
+              <span className="bg-emerald-500 text-black text-[10px] font-black px-1.5 py-0.2 rounded-full">
+                {watchedList.length}
+              </span>
+            )}
+          </button>
         </div>
       </div>
 

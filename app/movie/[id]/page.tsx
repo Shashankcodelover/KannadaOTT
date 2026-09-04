@@ -11,6 +11,7 @@ import {
 import { OTT_PLATFORM_MAP } from '@/lib/constants';
 import OTTBadge from '@/components/OTTBadge';
 import TrailerAndScenePlayer from '@/components/TrailerAndScenePlayer';
+import MarkWatchedButton from '@/components/MarkWatchedButton';
 
 export const revalidate = 3600;
 
@@ -192,21 +193,38 @@ export default async function MovieDetailPage({ params }: PageProps) {
               </h3>
 
               {flatrateProviders.length > 0 ? (
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap items-center gap-3 mb-4">
                   {flatrateProviders.map((provider) => (
                     <OTTBadge
                       key={provider.provider_id}
                       provider={provider}
                       movieLink={inProviders?.link}
                       size="lg"
+                      movie={{
+                        id: movie.id,
+                        title: movie.title,
+                        poster_path: movie.poster_path,
+                      }}
                     />
                   ))}
                 </div>
               ) : (
-                <div className="text-zinc-400 text-sm">
+                <div className="text-zinc-400 text-sm mb-4">
                   Checking current availability on Indian OTT platforms...
                 </div>
               )}
+
+              {/* Mark Watched / Hide Action */}
+              <div className="pt-3 border-t border-zinc-800">
+                <MarkWatchedButton
+                  movie={{
+                    id: movie.id,
+                    title: movie.title,
+                    poster_path: movie.poster_path,
+                  }}
+                  ottName={flatrateProviders[0]?.provider_name}
+                />
+              </div>
             </div>
 
             {/* Features / Specifications Box (Hotstar / Prime Video Style) */}

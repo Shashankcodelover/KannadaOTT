@@ -1,6 +1,7 @@
 // Home Page — updated with Kannada dubbed movies + Superstar Hub + Comedy/Feel-Good Focus
 import HeroSection from '@/components/HeroSection';
 import MovieRow from '@/components/MovieRow';
+import SyncAndDraftsStatusBar from '@/components/SyncAndDraftsStatusBar';
 import {
   getTrendingMovies,
   getKannadaOriginals,
@@ -194,22 +195,8 @@ export default async function HomePage() {
         </div>
       )}
 
-      {/* Catalog Status Bar */}
-      <div className="mx-4 sm:mx-6 lg:mx-8 mb-6 flex flex-wrap items-center justify-between gap-3 bg-zinc-900/90 border border-zinc-800 rounded-xl px-4 py-3">
-        <div className="flex items-center gap-2">
-          <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
-          <span className="text-white text-xs sm:text-sm font-medium">
-            Kannada OTT Catalog Active: Original Kannada &amp; Kannada Dubbed Releases
-          </span>
-        </div>
-        <div className="flex items-center gap-2 text-xs text-zinc-400">
-          <span>Streaming on:</span>
-          <span className="bg-blue-600/20 text-blue-400 px-2 py-0.5 rounded font-semibold">JioHotstar</span>
-          <span className="bg-purple-600/20 text-purple-400 px-2 py-0.5 rounded font-semibold">Zee5</span>
-          <span className="bg-sky-600/20 text-sky-400 px-2 py-0.5 rounded font-semibold">SonyLIV</span>
-          <span className="bg-cyan-600/20 text-cyan-400 px-2 py-0.5 rounded font-semibold">JioCinema</span>
-        </div>
-      </div>
+      {/* Dynamic Catalog & Watched Drafts Status Bar */}
+      <SyncAndDraftsStatusBar totalCount={57} />
 
       {/* Superstar Category Highlights */}
       <div className="mx-4 sm:mx-6 lg:mx-8 mb-6 p-4 bg-gradient-to-r from-amber-950/40 via-zinc-900 to-zinc-900 border border-amber-500/30 rounded-2xl">

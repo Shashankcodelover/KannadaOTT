@@ -1,9 +1,12 @@
-// Movie Card component — poster, title, rating, OTT badges, Kannada audio tag
+'use client';
+
+// Movie Card component — poster, title, rating, OTT badges, Kannada audio tag + Watched/Done Hide
 import Link from 'next/link';
 import Image from 'next/image';
 import { MovieWithProviders } from '@/lib/types';
 import { getPosterUrl } from '@/lib/tmdb';
 import { OTT_PLATFORM_MAP } from '@/lib/constants';
+import { useWatched } from '@/context/WatchedContext';
 
 interface MovieCardProps {
   movie: MovieWithProviders;
@@ -11,14 +14,21 @@ interface MovieCardProps {
 }
 
 export default function MovieCard({ movie }: MovieCardProps) {
+  const { isWatched, markAsWatched, unmarkAsWatched, hideWatched } = useWatched();
+  const watched = isWatched(movie.id);
+
+  // If user enabled hiding watched movies and this movie is watched, hide it from discovery
+  if (hideWatched && watched) {
+    return null;
+  }
+
   const posterUrl = getPosterUrl(movie.poster_path, 'medium');
   const rating = movie.vote_average.toFixed(1);
   const year = movie.release_date ? new Date(movie.release_date).getFullYear() : '';
 
   // Filter to known Indian OTT providers only
-  const availableOTTs = movie.watchProviders?.flatrate?.filter(
-    (p) => OTT_PLATFORM_MAP.has(p.provider_id)
-  ) ?? [];
+  const availableOTTs =
+    movie.watchProviders?.flatrate?.filter((p) => OTT_PLATFORM_MAP.has(p.provider_id)) ?? [];
 
   const mainPlatform = availableOTTs[0] ? OTT_PLATFORM_MAP.get(availableOTTs[0].provider_id) : null;
 
@@ -28,6 +38,19 @@ export default function MovieCard({ movie }: MovieCardProps) {
       : movie.vote_average >= 6.5
       ? 'text-yellow-400'
       : 'text-orange-400';
+
+  const handleToggleWatched = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (watched) {
+      unmarkAsWatched(movie.id);
+    } else {
+      markAsWatched(
+        { id: movie.id, title: movie.title, poster_path: movie.poster_path },
+        mainPlatform?.shortName
+      );
+    }
+  };
 
   return (
     <Link
@@ -55,7 +78,7 @@ export default function MovieCard({ movie }: MovieCardProps) {
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity" />
 
-        {/* Badges */}
+        {/* Badges Left */}
         <div className="absolute top-2 left-2 flex flex-col gap-1 z-10">
           {movie.isKannada ? (
             <span className="bg-orange-600 text-white text-[11px] font-bold px-2 py-0.5 rounded-full shadow-md">
@@ -68,13 +91,26 @@ export default function MovieCard({ movie }: MovieCardProps) {
           )}
         </div>
 
-        {/* Rating badge */}
-        <div className="absolute top-2 right-2 z-10">
+        {/* Rating & Mark Done Button (Right) */}
+        <div className="absolute top-2 right-2 flex flex-col items-end gap-1.5 z-20">
           <span
             className={`flex items-center gap-1 bg-black/85 backdrop-blur-sm text-xs font-bold px-2 py-1 rounded-full border border-zinc-700 shadow ${ratingColor}`}
           >
             ★ {rating}
           </span>
+
+          {/* Quick 1-Click "Mark as Done / Watched" Button */}
+          <button
+            onClick={handleToggleWatched}
+            title={watched ? 'Marked as watched (moved to Drafts)' : 'Mark as Done / Watched (hides movie)'}
+            className={`flex items-center gap-1 text-[10px] font-bold px-2 py-1 rounded-md shadow-lg transition-all cursor-pointer ${
+              watched
+                ? 'bg-emerald-600 text-white border border-emerald-400'
+                : 'bg-black/70 hover:bg-zinc-800 text-zinc-300 hover:text-white border border-zinc-700 opacity-90 group-hover:opacity-100 hover:scale-105'
+            }`}
+          >
+            <span>{watched ? '✓ Done' : '✓ Watched'}</span>
+          </button>
         </div>
 
         {/* Quality indicator on image bottom */}
@@ -100,7 +136,13 @@ export default function MovieCard({ movie }: MovieCardProps) {
         {/* Primary OTT Button Bar */}
         {mainPlatform ? (
           <div
-            className="flex items-center justify-center gap-1.5 py-1.5 px-2 rounded-lg text-xs font-bold w-full transition-colors"
+            onClick={() =>
+              markAsWatched(
+                { id: movie.id, title: movie.title, poster_path: movie.poster_path },
+                mainPlatform.shortName
+              )
+            }
+            className="flex items-center justify-center gap-1.5 py-1.5 px-2 rounded-lg text-xs font-bold w-full transition-colors hover:brightness-110"
             style={{
               backgroundColor: `${mainPlatform.color}25`,
               color: mainPlatform.color,

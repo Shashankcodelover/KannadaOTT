@@ -4,14 +4,21 @@
 import { WatchProvider } from '@/lib/types';
 import { OTT_PLATFORM_MAP } from '@/lib/constants';
 import { getProviderLogoUrl } from '@/lib/tmdb';
+import { useWatched } from '@/context/WatchedContext';
 
 interface OTTBadgeProps {
   provider: WatchProvider;
   movieLink?: string; // JustWatch link as fallback
   size?: 'sm' | 'md' | 'lg';
+  movie?: {
+    id: number;
+    title: string;
+    poster_path?: string | null;
+  };
 }
 
-export default function OTTBadge({ provider, movieLink, size = 'md' }: OTTBadgeProps) {
+export default function OTTBadge({ provider, movieLink, size = 'md', movie }: OTTBadgeProps) {
+  const { markAsWatched } = useWatched();
   const platform = OTT_PLATFORM_MAP.get(provider.provider_id);
   const targetUrl = provider.directUrl || movieLink || platform?.webUrl || '#';
 
@@ -32,6 +39,11 @@ export default function OTTBadge({ provider, movieLink, size = 'md' }: OTTBadgeP
       href={targetUrl}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={() => {
+        if (movie) {
+          markAsWatched(movie, platform?.shortName || provider.provider_name);
+        }
+      }}
       className={`
         inline-flex items-center rounded-lg font-semibold
         transition-all duration-200 ease-in-out
