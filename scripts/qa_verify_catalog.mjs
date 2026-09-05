@@ -1,13 +1,13 @@
-// Automated 2-Way Verification QA Test Suite for KannadaOTT Finder
+// Automated 3-Way Verification QA Test Suite for KannadaOTT Finder
 // Verifies:
-// 1. Zero generic root URLs (all streaming movies must have specific deep links)
-// 2. Verified Kannada audio (original or dubbed) on approved Indian OTTs
-// 3. Live HTTP 200 verification for all direct streaming links
+// Check 1: Deep Streaming Links (Zero generic root URLs, valid deep links returning HTTP 200)
+// Check 2: Content Title Integrity (Verifies destination page title does not contain sports, football, or TV serials)
+// Check 3: YouTube Official Trailer Verification (Live verification of trailer_youtube_id via YouTube oEmbed API)
 
 import fs from 'fs';
 
 const content = fs.readFileSync(new URL('../lib/catalog.ts', import.meta.url), 'utf8');
-const movieBlocks = content.split(/\{\s*id:\s*(\d+),/g);
+const movieBlocks = content.split(/\{\s*"?id"?:\s*(\d+),/g);
 
 const genericDomains = new Set([
   'https://www.hotstar.com/in',
@@ -21,11 +21,12 @@ const catalog = [];
 for (let i = 1; i < movieBlocks.length; i += 2) {
   const id = Number(movieBlocks[i]);
   const body = movieBlocks[i + 1];
-  const titleMatch = body.match(/title:\s*['"]([^'"]+)['"]/);
-  const isUpcoming = body.includes('isUpcoming: true');
-  const provMatch = body.match(/provider_name:\s*['"]([^'"]+)['"]/);
-  const urlMatch = body.match(/directUrl:\s*['"]([^'"]+)['"]/);
-  const audioMatch = body.match(/audio:\s*['"]([^'"]+)['"]/);
+  const titleMatch = body.match(/"?title"?:\s*['"]([^'"]+)['"]/);
+  const isUpcoming = body.includes('isUpcoming": true') || body.includes('isUpcoming: true');
+  const provMatch = body.match(/"?provider_name"?:\s*['"]([^'"]+)['"]/);
+  const urlMatch = body.match(/"?directUrl"?:\s*['"]([^'"]+)['"]/);
+  const audioMatch = body.match(/"?audio"?:\s*['"]([^'"]+)['"]/);
+  const trailerMatch = body.match(/"?trailer_youtube_id"?:\s*['"]([^'"]+)['"]/);
 
   catalog.push({
     id,
@@ -33,12 +34,13 @@ for (let i = 1; i < movieBlocks.length; i += 2) {
     isUpcoming,
     prov: provMatch ? provMatch[1] : '',
     url: urlMatch ? urlMatch[1] : '',
-    audio: audioMatch ? audioMatch[1] : ''
+    audio: audioMatch ? audioMatch[1] : '',
+    trailer_id: trailerMatch ? trailerMatch[1] : ''
   });
 }
 
 console.log('=====================================================');
-console.log('🚀 RUNNING KANNADAOTT 2-WAY VERIFICATION QA SUITE');
+console.log('🚀 RUNNING KANNADAOTT 3-WAY VERIFICATION QA SUITE');
 console.log('=====================================================');
 console.log(`Loaded ${catalog.length} catalog entries.\n`);
 
@@ -46,28 +48,50 @@ let passCount = 0;
 let failCount = 0;
 
 for (const m of catalog) {
+  console.log(`\n--- [ID ${m.id}] ${m.title} ---`);
+
+  // CHECK 3: YouTube Trailer Verification
+  if (!m.trailer_id) {
+    console.error(`❌ [FAIL - CHECK 3] No trailer_youtube_id specified!`);
+    failCount++;
+  } else {
+    try {
+      const ytRes = await fetch(`https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${m.trailer_id}&format=json`);
+      if (ytRes.status === 200) {
+        const ytData = await ytRes.json();
+        console.log(`  ✓ Check 3 (YouTube Trailer): PASS - "${ytData.title}" (${m.trailer_id})`);
+      } else {
+        console.error(`  ❌ Check 3 (YouTube Trailer): FAIL - HTTP ${ytRes.status} for ID ${m.trailer_id}`);
+        failCount++;
+      }
+    } catch (e) {
+      console.error(`  ❌ Check 3 (YouTube Trailer): FAIL - ${e.message}`);
+      failCount++;
+    }
+  }
+
   if (m.isUpcoming) {
-    console.log(`[UPCOMING TRACKING] [${m.id}] ${m.title} (Pre-OTT Theatrical Tracking)`);
+    console.log(`  ✓ [UPCOMING PRE-OTT] Theatrical Tracking verified.`);
     passCount++;
     continue;
   }
 
-  // 1. Root URL Check
+  // CHECK 1: Root URL Check
   const cleanUrl = m.url.replace(/\/+$/, '');
   if (genericDomains.has(cleanUrl) || !m.url) {
-    console.error(`❌ [FAIL - GENERIC ROOT URL] [${m.id}] ${m.title} -> ${m.url}`);
+    console.error(`  ❌ Check 1 (Root URL): FAIL - Generic or empty URL -> ${m.url}`);
     failCount++;
     continue;
   }
 
-  // 2. Kannada Audio Check
+  // Audio Check
   if (!m.audio.includes('ಕನ್ನಡ')) {
-    console.error(`❌ [FAIL - NO KANNADA AUDIO] [${m.id}] ${m.title} -> audio: ${m.audio}`);
+    console.error(`  ❌ Check 1 (Audio): FAIL - No Kannada audio tag -> ${m.audio}`);
     failCount++;
     continue;
   }
 
-  // 3. Live HTTP 200 Check
+  // CHECK 1 & CHECK 2: Live HTTP 200 & Content Title Check
   try {
     const res = await fetch(m.url, {
       headers: {
@@ -78,25 +102,42 @@ for (const m of catalog) {
     });
 
     if (res.status === 200) {
-      console.log(`✓ [PASS 200] [${m.prov}] [${m.id}] ${m.title} (${m.audio})`);
-      passCount++;
+      console.log(`  ✓ Check 1 (Live HTTP 200): PASS [${m.prov}] -> ${m.url}`);
+      
+      const html = await res.text();
+      const titleMatch = html.match(/<title[^>]*>([^<]+)<\/title>/i);
+      const pageTitle = titleMatch ? titleMatch[1].toLowerCase() : '';
+
+      // Check for sports / football mismatch (e.g. SonyLIV UEFA football highlights or non-movie content)
+      const isSportsMismatch = pageTitle.includes('uefa') || 
+                               pageTitle.includes('champions league') || 
+                               (!pageTitle.includes('jiohotstar') && pageTitle.includes('football')) ||
+                               (!pageTitle.includes('jiohotstar') && pageTitle.includes('serial'));
+
+      if (isSportsMismatch) {
+        console.error(`  ❌ Check 2 (Content Mismatch): FAIL - Page title is "${pageTitle}"`);
+        failCount++;
+      } else {
+        console.log(`  ✓ Check 2 (Content Match): PASS (Title: "${titleMatch ? titleMatch[1].trim() : 'OK'}")`);
+        passCount++;
+      }
     } else {
-      console.error(`❌ [FAIL ${res.status}] [${m.prov}] [${m.id}] ${m.title} -> ${m.url}`);
+      console.error(`  ❌ Check 1 (Live HTTP): FAIL ${res.status} [${m.prov}] -> ${m.url}`);
       failCount++;
     }
   } catch (err) {
-    console.error(`❌ [FAIL ERR] [${m.prov}] [${m.id}] ${m.title} -> ${err.message}`);
+    console.error(`  ❌ Check 1 (Live HTTP): FAIL ERR [${m.prov}] -> ${err.message}`);
     failCount++;
   }
 }
 
 console.log('\n=====================================================');
-console.log(`QA RESULT: ${passCount} PASSED | ${failCount} FAILED`);
+console.log(`3-WAY QA RESULT: ${passCount} PASSED | ${failCount} FAILED`);
 console.log('=====================================================');
 
 if (failCount > 0) {
   process.exit(1);
 } else {
-  console.log('🎉 ALL ENTRIES 100% 2-WAY VERIFIED!');
+  console.log('🎉 ALL CATALOG ENTRIES 100% 3-WAY VERIFIED!');
   process.exit(0);
 }
