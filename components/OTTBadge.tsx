@@ -20,7 +20,8 @@ interface OTTBadgeProps {
 export default function OTTBadge({ provider, movieLink, size = 'md', movie }: OTTBadgeProps) {
   const { markAsWatched } = useWatched();
   const platform = OTT_PLATFORM_MAP.get(provider.provider_id);
-  const targetUrl = provider.directUrl || movieLink || platform?.webUrl || '#';
+  const targetUrl = provider.directUrl || movieLink || '';
+  const isAvailable = Boolean(targetUrl && targetUrl !== '#' && !targetUrl.endsWith('/in') && !targetUrl.endsWith('zee5.com') && !targetUrl.endsWith('sonyliv.com') && !targetUrl.endsWith('jiocinema.com'));
 
   const sizeClasses = {
     sm: 'px-2 py-1 text-xs gap-1',
@@ -33,6 +34,23 @@ export default function OTTBadge({ provider, movieLink, size = 'md', movie }: OT
     md: 'w-6 h-6',
     lg: 'w-8 h-8',
   };
+
+  if (!isAvailable) {
+    return (
+      <span
+        className={`
+          inline-flex items-center rounded-lg font-medium opacity-90
+          bg-zinc-800 text-yellow-400 border border-yellow-500/30
+          ${sizeClasses[size]}
+        `}
+      >
+        <span>🎟️</span>
+        <span className="whitespace-nowrap font-semibold">
+          In Theatres • OTT Streaming Soon
+        </span>
+      </span>
+    );
+  }
 
   return (
     <a

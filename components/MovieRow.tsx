@@ -19,17 +19,7 @@ export default function MovieRow({ title, emoji, movies, emptyMessage }: MovieRo
   const watchedCountInThisRow = movies.filter((m) => isWatched(m.id)).length;
 
   if (movies.length === 0) {
-    return (
-      <section className="mb-10">
-        <h2 className="text-white text-xl sm:text-2xl font-bold mb-4 px-4 sm:px-6 lg:px-8">
-          {emoji && <span className="mr-2">{emoji}</span>}
-          {title}
-        </h2>
-        <div className="px-4 sm:px-6 lg:px-8">
-          <p className="text-zinc-500 text-sm">{emptyMessage || 'No movies found.'}</p>
-        </div>
-      </section>
-    );
+    return null;
   }
 
   // If all movies in this row were marked as watched and hidden

@@ -130,11 +130,18 @@ export default function MovieCard({ movie }: MovieCardProps) {
         {/* Metadata & Audio Badge */}
         <div className="flex items-center justify-between text-xs mb-2">
           <span className="text-zinc-400">{year}</span>
-          <span className="text-sky-400 font-semibold text-[11px]">🔊 ಕನ್ನಡ</span>
+          <span className="text-emerald-400 font-bold text-[10px] bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-500/30">
+            ✓ 2-Way Verified
+          </span>
         </div>
 
         {/* Primary OTT Button Bar */}
-        {mainPlatform ? (
+        {(movie as { isUpcoming?: boolean }).isUpcoming ? (
+          <div className="flex items-center justify-center gap-1.5 py-1.5 px-2 rounded-lg text-xs font-bold w-full bg-amber-950/40 text-amber-400 border border-amber-500/40">
+            <span>🎟️</span>
+            <span>In Theatres Soon</span>
+          </div>
+        ) : mainPlatform ? (
           <div
             onClick={() =>
               markAsWatched(

@@ -1,18 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 750" width="100%" height="100%">
   <defs>
-    <linearGradient id="bg-203" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#b91c1c" />
-      <stop offset="100%" stop-color="#18181b" />
+    <linearGradient id="bg-209" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#78350f" />
+      <stop offset="100%" stop-color="#1c1917" />
     </linearGradient>
-    <radialGradient id="glow-203" cx="50%" cy="40%" r="60%">
+    <radialGradient id="glow-209" cx="50%" cy="40%" r="60%">
       <stop offset="0%" stop-color="#ffffff" stop-opacity="0.15" />
       <stop offset="100%" stop-color="#000000" stop-opacity="0.8" />
     </radialGradient>
   </defs>
 
   <!-- Background Layer -->
-  <rect width="500" height="750" fill="url(#bg-203)" />
-  <rect width="500" height="750" fill="url(#glow-203)" />
+  <rect width="500" height="750" fill="url(#bg-209)" />
+  <rect width="500" height="750" fill="url(#glow-209)" />
 
   <!-- Border Accent -->
   <rect x="15" y="15" width="470" height="720" fill="none" stroke="rgba(255, 255, 255, 0.15)" stroke-width="2" rx="16" />
@@ -21,7 +21,7 @@
   <g transform="translate(30, 45)">
     <rect width="440" height="36" rx="18" fill="rgba(0, 0, 0, 0.6)" stroke="rgba(255, 255, 255, 0.2)" />
     <text x="220" y="23" fill="#facc15" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="800" letter-spacing="1.5" text-anchor="middle">
-      ✓ 2-WAY VERIFIED • KANNADA DUBBED • SUPERHERO HIT
+      ✓ 2-WAY VERIFIED • KANNADA DUBBED • SARPATTA
     </text>
   </g>
 
@@ -34,10 +34,10 @@
   <!-- Movie Title and Subtitle -->
   <g transform="translate(250, 520)" text-anchor="middle">
     <text y="0" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="34" font-weight="900" letter-spacing="1">
-      HANU-MAN
+      BOXING PARAMPARE
     </text>
     <text y="40" fill="rgba(255, 255, 255, 0.85)" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600">
-      Teja Sajja • Prasanth Varma
+      Arya • Pa. Ranjith
     </text>
   </g>
 
