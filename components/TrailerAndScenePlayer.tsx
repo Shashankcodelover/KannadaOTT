@@ -24,8 +24,8 @@ export default function TrailerAndScenePlayer({
   // For 30-second scene clip mode, we can start at 45s and loop or provide key clip
   const embedUrl =
     activeTab === 'trailer'
-      ? `https://www.youtube-nocookie.com/embed/${ytId}?autoplay=1&rel=0&modestbranding=1`
-      : `https://www.youtube-nocookie.com/embed/${ytId}?autoplay=1&start=45&end=75&rel=0&modestbranding=1`;
+      ? `https://www.youtube.com/embed/${ytId}?autoplay=1&rel=0&playsinline=1`
+      : `https://www.youtube.com/embed/${ytId}?autoplay=1&start=45&end=75&rel=0&playsinline=1`;
 
   return (
     <section className="mb-8 rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-950 shadow-2xl">
@@ -132,15 +132,24 @@ export default function TrailerAndScenePlayer({
           </span>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-3">
+          <a
+            href={`https://www.youtube.com/watch?v=${ytId}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 bg-red-600 hover:bg-red-700 text-white font-bold px-3 py-1 rounded-lg text-xs transition-all shadow"
+          >
+            <span>▶</span>
+            <span>Open in YouTube App ↗</span>
+          </a>
           <button
             onClick={() => {
               setActiveTab(activeTab === 'trailer' ? 'scene' : 'trailer');
               setIsPlaying(true);
             }}
-            className="text-amber-400 hover:text-amber-300 font-semibold underline underline-offset-2 cursor-pointer"
+            className="text-amber-400 hover:text-amber-300 font-semibold underline underline-offset-2 cursor-pointer text-xs"
           >
-            {activeTab === 'trailer' ? 'Switch to 30s Key Scene ➔' : 'Switch to Full Trailer ➔'}
+            {activeTab === 'trailer' ? '30s Key Scene ➔' : 'Full Trailer ➔'}
           </button>
         </div>
       </div>

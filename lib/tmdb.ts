@@ -439,6 +439,42 @@ export async function getSuperstarMovies(heroName?: string): Promise<TMDBRespons
       (m) => m.hero_name?.toLowerCase().includes(heroName.toLowerCase()) ?? false
     );
   }
-  return filterCatalog((m) => !!m.hero_name || (m.id >= 601 && m.id <= 608));
+  return filterCatalog((m) => !!m.hero_name && !m.isKannada);
 }
+
+// ─── Love-Comedy & Romance Mix (User Taste: Saba Nayagan, Premalu, Lover, Good Night, Joe) ─
+export async function getLoveComedyMovies(): Promise<TMDBResponse<Movie>> {
+  return filterCatalog(
+    (m) =>
+      Boolean(
+        (m.genre_ids.includes(GENRES.ROMANCE) || m.genre_ids.includes(GENRES.COMEDY)) &&
+          (m.hasKannadaDub || m.isKannada)
+      )
+  );
+}
+
+// ─── Investigation Thrillers & Crime Mysteries (Por Thozhil, Kishkindha Kaandam, Parking, Kannur Squad) ─
+export async function getInvestigationThrillers(): Promise<TMDBResponse<Movie>> {
+  return filterCatalog(
+    (m) =>
+      Boolean(
+        (m.genre_ids.includes(GENRES.MYSTERY) ||
+          m.genre_ids.includes(GENRES.CRIME) ||
+          m.genre_ids.includes(GENRES.THRILLER)) &&
+          !m.genre_ids.includes(GENRES.FANTASY)
+      )
+  );
+}
+
+// ─── Fast & Furious Action, Tricks & High Stakes (Valimai, Vikram, Vikram Vedha, Bloody Daddy, Bimbisara) ─
+export async function getFastTwistAction(): Promise<TMDBResponse<Movie>> {
+  return filterCatalog(
+    (m) =>
+      Boolean(
+        m.genre_ids.includes(GENRES.ACTION) ||
+          (m.genre_ids.includes(GENRES.THRILLER) && m.popularity >= 88)
+      )
+  );
+}
+
 

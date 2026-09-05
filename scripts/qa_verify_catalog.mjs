@@ -47,6 +47,19 @@ console.log(`Loaded ${catalog.length} catalog entries.\n`);
 let passCount = 0;
 let failCount = 0;
 
+async function fetchWithRetry(url, options = {}, retries = 3) {
+  for (let i = 0; i <= retries; i++) {
+    try {
+      const res = await fetch(url, options);
+      if (res.status === 200 || i === retries) return res;
+      await new Promise((r) => setTimeout(r, 500));
+    } catch (err) {
+      if (i === retries) throw err;
+      await new Promise((r) => setTimeout(r, 700));
+    }
+  }
+}
+
 for (const m of catalog) {
   console.log(`\n--- [ID ${m.id}] ${m.title} ---`);
 
@@ -56,7 +69,7 @@ for (const m of catalog) {
     failCount++;
   } else {
     try {
-      const ytRes = await fetch(`https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${m.trailer_id}&format=json`);
+      const ytRes = await fetchWithRetry(`https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${m.trailer_id}&format=json`);
       if (ytRes.status === 200) {
         const ytData = await ytRes.json();
         console.log(`  ✓ Check 3 (YouTube Trailer): PASS - "${ytData.title}" (${m.trailer_id})`);
@@ -93,7 +106,7 @@ for (const m of catalog) {
 
   // CHECK 1 & CHECK 2: Live HTTP 200 & Content Title Check
   try {
-    const res = await fetch(m.url, {
+    const res = await fetchWithRetry(m.url, {
       headers: {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',

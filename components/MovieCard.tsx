@@ -1,12 +1,13 @@
 'use client';
 
-// Movie Card component — poster, title, rating, OTT badges, Kannada audio tag + Watched/Done Hide
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { MovieWithProviders } from '@/lib/types';
 import { getPosterUrl } from '@/lib/tmdb';
 import { OTT_PLATFORM_MAP } from '@/lib/constants';
 import { useWatched } from '@/context/WatchedContext';
+import TrailerModal from './TrailerModal';
 
 interface MovieCardProps {
   movie: MovieWithProviders;
@@ -16,6 +17,8 @@ interface MovieCardProps {
 export default function MovieCard({ movie }: MovieCardProps) {
   const { isWatched, markAsWatched, unmarkAsWatched, hideWatched } = useWatched();
   const watched = isWatched(movie.id);
+
+  const [showTrailer, setShowTrailer] = useState(false);
 
   // If user enabled hiding watched movies and this movie is watched, hide it from discovery
   if (hideWatched && watched) {
@@ -52,20 +55,27 @@ export default function MovieCard({ movie }: MovieCardProps) {
     }
   };
 
+  const handleOpenTrailer = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setShowTrailer(true);
+  };
+
   return (
-    <Link
-      href={`/movie/${movie.id}`}
-      className="group relative flex-shrink-0 w-44 sm:w-48 md:w-52 rounded-xl overflow-hidden
-        bg-zinc-900 border border-zinc-800
-        transition-all duration-300 ease-out
-        hover:scale-105 hover:border-zinc-500 hover:shadow-2xl hover:shadow-black/70
-        focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black
-        focus:scale-105
-        cursor-pointer"
-      tabIndex={0}
-    >
-      {/* Poster Container */}
-      <div className="relative aspect-[2/3] w-full bg-zinc-950 overflow-hidden">
+    <>
+      <Link
+        href={`/movie/${movie.id}`}
+        className="group relative flex-shrink-0 w-36 sm:w-44 md:w-48 rounded-xl overflow-hidden
+          bg-zinc-900 border border-zinc-800
+          transition-all duration-300 ease-out
+          hover:scale-105 hover:border-zinc-500 hover:shadow-2xl hover:shadow-black/70
+          focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black
+          focus:scale-105
+          cursor-pointer"
+        tabIndex={0}
+      >
+        {/* Poster Container */}
+        <div className="relative aspect-[2/3] w-full bg-zinc-950 overflow-hidden">
         <Image
           src={posterUrl}
           alt={movie.title}
@@ -119,25 +129,37 @@ export default function MovieCard({ movie }: MovieCardProps) {
             {movie.quality.split('•')[0].trim()}
           </div>
         )}
+
+        {/* Quick Trailer Button on Poster */}
+        {movie.trailer_youtube_id && (
+          <button
+            onClick={handleOpenTrailer}
+            title="Preview Trailer"
+            className="absolute bottom-2 right-2 z-20 flex items-center gap-1 bg-red-600/90 hover:bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow transition-all hover:scale-105 active:scale-95 cursor-pointer"
+          >
+            <span>▶</span>
+            <span>Trailer</span>
+          </button>
+        )}
       </div>
 
       {/* Info Section */}
-      <div className="p-3">
-        <h3 className="text-white text-sm font-bold line-clamp-1 leading-tight mb-1 group-hover:text-amber-400 transition-colors">
+      <div className="p-2.5 sm:p-3">
+        <h3 className="text-white text-xs sm:text-sm font-bold line-clamp-1 leading-tight mb-1 group-hover:text-amber-400 transition-colors">
           {movie.title}
         </h3>
 
         {/* Metadata & Audio Badge */}
-        <div className="flex items-center justify-between text-xs mb-2">
-          <span className="text-zinc-400">{year}</span>
-          <span className="text-emerald-400 font-bold text-[10px] bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-500/30">
-            ✓ 2-Way Verified
+        <div className="flex items-center justify-between text-xs mb-1.5 sm:mb-2">
+          <span className="text-zinc-400 text-[11px] sm:text-xs">{year}</span>
+          <span className="text-emerald-400 font-bold text-[9px] sm:text-[10px] bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-500/30">
+            ✓ 3-Way Verified
           </span>
         </div>
 
         {/* Primary OTT Button Bar */}
         {(movie as { isUpcoming?: boolean }).isUpcoming ? (
-          <div className="flex items-center justify-center gap-1.5 py-1.5 px-2 rounded-lg text-xs font-bold w-full bg-amber-950/40 text-amber-400 border border-amber-500/40">
+          <div className="flex items-center justify-center gap-1.5 py-1.5 px-2 rounded-lg text-[11px] sm:text-xs font-bold w-full bg-amber-950/40 text-amber-400 border border-amber-500/40">
             <span>🎟️</span>
             <span>In Theatres Soon</span>
           </div>
@@ -149,7 +171,7 @@ export default function MovieCard({ movie }: MovieCardProps) {
                 mainPlatform.shortName
               )
             }
-            className="flex items-center justify-center gap-1.5 py-1.5 px-2 rounded-lg text-xs font-bold w-full transition-colors hover:brightness-110"
+            className="flex items-center justify-center gap-1.5 py-1.5 px-2 rounded-lg text-[11px] sm:text-xs font-bold w-full transition-colors hover:brightness-110"
             style={{
               backgroundColor: `${mainPlatform.color}25`,
               color: mainPlatform.color,
@@ -164,5 +186,15 @@ export default function MovieCard({ movie }: MovieCardProps) {
         )}
       </div>
     </Link>
+
+    {showTrailer && movie.trailer_youtube_id && (
+      <TrailerModal
+        youtubeId={movie.trailer_youtube_id}
+        title={movie.title}
+        isOpen={showTrailer}
+        onClose={() => setShowTrailer(false)}
+      />
+    )}
+  </>
   );
 }

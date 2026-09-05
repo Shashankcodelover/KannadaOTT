@@ -49,18 +49,34 @@ export default function TrailerModal({ youtubeId, title, isOpen, onClose }: Trai
         {/* Video Embed */}
         <div className="relative aspect-video w-full bg-black">
           <iframe
-            src={`https://www.youtube-nocookie.com/embed/${youtubeId}?autoplay=1&rel=0&modestbranding=1`}
+            src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1&rel=0&playsinline=1`}
             title={`${title} Trailer`}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
             className="absolute inset-0 w-full h-full border-0"
           />
         </div>
 
-        {/* Footer info */}
-        <div className="px-4 py-2.5 bg-zinc-900/60 border-t border-zinc-800 flex items-center justify-between text-xs text-zinc-400">
-          <span>🔊 Preview in Kannada / Official Audio</span>
-          <span className="hidden sm:inline">Press ESC or Close to return</span>
+        {/* Footer info & Direct YouTube Link */}
+        <div className="px-4 py-3 bg-zinc-900/90 border-t border-zinc-800 flex flex-wrap items-center justify-between gap-2.5 text-xs text-zinc-300">
+          <div className="flex items-center gap-2">
+            <span className="text-emerald-400 font-bold">✓ 3-Way Verified Trailer</span>
+            <span className="text-zinc-500">•</span>
+            <span className="text-zinc-400">Kannada / Official Audio</span>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <a
+              href={`https://www.youtube.com/watch?v=${youtubeId}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 bg-red-600 hover:bg-red-700 text-white font-bold px-3.5 py-1.5 rounded-lg shadow transition-all hover:scale-105 active:scale-95 text-xs"
+            >
+              <span>▶</span>
+              <span>Open in YouTube App ↗</span>
+            </a>
+            <span className="hidden sm:inline text-zinc-500 text-[11px]">(Press ESC to close)</span>
+          </div>
         </div>
       </div>
     </div>
