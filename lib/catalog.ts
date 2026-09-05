@@ -638,533 +638,6 @@ export const CURATED_MOVIES: (MovieWithProviders & { isUpcoming?: boolean })[] =
     }
   },
   {
-    "id": 114,
-    "title": "Milana",
-    "original_title": "Milana",
-    "original_language": "kn",
-    "overview": "A tender, beloved romantic drama following Akash and Anjali who enter a marriage of convenience, slowly realizing the deeper meaning of love, sacrifice, and mutual understanding.",
-    "poster_path": "/posters/114.svg",
-    "backdrop_path": "/posters/114.svg",
-    "vote_average": 8.5,
-    "vote_count": 12000,
-    "release_date": "2007-09-14",
-    "genre_ids": [
-      18,
-      10749,
-      10751
-    ],
-    "popularity": 90,
-    "adult": false,
-    "isKannada": true,
-    "hasKannadaDub": true,
-    "age_rating": "U",
-    "quality": "HD Remastered • Stereo",
-    "audio": "ಕನ್ನಡ (Original)",
-    "subtitles": "English",
-    "highlights": [
-      "All-Time Evergreen Romantic Classic",
-      "Dr. Puneeth Rajkumar State Award Performance",
-      "Iconic Mano Murthy Melodies",
-      "Feel-Good Family Favorite"
-    ],
-    "director": "Prakash",
-    "cast": [
-      "Dr. Puneeth Rajkumar",
-      "Parvathy Thiruvothu",
-      "Pooja Gandhi",
-      "Dileep Raj"
-    ],
-    "trailer_youtube_id": "Q9Sj8a_2GbE",
-    "scene_clip": "Akash & Anjali Umbrella Rain Confession (30s Spotlight)",
-    "hero_name": "Dr. Puneeth Rajkumar",
-    "watchProviders": {
-      "link": "https://www.zee5.com/movies/details/milana/0-0-2608",
-      "flatrate": [
-        {
-          "provider_id": 232,
-          "provider_name": "Zee5",
-          "logo_path": "",
-          "display_priority": 1,
-          "directUrl": "https://www.zee5.com/movies/details/milana/0-0-2608"
-        }
-      ]
-    }
-  },
-  {
-    "id": 115,
-    "title": "Mylari",
-    "original_title": "Mylari",
-    "original_language": "kn",
-    "overview": "Mylari, an earnest rural youth with big dreams, is constantly scolded by his father. Driven to Bangalore, circumstances pull him into the criminal underworld.",
-    "poster_path": "/posters/115.svg",
-    "backdrop_path": "/posters/115.svg",
-    "vote_average": 7.4,
-    "vote_count": 6700,
-    "release_date": "2010-12-24",
-    "genre_ids": [
-      28,
-      18,
-      35
-    ],
-    "popularity": 81,
-    "adult": false,
-    "isKannada": true,
-    "hasKannadaDub": true,
-    "age_rating": "U/A 13+",
-    "quality": "HD Remastered • Stereo",
-    "audio": "ಕನ್ನಡ (Original)",
-    "subtitles": "English",
-    "highlights": [
-      "Shiva Rajkumar Mass Drama",
-      "Sadhu Kokila & Bullet Prakash Classic Comedy",
-      "Gurukiran Musical Hit",
-      "Emotional Mother Sentiment"
-    ],
-    "director": "R. Chandru",
-    "cast": [
-      "Dr. Shiva Rajkumar",
-      "Sada",
-      "Sadhu Kokila",
-      "Rangayana Raghu"
-    ],
-    "trailer_youtube_id": "BuM6H421E5Q",
-    "scene_clip": "Mylari Bus Stand Sadhu Kokila Comedy Track (30s Spotlight)",
-    "hero_name": "Dr. Shiva Rajkumar",
-    "watchProviders": {
-      "link": "https://www.zee5.com/movies/details/mylari/0-0-2637",
-      "flatrate": [
-        {
-          "provider_id": 232,
-          "provider_name": "Zee5",
-          "logo_path": "",
-          "display_priority": 1,
-          "directUrl": "https://www.zee5.com/movies/details/mylari/0-0-2637"
-        }
-      ]
-    }
-  },
-  {
-    "id": 116,
-    "title": "Preethse",
-    "original_title": "Preethse",
-    "original_language": "kn",
-    "overview": "Surya loves Kiran with complete devotion, but an obsessed stalker named Chandu enters her life, leading to a nail-biting psychological face-off between two men.",
-    "poster_path": "/posters/116.svg",
-    "backdrop_path": "/posters/116.svg",
-    "vote_average": 7.8,
-    "vote_count": 8100,
-    "release_date": "2000-01-28",
-    "genre_ids": [
-      53,
-      10749,
-      18
-    ],
-    "popularity": 84,
-    "adult": false,
-    "isKannada": true,
-    "hasKannadaDub": true,
-    "age_rating": "U/A 13+",
-    "quality": "HD Remastered • Stereo",
-    "audio": "ಕನ್ನಡ (Original)",
-    "subtitles": "English",
-    "highlights": [
-      "Legendary Collaboration of Shiva Rajkumar & Real Star Upendra",
-      "Sensational Psychological Thriller",
-      "Hamsalekha Chartbuster Music",
-      "Memorable Dialogue Battles"
-    ],
-    "director": "D. Rajendra Babu",
-    "cast": [
-      "Dr. Shiva Rajkumar",
-      "Real Star Upendra",
-      "Sonali Bendre",
-      "Anant Nag"
-    ],
-    "trailer_youtube_id": "9JpG51taLGM",
-    "scene_clip": "Upendra & Shiva Rajkumar Climax Train Fight & Monologue (30s Spotlight)",
-    "hero_name": "Dr. Shiva Rajkumar",
-    "watchProviders": {
-      "link": "https://www.zee5.com/movies/details/preethse/0-0-101696",
-      "flatrate": [
-        {
-          "provider_id": 232,
-          "provider_name": "Zee5",
-          "logo_path": "",
-          "display_priority": 1,
-          "directUrl": "https://www.zee5.com/movies/details/preethse/0-0-101696"
-        }
-      ]
-    }
-  },
-  {
-    "id": 117,
-    "title": "Nammoora Mandaara Hoove",
-    "original_title": "Nammoora Mandaara Hoove",
-    "original_language": "kn",
-    "overview": "In an idyllic hill village, Manoj and Shivu form a deep friendship. Both fall in love with the spirited Suma, sparking an emotional conflict of sacrifice, duty, and affection.",
-    "poster_path": "/posters/117.svg",
-    "backdrop_path": "/posters/117.svg",
-    "vote_average": 8.4,
-    "vote_count": 9500,
-    "release_date": "1996-09-06",
-    "genre_ids": [
-      18,
-      10749
-    ],
-    "popularity": 87,
-    "adult": false,
-    "isKannada": true,
-    "hasKannadaDub": true,
-    "age_rating": "U",
-    "quality": "HD Remastered • Stereo",
-    "audio": "ಕನ್ನಡ (Original)",
-    "subtitles": "English",
-    "highlights": [
-      "Sunil Kumar Desai Romance Classic",
-      "Ilaiyaraaja Golden Soundtrack",
-      "Shivarajkumar & Ramesh Aravind Emotional Masterpiece",
-      "Winner of 2 Filmfare Awards"
-    ],
-    "director": "Sunil Kumar Desai",
-    "cast": [
-      "Dr. Shiva Rajkumar",
-      "Ramesh Aravind",
-      "Prema",
-      "Suman Nagarkar"
-    ],
-    "trailer_youtube_id": "b_TKxe2Htas",
-    "scene_clip": "Manoja and Shivu Hilltop Accordion Song (30s Spotlight)",
-    "hero_name": "Dr. Shiva Rajkumar",
-    "watchProviders": {
-      "link": "https://www.zee5.com/movies/details/nammoora-mandaara-hoove/0-0-20930",
-      "flatrate": [
-        {
-          "provider_id": 232,
-          "provider_name": "Zee5",
-          "logo_path": "",
-          "display_priority": 1,
-          "directUrl": "https://www.zee5.com/movies/details/nammoora-mandaara-hoove/0-0-20930"
-        }
-      ]
-    }
-  },
-  {
-    "id": 118,
-    "title": "Galate Aliyandru",
-    "original_title": "Galate Aliyandru",
-    "original_language": "kn",
-    "overview": "Two best friends pretend to be high-society bachelors to impress wealthy landlords and marry their sweethearts, unleashing a wave of hilarious misunderstandings.",
-    "poster_path": "/posters/118.svg",
-    "backdrop_path": "/posters/118.svg",
-    "vote_average": 7.8,
-    "vote_count": 7300,
-    "release_date": "2000-09-08",
-    "genre_ids": [
-      35,
-      10749
-    ],
-    "popularity": 83,
-    "adult": false,
-    "isKannada": true,
-    "hasKannadaDub": true,
-    "age_rating": "U",
-    "quality": "HD Remastered • Stereo",
-    "audio": "ಕನ್ನಡ (Original)",
-    "subtitles": "English",
-    "highlights": [
-      "Evergreen 2000s Comedy Riot",
-      "Shivarajkumar & S. Narayan Duo",
-      "Sadhu Kokila & Doddanna Laugh Riot",
-      "High Re-watch Value"
-    ],
-    "director": "S. Narayan",
-    "cast": [
-      "Dr. Shiva Rajkumar",
-      "S. Narayan",
-      "Sakshi Shivanand",
-      "Tara"
-    ],
-    "trailer_youtube_id": "iZNGSDP7_oU",
-    "scene_clip": "Double Identity House Rent Confusion Comedy (30s Spotlight)",
-    "hero_name": "Dr. Shiva Rajkumar",
-    "watchProviders": {
-      "link": "https://www.zee5.com/movies/details/galate-aliyandru/0-0-101641",
-      "flatrate": [
-        {
-          "provider_id": 232,
-          "provider_name": "Zee5",
-          "logo_path": "",
-          "display_priority": 1,
-          "directUrl": "https://www.zee5.com/movies/details/galate-aliyandru/0-0-101641"
-        }
-      ]
-    }
-  },
-  {
-    "id": 119,
-    "title": "Kurubana Rani",
-    "original_title": "Kurubana Rani",
-    "original_language": "kn",
-    "overview": "Kencha, a kind and innocent shepherd boy from rural Karnataka, finds his life transformed when he marries a proud urban girl and strives to earn her true respect and love.",
-    "poster_path": "/posters/119.svg",
-    "backdrop_path": "/posters/119.svg",
-    "vote_average": 7.6,
-    "vote_count": 6200,
-    "release_date": "1998-04-10",
-    "genre_ids": [
-      18,
-      10749,
-      35
-    ],
-    "popularity": 80,
-    "adult": false,
-    "isKannada": true,
-    "hasKannadaDub": true,
-    "age_rating": "U",
-    "quality": "HD Remastered • Stereo",
-    "audio": "ಕನ್ನಡ (Original)",
-    "subtitles": "English",
-    "highlights": [
-      "Shiva Rajkumar & Nagma Blockbuster Pair",
-      "V. Manohar Melodious Tracks",
-      "Rural Charm & Heartwarming Emotion",
-      "Family Favorite"
-    ],
-    "director": "D. Rajendra Babu",
-    "cast": [
-      "Dr. Shiva Rajkumar",
-      "Nagma",
-      "Lokesh",
-      "Sumithra"
-    ],
-    "trailer_youtube_id": "L53AUkPeWiw",
-    "scene_clip": "Kencha Village Flute Melody & Sheep Pasture Scene (30s Spotlight)",
-    "hero_name": "Dr. Shiva Rajkumar",
-    "watchProviders": {
-      "link": "https://www.zee5.com/movies/details/kurubana-rani/0-0-89548",
-      "flatrate": [
-        {
-          "provider_id": 232,
-          "provider_name": "Zee5",
-          "logo_path": "",
-          "display_priority": 1,
-          "directUrl": "https://www.zee5.com/movies/details/kurubana-rani/0-0-89548"
-        }
-      ]
-    }
-  },
-  {
-    "id": 120,
-    "title": "Asura",
-    "original_title": "Asura",
-    "original_language": "kn",
-    "overview": "An honest and fierce young police officer takes on the corrupt political mafia and dangerous crime syndicates terrorizing the city, risking everything to uphold justice.",
-    "poster_path": "/posters/120.svg",
-    "backdrop_path": "/posters/120.svg",
-    "vote_average": 7.7,
-    "vote_count": 5900,
-    "release_date": "2001-04-06",
-    "genre_ids": [
-      28,
-      80,
-      53
-    ],
-    "popularity": 81,
-    "adult": false,
-    "isKannada": true,
-    "hasKannadaDub": true,
-    "age_rating": "U/A 16+",
-    "quality": "HD Remastered • Stereo",
-    "audio": "ಕನ್ನಡ (Original)",
-    "subtitles": "English",
-    "highlights": [
-      "High-Octane Cop Action Thriller",
-      "Shiva Rajkumar Power-Packed Monologues",
-      "Raghuvaran Formidable Antagonist",
-      "Gripping Pacing"
-    ],
-    "director": "S. Mahendar",
-    "cast": [
-      "Dr. Shiva Rajkumar",
-      "Damini",
-      "Raghuvaran",
-      "Anant Nag"
-    ],
-    "trailer_youtube_id": "0lyYcYeD8aA",
-    "scene_clip": "Inspector Action Encounter at Harbor Warehouse (30s Spotlight)",
-    "hero_name": "Dr. Shiva Rajkumar",
-    "watchProviders": {
-      "link": "https://www.zee5.com/movies/details/asura/0-0-89487",
-      "flatrate": [
-        {
-          "provider_id": 232,
-          "provider_name": "Zee5",
-          "logo_path": "",
-          "display_priority": 1,
-          "directUrl": "https://www.zee5.com/movies/details/asura/0-0-89487"
-        }
-      ]
-    }
-  },
-  {
-    "id": 121,
-    "title": "Bhagyada Balegara",
-    "original_title": "Bhagyada Balegara",
-    "original_language": "kn",
-    "overview": "Chennayya, a righteous and hard-working village bangle seller, faces immense trials to protect his family and preserve age-old village bonds of loyalty and sacrifice.",
-    "poster_path": "/posters/121.svg",
-    "backdrop_path": "/posters/121.svg",
-    "vote_average": 7.5,
-    "vote_count": 4800,
-    "release_date": "2009-09-11",
-    "genre_ids": [
-      18,
-      10751
-    ],
-    "popularity": 79,
-    "adult": false,
-    "isKannada": true,
-    "hasKannadaDub": true,
-    "age_rating": "U",
-    "quality": "HD Remastered • Stereo",
-    "audio": "ಕನ್ನಡ (Original)",
-    "subtitles": "English",
-    "highlights": [
-      "Traditional Village Folk Tale",
-      "Shiva Rajkumar & Navya Nair Emotional Pairing",
-      "Ilaiyaraaja Folk Melodies",
-      "Tear-Jerker Climax"
-    ],
-    "director": "Om Sai Prakash",
-    "cast": [
-      "Dr. Shiva Rajkumar",
-      "Navya Nair",
-      "Sudharani",
-      "Doddanna"
-    ],
-    "trailer_youtube_id": "uRtau4Z7LH4",
-    "scene_clip": "Village Fair Bangle Gifting Ceremony (30s Spotlight)",
-    "hero_name": "Dr. Shiva Rajkumar",
-    "watchProviders": {
-      "link": "https://www.zee5.com/movies/details/bhagyada-balegara/0-0-2585",
-      "flatrate": [
-        {
-          "provider_id": 232,
-          "provider_name": "Zee5",
-          "logo_path": "",
-          "display_priority": 1,
-          "directUrl": "https://www.zee5.com/movies/details/bhagyada-balegara/0-0-2585"
-        }
-      ]
-    }
-  },
-  {
-    "id": 122,
-    "title": "Jodi",
-    "original_title": "Jodi",
-    "original_language": "kn",
-    "overview": "A delightful family romantic drama revolving around an earnest young man whose quest for romance leads him through comic family clashes and heartwarming reunions.",
-    "poster_path": "/posters/122.svg",
-    "backdrop_path": "/posters/122.svg",
-    "vote_average": 7.3,
-    "vote_count": 4200,
-    "release_date": "2001-08-31",
-    "genre_ids": [
-      35,
-      10749,
-      10751
-    ],
-    "popularity": 77,
-    "adult": false,
-    "isKannada": true,
-    "hasKannadaDub": true,
-    "age_rating": "U",
-    "quality": "HD Remastered • Stereo",
-    "audio": "ಕನ್ನಡ (Original)",
-    "subtitles": "English",
-    "highlights": [
-      "Shiva Rajkumar & Jaggesh Sparkling Chemistry",
-      "SA Rajkumar Hit Songs",
-      "Pure Nostalgic Family Drama",
-      "Feel-Good Romance"
-    ],
-    "director": "Kishore Sarja",
-    "cast": [
-      "Dr. Shiva Rajkumar",
-      "Jaggesh",
-      "Poonam Singar",
-      "Mukhyamantri Chandru"
-    ],
-    "trailer_youtube_id": "8eebwaGzaco",
-    "scene_clip": "Shivarajkumar & Jaggesh Matchmaking Confusion (30s Spotlight)",
-    "hero_name": "Dr. Shiva Rajkumar",
-    "watchProviders": {
-      "link": "https://www.zee5.com/movies/details/jodi/0-0-89533",
-      "flatrate": [
-        {
-          "provider_id": 232,
-          "provider_name": "Zee5",
-          "logo_path": "",
-          "display_priority": 1,
-          "directUrl": "https://www.zee5.com/movies/details/jodi/0-0-89533"
-        }
-      ]
-    }
-  },
-  {
-    "id": 123,
-    "title": "Krishna Leele",
-    "original_title": "Krishna Leele",
-    "original_language": "kn",
-    "overview": "A wrong phone call connects Krishna, a modest cab driver, and Leela, a college student. What begins as harmless phone conversations spirals into a tense crisis.",
-    "poster_path": "/posters/123.svg",
-    "backdrop_path": "/posters/123.svg",
-    "vote_average": 7.9,
-    "vote_count": 6700,
-    "release_date": "2015-03-20",
-    "genre_ids": [
-      10749,
-      18,
-      53
-    ],
-    "popularity": 84,
-    "adult": false,
-    "isKannada": true,
-    "hasKannadaDub": true,
-    "age_rating": "U/A 13+",
-    "quality": "Full HD 1080p • Dolby 5.1",
-    "audio": "ಕನ್ನಡ (Original)",
-    "subtitles": "English",
-    "highlights": [
-      "Critically Acclaimed Hit",
-      "Ajai Rao & Mayuri Realistic Romance",
-      "Chartbuster Album by V. Sridhar",
-      "Authentic Bangalore Setting"
-    ],
-    "director": "Shashank",
-    "cast": [
-      "Ajai Rao",
-      "Mayuri Kyatari",
-      "Rangayana Raghu",
-      "Achyuth Kumar"
-    ],
-    "trailer_youtube_id": "Eq3CbN-f2bY",
-    "scene_clip": "First Phone Call Connection in Auto Cab (30s Spotlight)",
-    "hero_name": "Ajai Rao",
-    "watchProviders": {
-      "link": "https://www.zee5.com/movies/details/krishna-leele/0-0-102549",
-      "flatrate": [
-        {
-          "provider_id": 232,
-          "provider_name": "Zee5",
-          "logo_path": "",
-          "display_priority": 1,
-          "directUrl": "https://www.zee5.com/movies/details/krishna-leele/0-0-102549"
-        }
-      ]
-    }
-  },
-  {
     "id": 201,
     "title": "RRR",
     "original_title": "RRR",
@@ -1348,7 +821,7 @@ export const CURATED_MOVIES: (MovieWithProviders & { isUpcoming?: boolean })[] =
     "highlights": [
       "Astraverse Mythology",
       "Ranbir Kapoor & Alia Bhatt",
-      "VFX Spectacle",
+      "Shah Rukh Khan Special Appearance",
       "Official Kannada Audio on JioHotstar"
     ],
     "director": "Ayan Mukerji",
@@ -1356,7 +829,7 @@ export const CURATED_MOVIES: (MovieWithProviders & { isUpcoming?: boolean })[] =
       "Ranbir Kapoor",
       "Alia Bhatt",
       "Amitabh Bachchan",
-      "Nagarjuna Akkineni"
+      "Shah Rukh Khan"
     ],
     "trailer_youtube_id": "cM-z9kZwOAw",
     "scene_clip": "Agnyastra Awakening Temple Fight (30s Spotlight)",
@@ -1460,8 +933,8 @@ export const CURATED_MOVIES: (MovieWithProviders & { isUpcoming?: boolean })[] =
     "director": "Lokesh Kanagaraj",
     "cast": [
       "Kamal Haasan",
-      "Vijay Sethupathi",
       "Fahadh Faasil",
+      "Vijay Sethupathi",
       "Suriya (Rolex)"
     ],
     "trailer_youtube_id": "OKBMCL-frPU",
@@ -1842,6 +1315,428 @@ export const CURATED_MOVIES: (MovieWithProviders & { isUpcoming?: boolean })[] =
           "logo_path": "",
           "display_priority": 1,
           "directUrl": "https://www.zee5.com/movies/details/rekke/0-0-1z51199"
+        }
+      ]
+    }
+  },
+  {
+    "id": 214,
+    "title": "Valimai",
+    "original_title": "Valimai",
+    "original_language": "ta",
+    "overview": "ACP Arjun, an IPS officer, is tasked with tracking down an untraceable syndicate of ruthless outlaw bikers known as 'Satan's Slave' who unleash chaos, heists, and drug trafficking across the city.",
+    "poster_path": "/posters/214.svg",
+    "backdrop_path": "/posters/214.svg",
+    "vote_average": 7.9,
+    "vote_count": 14200,
+    "release_date": "2022-02-24",
+    "genre_ids": [
+      28,
+      53,
+      80
+    ],
+    "popularity": 94,
+    "adult": false,
+    "isKannada": false,
+    "hasKannadaDub": true,
+    "age_rating": "U/A 16+",
+    "quality": "Full HD 1080p • Dolby 5.1",
+    "audio": "ಕನ್ನಡ (Dubbed)",
+    "subtitles": "English",
+    "highlights": [
+      "Ajith Kumar High-Speed Bike Heists",
+      "Fast & Furious Level Practical Stunts",
+      "Kartikeya Intense Rivalry",
+      "Verified Kannada Audio on Zee5"
+    ],
+    "director": "H. Vinoth",
+    "cast": [
+      "Ajith Kumar",
+      "Kartikeya Gummakonda",
+      "Huma Qureshi",
+      "Bani J"
+    ],
+    "trailer_youtube_id": "4PL3JTQA4Is",
+    "scene_clip": "Bus Heist & Highway Motorcycle Chase Sequence (30s Spotlight)",
+    "hero_name": "Ajith Kumar",
+    "watchProviders": {
+      "link": "https://www.zee5.com/movies/details/valimai-kannada/0-0-1z5117565",
+      "flatrate": [
+        {
+          "provider_id": 232,
+          "provider_name": "Zee5",
+          "logo_path": "",
+          "display_priority": 1,
+          "directUrl": "https://www.zee5.com/movies/details/valimai-kannada/0-0-1z5117565"
+        }
+      ]
+    }
+  },
+  {
+    "id": 215,
+    "title": "Saba Nayagan",
+    "original_title": "Saba Nayagan",
+    "original_language": "ta",
+    "overview": "When Saba is arrested by the police for creating a nuisance, he spends the night recounting his misadventures in love across school, college, and adulthood, unraveling hilarious twists.",
+    "poster_path": "/posters/215.svg",
+    "backdrop_path": "/posters/215.svg",
+    "vote_average": 8,
+    "vote_count": 6700,
+    "release_date": "2023-12-22",
+    "genre_ids": [
+      35,
+      10749
+    ],
+    "popularity": 88,
+    "adult": false,
+    "isKannada": false,
+    "hasKannadaDub": true,
+    "age_rating": "U/A 13+",
+    "quality": "Full HD 1080p • Dolby 5.1",
+    "audio": "ಕನ್ನಡ (Dubbed)",
+    "subtitles": "English",
+    "highlights": [
+      "Wholesome Love-Comedy Sensation",
+      "Ashok Selvan Comic Timing",
+      "Relatable School & College Nostalgia",
+      "Verified Kannada Audio on JioHotstar"
+    ],
+    "director": "C. S. Karthikeyan",
+    "cast": [
+      "Ashok Selvan",
+      "Megha Akash",
+      "Karthika Muralidharan",
+      "Chandini Chowdary"
+    ],
+    "trailer_youtube_id": "NbfYpXGWZKs",
+    "scene_clip": "Police Station Breakup Narrative & Flashback Comedy (30s Spotlight)",
+    "hero_name": "Ashok Selvan",
+    "watchProviders": {
+      "link": "https://www.hotstar.com/in/movies/saba-nayagan/1260169820",
+      "flatrate": [
+        {
+          "provider_id": 122,
+          "provider_name": "JioHotstar",
+          "logo_path": "",
+          "display_priority": 1,
+          "directUrl": "https://www.hotstar.com/in/movies/saba-nayagan/1260169820"
+        }
+      ]
+    }
+  },
+  {
+    "id": 216,
+    "title": "Kannur Squad",
+    "original_title": "Kannur Squad",
+    "original_language": "ml",
+    "overview": "ASI George Martin and his close-knit squad of four Kerala police officers embark on a relentless cross-country investigation tracking down dangerous culprits across rugged Indian terrains.",
+    "poster_path": "/posters/216.svg",
+    "backdrop_path": "/posters/216.svg",
+    "vote_average": 8.5,
+    "vote_count": 15000,
+    "release_date": "2023-09-28",
+    "genre_ids": [
+      80,
+      18,
+      53
+    ],
+    "popularity": 95,
+    "adult": false,
+    "isKannada": false,
+    "hasKannadaDub": true,
+    "age_rating": "U/A 16+",
+    "quality": "Full HD 1080p • Dolby 5.1",
+    "audio": "ಕನ್ನಡ (Dubbed)",
+    "subtitles": "English",
+    "highlights": [
+      "Mammootty Realistic Cop Masterpiece",
+      "Nail-Biting Investigation Procedural",
+      "Sushin Shyam Powerful BGM",
+      "Verified Kannada Audio on JioHotstar"
+    ],
+    "director": "Roby Varghese Raj",
+    "cast": [
+      "Mammootty",
+      "Rony David",
+      "Shabareesh Varma",
+      "Azees Nedumangad"
+    ],
+    "trailer_youtube_id": "j7uWUMd_ItE",
+    "scene_clip": "North India Village Narrow Alley Chase & Raid (30s Spotlight)",
+    "hero_name": "Mammootty",
+    "watchProviders": {
+      "link": "https://www.hotstar.com/in/movies/kannur-squad/1260156780",
+      "flatrate": [
+        {
+          "provider_id": 122,
+          "provider_name": "JioHotstar",
+          "logo_path": "",
+          "display_priority": 1,
+          "directUrl": "https://www.hotstar.com/in/movies/kannur-squad/1260156780"
+        }
+      ]
+    }
+  },
+  {
+    "id": 217,
+    "title": "King of Kotha",
+    "original_title": "King of Kotha",
+    "original_language": "ml",
+    "overview": "In the crime-infested town of Kotha, circle inspector Shahul schemes to bring back Raju, an exiled kingpin and former undisputed ruler, to overthrow a ruthless drug mafia lord.",
+    "poster_path": "/posters/217.svg",
+    "backdrop_path": "/posters/217.svg",
+    "vote_average": 7.6,
+    "vote_count": 9800,
+    "release_date": "2023-08-24",
+    "genre_ids": [
+      28,
+      80,
+      18
+    ],
+    "popularity": 89,
+    "adult": false,
+    "isKannada": false,
+    "hasKannadaDub": true,
+    "age_rating": "U/A 16+",
+    "quality": "Full HD 1080p • Dolby 5.1",
+    "audio": "ಕನ್ನಡ (Dubbed)",
+    "subtitles": "English",
+    "highlights": [
+      "Dulquer Salmaan Mass Action Avatar",
+      "High-Voltage 90s Retro Gangster Drama",
+      "Grand Scale Sets & Action",
+      "Verified Kannada Audio on JioHotstar"
+    ],
+    "director": "Abhilash Joshiy",
+    "cast": [
+      "Dulquer Salmaan",
+      "Shabeer Kallarakkal",
+      "Prasanna",
+      "Aishwarya Lekshmi"
+    ],
+    "trailer_youtube_id": "dljEVygvwG8",
+    "scene_clip": "Raju Return to Kotha Market Fight (30s Spotlight)",
+    "hero_name": "Dulquer Salmaan",
+    "watchProviders": {
+      "link": "https://www.hotstar.com/in/movies/king-of-kotha/1260153659",
+      "flatrate": [
+        {
+          "provider_id": 122,
+          "provider_name": "JioHotstar",
+          "logo_path": "",
+          "display_priority": 1,
+          "directUrl": "https://www.hotstar.com/in/movies/king-of-kotha/1260153659"
+        }
+      ]
+    }
+  },
+  {
+    "id": 218,
+    "title": "Bro Daddy",
+    "original_title": "Bro Daddy",
+    "original_language": "ml",
+    "overview": "John and his son Eby share an unusually youthful, brotherly bond. When sudden unexpected news about Eby's love life arrives, John orchestrates comic chaos to fix family matters.",
+    "poster_path": "/posters/218.svg",
+    "backdrop_path": "/posters/218.svg",
+    "vote_average": 8.1,
+    "vote_count": 12400,
+    "release_date": "2022-01-26",
+    "genre_ids": [
+      35,
+      18,
+      10751
+    ],
+    "popularity": 91,
+    "adult": false,
+    "isKannada": false,
+    "hasKannadaDub": true,
+    "age_rating": "U",
+    "quality": "Full HD 1080p • Dolby 5.1",
+    "audio": "ಕನ್ನಡ (Dubbed)",
+    "subtitles": "English",
+    "highlights": [
+      "Mohanlal & Prithviraj Sparkling Chemistry",
+      "Wholesome Family Comedy Hit",
+      "Kalyani Priyadarshan & Meena Duo",
+      "Verified Kannada Audio on JioHotstar"
+    ],
+    "director": "Prithviraj Sukumaran",
+    "cast": [
+      "Mohanlal",
+      "Prithviraj Sukumaran",
+      "Meena",
+      "Kalyani Priyadarshan"
+    ],
+    "trailer_youtube_id": "zdCLPqEHHew",
+    "scene_clip": "Father and Son Strategy Meeting at Rooftop (30s Spotlight)",
+    "hero_name": "Mohanlal",
+    "watchProviders": {
+      "link": "https://www.hotstar.com/in/movies/bro-daddy/1260080164",
+      "flatrate": [
+        {
+          "provider_id": 122,
+          "provider_name": "JioHotstar",
+          "logo_path": "",
+          "display_priority": 1,
+          "directUrl": "https://www.hotstar.com/in/movies/bro-daddy/1260080164"
+        }
+      ]
+    }
+  },
+  {
+    "id": 219,
+    "title": "12th Man",
+    "original_title": "12th Man",
+    "original_language": "ml",
+    "overview": "Eleven longtime friends gather at an isolated hilltop estate for a bachelor party. When a mysterious death occurs, an uninvited, seemingly drunk cop locks the premises to interrogate every dark secret.",
+    "poster_path": "/posters/219.svg",
+    "backdrop_path": "/posters/219.svg",
+    "vote_average": 8.2,
+    "vote_count": 11800,
+    "release_date": "2022-05-20",
+    "genre_ids": [
+      9648,
+      53,
+      18
+    ],
+    "popularity": 92,
+    "adult": false,
+    "isKannada": false,
+    "hasKannadaDub": true,
+    "age_rating": "U/A 16+",
+    "quality": "Full HD 1080p • Dolby 5.1",
+    "audio": "ಕನ್ನಡ (Dubbed)",
+    "subtitles": "English",
+    "highlights": [
+      "Jeethu Joseph & Mohanlal Mystery Collaboration",
+      "Twists and Mind Tricks Galore",
+      "Phone Game Revelation Sequence",
+      "Verified Kannada Audio on JioHotstar"
+    ],
+    "director": "Jeethu Joseph",
+    "cast": [
+      "Mohanlal",
+      "Unni Mukundan",
+      "Anusree",
+      "Saiju Kurup"
+    ],
+    "trailer_youtube_id": "V81jMFrawAk",
+    "scene_clip": "The Phone Game Revelation & Interrogation Scene (30s Spotlight)",
+    "hero_name": "Mohanlal",
+    "watchProviders": {
+      "link": "https://www.hotstar.com/in/movies/12th-man/1260102069",
+      "flatrate": [
+        {
+          "provider_id": 122,
+          "provider_name": "JioHotstar",
+          "logo_path": "",
+          "display_priority": 1,
+          "directUrl": "https://www.hotstar.com/in/movies/12th-man/1260102069"
+        }
+      ]
+    }
+  },
+  {
+    "id": 220,
+    "title": "Darbar",
+    "original_title": "Darbar",
+    "original_language": "ta",
+    "overview": "Aaditya Arunasalam, a ruthless, rogue Mumbai police commissioner, goes on a rampage to dismantle an international drug cartel and avenge the betrayal of his beloved daughter.",
+    "poster_path": "/posters/220.svg",
+    "backdrop_path": "/posters/220.svg",
+    "vote_average": 7.7,
+    "vote_count": 13500,
+    "release_date": "2020-01-09",
+    "genre_ids": [
+      28,
+      53
+    ],
+    "popularity": 93,
+    "adult": false,
+    "isKannada": false,
+    "hasKannadaDub": true,
+    "age_rating": "U/A 16+",
+    "quality": "Full HD 1080p • Dolby 5.1",
+    "audio": "ಕನ್ನಡ (Dubbed)",
+    "subtitles": "English",
+    "highlights": [
+      "Superstar Rajinikanth Peak Energy & Swag",
+      "AR Murugadoss Fast-Paced Direction",
+      "Anirudh Ravichander Thumping BGM",
+      "Verified Kannada Audio on JioHotstar"
+    ],
+    "director": "A. R. Murugadoss",
+    "cast": [
+      "Rajinikanth",
+      "Nayanthara",
+      "Nivetha Thomas",
+      "Suniel Shetty"
+    ],
+    "trailer_youtube_id": "dwbOoY5PaCc",
+    "scene_clip": "Police Station Mass Sword Confrontation (30s Spotlight)",
+    "hero_name": "Rajinikanth",
+    "watchProviders": {
+      "link": "https://www.hotstar.com/in/movies/darbar/1260020117",
+      "flatrate": [
+        {
+          "provider_id": 122,
+          "provider_name": "JioHotstar",
+          "logo_path": "",
+          "display_priority": 1,
+          "directUrl": "https://www.hotstar.com/in/movies/darbar/1260020117"
+        }
+      ]
+    }
+  },
+  {
+    "id": 221,
+    "title": "Vikram Vedha",
+    "original_title": "Vikram Vedha",
+    "original_language": "hi",
+    "overview": "Vikram, an unyielding and honest police inspector, tracks down Vedha, a notorious and elusive gangster. Upon surrendering, Vedha tells Vikram riddles and stories that blur good and evil.",
+    "poster_path": "/posters/221.svg",
+    "backdrop_path": "/posters/221.svg",
+    "vote_average": 8.1,
+    "vote_count": 14000,
+    "release_date": "2022-09-30",
+    "genre_ids": [
+      28,
+      80,
+      53
+    ],
+    "popularity": 92,
+    "adult": false,
+    "isKannada": false,
+    "hasKannadaDub": true,
+    "age_rating": "U/A 16+",
+    "quality": "Full HD 1080p • Dolby Atmos 5.1",
+    "audio": "ಕನ್ನಡ (Dubbed)",
+    "subtitles": "English",
+    "highlights": [
+      "Hrithik Roshan Ferocious Gangster Act",
+      "Saif Ali Khan Sharp Police Foil",
+      "Mind Games, Morality & Twists",
+      "Verified Kannada Audio on JioCinema"
+    ],
+    "director": "Pushkar-Gayathri",
+    "cast": [
+      "Hrithik Roshan",
+      "Saif Ali Khan",
+      "Radhika Apte",
+      "Rohit Saraf"
+    ],
+    "trailer_youtube_id": "hpwnlr-ZHB0",
+    "scene_clip": "Police Station Surrender & First Riddle Story (30s Spotlight)",
+    "hero_name": "Hrithik Roshan",
+    "watchProviders": {
+      "link": "https://www.jiocinema.com/movies/vikram-vedha/3739775",
+      "flatrate": [
+        {
+          "provider_id": 220,
+          "provider_name": "JioCinema",
+          "logo_path": "",
+          "display_priority": 1,
+          "directUrl": "https://www.jiocinema.com/movies/vikram-vedha/3739775"
         }
       ]
     }
