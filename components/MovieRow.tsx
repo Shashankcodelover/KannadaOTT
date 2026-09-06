@@ -13,17 +13,17 @@ interface MovieRowProps {
 }
 
 export default function MovieRow({ title, emoji, movies, emptyMessage }: MovieRowProps) {
-  const { isWatched, hideWatched, unmarkAsWatched } = useWatched();
+  const { isExcluded, hideWatched } = useWatched();
 
-  const visibleMovies = hideWatched ? movies.filter((m) => !isWatched(m.id)) : movies;
-  const watchedCountInThisRow = movies.filter((m) => isWatched(m.id)).length;
+  const visibleMovies = hideWatched ? movies.filter((m) => !isExcluded(m.id)) : movies;
+  const excludedCountInThisRow = movies.filter((m) => isExcluded(m.id)).length;
 
   if (movies.length === 0) {
     return null;
   }
 
-  // If all movies in this row were marked as watched and hidden
-  if (visibleMovies.length === 0 && watchedCountInThisRow > 0) {
+  // If all movies in this row were marked as watched or dismissed and hidden
+  if (visibleMovies.length === 0 && excludedCountInThisRow > 0) {
     return (
       <section className="mb-8 px-4 sm:px-6 lg:px-8">
         <div className="p-3.5 rounded-xl bg-zinc-900/50 border border-zinc-800/80 flex items-center justify-between">
@@ -31,10 +31,10 @@ export default function MovieRow({ title, emoji, movies, emptyMessage }: MovieRo
             <span>{emoji || '🎬'}</span>
             <span className="text-zinc-400 text-sm font-semibold">{title}</span>
             <span className="text-emerald-400 text-xs font-bold bg-emerald-950/50 px-2 py-0.5 rounded-full border border-emerald-800/40">
-              ✓ All {watchedCountInThisRow} movies watched
+              ✓ All {excludedCountInThisRow} movies tracked
             </span>
           </div>
-          <span className="text-zinc-500 text-xs">Hidden from feed • In Drafts</span>
+          <span className="text-zinc-500 text-xs">2-Year Anti-Repeat Cooldown Active</span>
         </div>
       </section>
     );
@@ -47,9 +47,9 @@ export default function MovieRow({ title, emoji, movies, emptyMessage }: MovieRo
           {emoji && <span className="mr-2">{emoji}</span>}
           {title}
         </h2>
-        {watchedCountInThisRow > 0 && hideWatched && (
+        {excludedCountInThisRow > 0 && hideWatched && (
           <span className="text-zinc-500 text-xs font-medium">
-            {watchedCountInThisRow} watched hidden
+            {excludedCountInThisRow} tracked in 2-yr cooldown
           </span>
         )}
       </div>

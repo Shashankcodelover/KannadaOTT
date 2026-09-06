@@ -15,13 +15,26 @@ interface MovieCardProps {
 }
 
 export default function MovieCard({ movie }: MovieCardProps) {
-  const { isWatched, markAsWatched, unmarkAsWatched, hideWatched } = useWatched();
+  const {
+    isWatched,
+    isLiked,
+    isExcluded,
+    markAsWatched,
+    unmarkAsWatched,
+    toggleLike,
+    dismissMovie,
+    hideWatched,
+  } = useWatched();
+
   const watched = isWatched(movie.id);
+  const liked = isLiked(movie.id);
+  const excluded = isExcluded(movie.id);
 
   const [showTrailer, setShowTrailer] = useState(false);
 
-  // If user enabled hiding watched movies and this movie is watched, hide it from discovery
-  if (hideWatched && watched) {
+  // If user enabled hiding watched movies and this movie is excluded by 2-year anti-repeat rule
+  // (Note: Liked movies are never excluded so user can recollect them)
+  if (hideWatched && excluded) {
     return null;
   }
 
@@ -53,6 +66,21 @@ export default function MovieCard({ movie }: MovieCardProps) {
         mainPlatform?.shortName
       );
     }
+  };
+
+  const handleToggleLike = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    toggleLike({ id: movie.id, title: movie.title, poster_path: movie.poster_path });
+  };
+
+  const handleDismiss = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    dismissMovie(
+      { id: movie.id, title: movie.title, poster_path: movie.poster_path },
+      'User dismissed from discovery'
+    );
   };
 
   const handleOpenTrailer = (e: React.MouseEvent) => {
@@ -101,26 +129,51 @@ export default function MovieCard({ movie }: MovieCardProps) {
           )}
         </div>
 
-        {/* Rating & Mark Done Button (Right) */}
+        {/* Action Controls & Rating (Right) */}
         <div className="absolute top-2 right-2 flex flex-col items-end gap-1.5 z-20">
           <span
-            className={`flex items-center gap-1 bg-black/85 backdrop-blur-sm text-xs font-bold px-2 py-1 rounded-full border border-zinc-700 shadow ${ratingColor}`}
+            className={`flex items-center gap-1 bg-black/85 backdrop-blur-sm text-xs font-bold px-2 py-0.5 rounded-full border border-zinc-700 shadow ${ratingColor}`}
           >
             ★ {rating}
           </span>
 
-          {/* Quick 1-Click "Mark as Done / Watched" Button */}
-          <button
-            onClick={handleToggleWatched}
-            title={watched ? 'Marked as watched (moved to Drafts)' : 'Mark as Done / Watched (hides movie)'}
-            className={`flex items-center gap-1 text-[10px] font-bold px-2 py-1 rounded-md shadow-lg transition-all cursor-pointer ${
-              watched
-                ? 'bg-emerald-600 text-white border border-emerald-400'
-                : 'bg-black/70 hover:bg-zinc-800 text-zinc-300 hover:text-white border border-zinc-700 opacity-90 group-hover:opacity-100 hover:scale-105'
-            }`}
-          >
-            <span>{watched ? '✓ Done' : '✓ Watched'}</span>
-          </button>
+          {/* Action Button Row */}
+          <div className="flex items-center gap-1">
+            {/* Like / Recollect Button */}
+            <button
+              onClick={handleToggleLike}
+              title={liked ? 'In your Recollections ❤️ (saved from cooldown)' : 'Save to Liked / Recollect ❤️'}
+              className={`flex items-center justify-center w-6 h-6 rounded-md shadow-lg transition-all cursor-pointer ${
+                liked
+                  ? 'bg-rose-600 text-white border border-rose-400 scale-105'
+                  : 'bg-black/75 hover:bg-zinc-800 text-zinc-300 hover:text-rose-400 border border-zinc-700 opacity-90 group-hover:opacity-100 hover:scale-110'
+              }`}
+            >
+              <span className="text-[11px] leading-none">{liked ? '❤️' : '🤍'}</span>
+            </button>
+
+            {/* Quick 1-Click "Mark as Done / Watched" Button */}
+            <button
+              onClick={handleToggleWatched}
+              title={watched ? 'Marked as watched (2-year anti-repeat active)' : 'Mark as Done (2-year cooldown)'}
+              className={`flex items-center gap-0.5 text-[10px] font-bold px-1.5 py-1 rounded-md shadow-lg transition-all cursor-pointer ${
+                watched
+                  ? 'bg-emerald-600 text-white border border-emerald-400'
+                  : 'bg-black/75 hover:bg-zinc-800 text-zinc-300 hover:text-white border border-zinc-700 opacity-90 group-hover:opacity-100 hover:scale-105'
+              }`}
+            >
+              <span>{watched ? '✓ Done' : '✓'}</span>
+            </button>
+
+            {/* Quick Dismiss Button */}
+            <button
+              onClick={handleDismiss}
+              title="Dismiss from feed for 2 years"
+              className="flex items-center justify-center w-5 h-6 rounded-md shadow-lg bg-black/75 hover:bg-red-950 text-zinc-400 hover:text-red-400 border border-zinc-700 opacity-80 group-hover:opacity-100 hover:scale-105 transition-all cursor-pointer text-[10px]"
+            >
+              ✕
+            </button>
+          </div>
         </div>
 
         {/* Quality indicator on image bottom */}

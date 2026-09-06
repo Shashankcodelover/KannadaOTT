@@ -10,7 +10,7 @@ import { useWatched } from '@/context/WatchedContext';
 export default function Navbar() {
   const router = useRouter();
   const pathname = usePathname();
-  const { watchedList, setDraftsOpen, hideWatched, setHideWatched } = useWatched();
+  const { watchedList, likedList, setDraftsOpen, hideWatched, setHideWatched } = useWatched();
   const [searchQuery, setSearchQuery] = useState('');
   const [showSearch, setShowSearch] = useState(false);
   const searchRef = useRef<HTMLInputElement>(null);
@@ -120,16 +120,21 @@ export default function Navbar() {
             </button>
           )}
 
-          {/* Watched / Drafts Button */}
+          {/* 2-Year Anti-Repeat Tracker & Recollections Button */}
           <button
             onClick={() => setDraftsOpen(true)}
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-zinc-900 border border-zinc-700 hover:border-zinc-500 text-zinc-300 hover:text-white transition-all cursor-pointer shadow"
-            title="View watched movies stored in drafts"
+            title="View 2-Year Anti-Repeat Tracker & Recollections"
           >
-            <span>📋 Watched</span>
+            <span>🛡️ 2-Yr Tracker</span>
             {watchedList.length > 0 && (
               <span className="bg-emerald-500 text-black text-[10px] font-black px-1.5 py-0.2 rounded-full">
                 {watchedList.length}
+              </span>
+            )}
+            {likedList.length > 0 && (
+              <span className="text-rose-400 text-xs">
+                ❤️{likedList.length}
               </span>
             )}
           </button>

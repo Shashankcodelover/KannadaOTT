@@ -47,20 +47,22 @@ console.log(`Loaded ${catalog.length} catalog entries.\n`);
 let passCount = 0;
 let failCount = 0;
 
-async function fetchWithRetry(url, options = {}, retries = 3) {
+async function fetchWithRetry(url, options = {}, retries = 4) {
   for (let i = 0; i <= retries; i++) {
     try {
       const res = await fetch(url, options);
-      if (res.status === 200 || i === retries) return res;
-      await new Promise((r) => setTimeout(r, 500));
+      if (res.status === 200) return res;
+      if (i === retries) return res;
+      await new Promise((r) => setTimeout(r, 600 * (i + 1)));
     } catch (err) {
       if (i === retries) throw err;
-      await new Promise((r) => setTimeout(r, 700));
+      await new Promise((r) => setTimeout(r, 800 * (i + 1)));
     }
   }
 }
 
 for (const m of catalog) {
+  await new Promise((r) => setTimeout(r, 150));
   console.log(`\n--- [ID ${m.id}] ${m.title} ---`);
 
   // CHECK 3: YouTube Trailer Verification
@@ -106,6 +108,9 @@ for (const m of catalog) {
 
   // CHECK 1 & CHECK 2: Live HTTP 200 & Content Title Check
   try {
+    if (m.url.includes('zee5.com')) {
+      await new Promise((r) => setTimeout(r, 750));
+    }
     const res = await fetchWithRetry(m.url, {
       headers: {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',

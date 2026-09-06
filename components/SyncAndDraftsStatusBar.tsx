@@ -72,13 +72,13 @@ export default function SyncAndDraftsStatusBar({ totalCount = 39 }: SyncAndDraft
         </div>
       )}
 
-      {/* Watched Movies Avoidance Notice (Shows when user has marked movies as watched) */}
-      {watchedList.length > 0 && (
+      {/* 2-Year Anti-Repeat Status Strip */}
+      {(watchedList.length > 0) && (
         <div className="flex flex-wrap items-center justify-between gap-3 p-3 bg-gradient-to-r from-zinc-900 to-zinc-900/60 border border-emerald-900/40 rounded-xl text-xs">
           <div className="flex items-center gap-2">
-            <span className="text-emerald-400">✓</span>
+            <span className="text-emerald-400">🛡️</span>
             <span className="text-zinc-300 font-medium">
-              <strong>{watchedList.length} watched movie{watchedList.length === 1 ? '' : 's'}</strong> hidden from discovery feed (stored under Drafts for 7 days).
+              <strong>{watchedList.length} movie{watchedList.length === 1 ? '' : 's'}</strong> locked into 2-Year Anti-Repeat Cycle (730-day cooldown). Won&apos;t repeat on rerun or sync.
             </span>
           </div>
 
@@ -90,14 +90,14 @@ export default function SyncAndDraftsStatusBar({ totalCount = 39 }: SyncAndDraft
                 onChange={(e) => setHideWatched(e.target.checked)}
                 className="rounded bg-zinc-800 border-zinc-700 text-emerald-500 focus:ring-emerald-400 h-3.5 w-3.5"
               />
-              <span>Hide Watched</span>
+              <span>Hide Tracked</span>
             </label>
             <span>•</span>
             <button
               onClick={() => setDraftsOpen(true)}
               className="text-amber-400 hover:text-amber-300 font-bold underline underline-offset-2 cursor-pointer"
             >
-              Open Watched Drafts ➔
+              Open 2-Yr Tracker ➔
             </button>
           </div>
         </div>
