@@ -64,58 +64,6 @@ export const CURATED_MOVIES: (MovieWithProviders & { isUpcoming?: boolean })[] =
     }
   },
   {
-    "id": 102,
-    "title": "Kaatera",
-    "original_title": "Kaatera",
-    "original_language": "kn",
-    "overview": "In 1970s rural Karnataka, a blacksmith named Kaatera takes a daring stand against feudal landlords to protect the rights and dignity of oppressed farmers.",
-    "poster_path": "/posters/102.jpg",
-    "backdrop_path": "/posters/102.jpg",
-    "vote_average": 8.1,
-    "vote_count": 9800,
-    "release_date": "2023-12-29",
-    "genre_ids": [
-      28,
-      18
-    ],
-    "popularity": 95,
-    "adult": false,
-    "isKannada": true,
-    "hasKannadaDub": true,
-    "age_rating": "U/A 16+",
-    "quality": "Full HD 1080p • Dolby 5.1",
-    "audio": "ಕನ್ನಡ (Original)",
-    "subtitles": "English",
-    "highlights": [
-      "All-Time Industry Hit 2024",
-      "Powerful Land Reform Drama",
-      "Darshan Mass Performance",
-      "Record-Breaking Run"
-    ],
-    "director": "Tharun Sudhir",
-    "cast": [
-      "Darshan",
-      "Aradhana Ram",
-      "Jagapathi Babu",
-      "Kumar Govind"
-    ],
-    "trailer_youtube_id": "L1KYlnMRtqc",
-    "scene_clip": "Kaatera Blacksmith Workshop Declaration Scene (30s Spotlight)",
-    "hero_name": "Darshan",
-    "watchProviders": {
-      "link": "https://www.zee5.com/movies/details/kaatera/0-0-1z5508837",
-      "flatrate": [
-        {
-          "provider_id": 232,
-          "provider_name": "Zee5",
-          "logo_path": "",
-          "display_priority": 1,
-          "directUrl": "https://www.zee5.com/movies/details/kaatera/0-0-1z5508837"
-        }
-      ]
-    }
-  },
-  {
     "id": 103,
     "title": "Vikrant Rona",
     "original_title": "Vikrant Rona",
@@ -267,58 +215,6 @@ export const CURATED_MOVIES: (MovieWithProviders & { isUpcoming?: boolean })[] =
           "logo_path": "",
           "display_priority": 1,
           "directUrl": "https://www.zee5.com/movies/details/ghost/0-0-1z5465536"
-        }
-      ]
-    }
-  },
-  {
-    "id": 106,
-    "title": "Vedha",
-    "original_title": "Vedha",
-    "original_language": "kn",
-    "overview": "In 1980s rural Karnataka, Vedha and his fierce daughter embark on a violent journey of justice and vengeance against predators, uncovering haunting secrets.",
-    "poster_path": "/posters/106.jpg",
-    "backdrop_path": "/posters/106.jpg",
-    "vote_average": 7.5,
-    "vote_count": 5800,
-    "release_date": "2022-12-23",
-    "genre_ids": [
-      28,
-      18
-    ],
-    "popularity": 84,
-    "adult": false,
-    "isKannada": true,
-    "hasKannadaDub": true,
-    "age_rating": "A (18+)",
-    "quality": "Full HD 1080p • Dolby 5.1",
-    "audio": "ಕನ್ನಡ (Original)",
-    "subtitles": "English",
-    "highlights": [
-      "Shiva Rajkumar 125th Milestone Film",
-      "Raw Revenge Drama",
-      "Empowering Female Vigilantes",
-      "Sensational BGM"
-    ],
-    "director": "A. Harsha",
-    "cast": [
-      "Dr. Shiva Rajkumar",
-      "Ganavi Laxman",
-      "Umashree",
-      "Shwetha Chengappa"
-    ],
-    "trailer_youtube_id": "kWG33LopAOc",
-    "scene_clip": "Vedha Rustic Sickle Fight & Protect Sequence (30s Spotlight)",
-    "hero_name": "Dr. Shiva Rajkumar",
-    "watchProviders": {
-      "link": "https://www.zee5.com/movies/details/vedha/0-0-1z5294923",
-      "flatrate": [
-        {
-          "provider_id": 232,
-          "provider_name": "Zee5",
-          "logo_path": "",
-          "display_priority": 1,
-          "directUrl": "https://www.zee5.com/movies/details/vedha/0-0-1z5294923"
         }
       ]
     }
@@ -481,59 +377,6 @@ export const CURATED_MOVIES: (MovieWithProviders & { isUpcoming?: boolean })[] =
     }
   },
   {
-    "id": 111,
-    "title": "Bhajarangi 2",
-    "original_title": "Bhajarangi 2",
-    "original_language": "kn",
-    "overview": "Anji, an everyday forest dweller, stands up to ruthless black-magic warlords exploiting innocent villagers and sacred medicinal herbs in a rich fantasy kingdom.",
-    "poster_path": "/posters/111.jpg",
-    "backdrop_path": "/posters/111.jpg",
-    "vote_average": 7.3,
-    "vote_count": 6100,
-    "release_date": "2021-10-29",
-    "genre_ids": [
-      28,
-      14,
-      12
-    ],
-    "popularity": 83,
-    "adult": false,
-    "isKannada": true,
-    "hasKannadaDub": true,
-    "age_rating": "U/A 16+",
-    "quality": "Full HD 1080p • Dolby 5.1",
-    "audio": "ಕನ್ನಡ (Original)",
-    "subtitles": "English",
-    "highlights": [
-      "Grand Visual Fantasy World",
-      "Shiva Rajkumar High-Energy Heroism",
-      "Rich Folklore & Mythology",
-      "Memorable Character Designs"
-    ],
-    "director": "A. Harsha",
-    "cast": [
-      "Dr. Shiva Rajkumar",
-      "Bhavana Menon",
-      "Shruthi",
-      "Saurav Lokesh"
-    ],
-    "trailer_youtube_id": "CcrdrVx2VDs",
-    "scene_clip": "Forest Battle with Sacred Herbs Sequence (30s Spotlight)",
-    "hero_name": "Dr. Shiva Rajkumar",
-    "watchProviders": {
-      "link": "https://www.zee5.com/movies/details/bhajarangi-2/0-0-1z560890",
-      "flatrate": [
-        {
-          "provider_id": 232,
-          "provider_name": "Zee5",
-          "logo_path": "",
-          "display_priority": 1,
-          "directUrl": "https://www.zee5.com/movies/details/bhajarangi-2/0-0-1z560890"
-        }
-      ]
-    }
-  },
-  {
     "id": 112,
     "title": "The Villain",
     "original_title": "The Villain",
@@ -638,105 +481,106 @@ export const CURATED_MOVIES: (MovieWithProviders & { isUpcoming?: boolean })[] =
     }
   },
   {
-    "id": 201,
-    "title": "RRR",
-    "original_title": "RRR",
-    "original_language": "te",
-    "overview": "A fictionalized chronicle of two legendary Indian revolutionaries — Alluri Sitarama Raju and Komaram Bheem — and their historic fight against the British Raj in 1920s India.",
-    "poster_path": "/posters/201.jpg",
-    "backdrop_path": "/posters/201.jpg",
-    "vote_average": 8.8,
-    "vote_count": 24000,
-    "release_date": "2022-03-25",
+    "id": 114,
+    "title": "Maanikya",
+    "original_title": "Maanikya",
+    "original_language": "kn",
+    "overview": "Vijay, an idealistic martial arts trainer in the city, returns to his ancestral village to bridge the rift between his estranged father and their bitter rivals, bringing peace through mass heroism and compassion.",
+    "poster_path": "/posters/114.jpg",
+    "backdrop_path": "/posters/114.jpg",
+    "vote_average": 8.4,
+    "vote_count": 12000,
+    "release_date": "2014-05-01",
     "genre_ids": [
       28,
-      18
-    ],
-    "popularity": 99,
-    "adult": false,
-    "isKannada": false,
-    "hasKannadaDub": true,
-    "age_rating": "U/A 16+",
-    "quality": "Full HD 1080p • Dolby 5.1",
-    "audio": "ಕನ್ನಡ (Dubbed)",
-    "subtitles": "English",
-    "highlights": [
-      "Academy Award & Golden Globe Winner",
-      "Jr. NTR & Ram Charan Colossus",
-      "SS Rajamouli Visual Masterpiece",
-      "Official Kannada Audio on Zee5"
-    ],
-    "director": "S. S. Rajamouli",
-    "cast": [
-      "Jr. NTR",
-      "Ram Charan",
-      "Alia Bhatt",
-      "Ajay Devgn"
-    ],
-    "trailer_youtube_id": "dL0w9pRyMJw",
-    "scene_clip": "Komaram Bheem Wild Animals Attack Sequence (30s Spotlight)",
-    "hero_name": "Jr. NTR",
-    "watchProviders": {
-      "link": "https://www.zee5.com/movies/details/rrr-kannada/0-0-1z5148988",
-      "flatrate": [
-        {
-          "provider_id": 232,
-          "provider_name": "Zee5",
-          "logo_path": "",
-          "display_priority": 1,
-          "directUrl": "https://www.zee5.com/movies/details/rrr-kannada/0-0-1z5148988"
-        }
-      ]
-    }
-  },
-  {
-    "id": 202,
-    "title": "12th Fail",
-    "original_title": "12th Fail",
-    "original_language": "hi",
-    "overview": "Based on the inspiring real-life journey of IPS officer Manoj Kumar Sharma, who restarts his academic journey from scratch in Delhi Mukherjee Nagar after failing his 12th standard exams.",
-    "poster_path": "/posters/202.jpg",
-    "backdrop_path": "/posters/202.jpg",
-    "vote_average": 8.9,
-    "vote_count": 18900,
-    "release_date": "2023-10-27",
-    "genre_ids": [
       18,
       10751
     ],
     "popularity": 96,
     "adult": false,
-    "isKannada": false,
+    "isKannada": true,
     "hasKannadaDub": true,
-    "age_rating": "U",
+    "age_rating": "U/A 13+",
     "quality": "Full HD 1080p • Dolby 5.1",
-    "audio": "ಕನ್ನಡ (Dubbed)",
+    "audio": "ಕನ್ನಡ (Original)",
     "subtitles": "English",
     "highlights": [
-      "National Award Winning Masterpiece",
-      "Pure Inspiration & Grit",
-      "Flawless Kannada Dubbing",
-      "Critically Acclaimed"
+      "Kichcha Sudeep & V. Ravichandran Mega Blockbuster",
+      "Mass Action Family Classic",
+      "High Octane Action & Emotion",
+      "All-Time Kannada Mass Favorite"
     ],
-    "director": "Vidhu Vinod Chopra",
+    "director": "Kichcha Sudeep",
     "cast": [
-      "Vikrant Massey",
-      "Medha Shankr",
-      "Anant V Joshi",
-      "Anshumaan Pushkar"
+      "Kichcha Sudeep",
+      "V. Ravichandran",
+      "Varalaxmi Sarathkumar",
+      "Ranya Rao"
     ],
-    "trailer_youtube_id": "KjbtuqENvVE",
-    "scene_clip": "UPSC Final Interview Truth Confession (30s Spotlight)",
-    "hero_name": "Vikrant Massey",
+    "trailer_youtube_id": "-VVm4Z6qzys",
+    "scene_clip": "Kichcha Sudeep & Ravichandran Father-Son Mass Elevation Scene (30s Spotlight)",
+    "hero_name": "Kichcha Sudeep",
     "watchProviders": {
-      "link": "https://www.hotstar.com/in/movies/12th-fail/1260159987",
+      "link": "https://www.hotstar.com/in/movies/maanikya/1000037626",
       "flatrate": [
         {
           "provider_id": 122,
           "provider_name": "JioHotstar",
           "logo_path": "",
           "display_priority": 1,
-          "directUrl": "https://www.hotstar.com/in/movies/12th-fail/1260159987"
+          "directUrl": "https://www.hotstar.com/in/movies/maanikya/1000037626"
+        }
+      ]
+    }
+  },
+  {
+    "id": 115,
+    "title": "Kshetrapati",
+    "original_title": "Kshetrapati",
+    "original_language": "kn",
+    "overview": "Basava, an ambitious agricultural engineering graduate, is propelled into a fierce modern struggle against corporate agrarian exploitation and a corrupt administrative system after a personal tragedy, igniting a powerful mass youth movement.",
+    "poster_path": "/posters/115.jpg",
+    "backdrop_path": "/posters/115.jpg",
+    "vote_average": 8,
+    "vote_count": 5200,
+    "release_date": "2023-08-18",
+    "genre_ids": [
+      28,
+      18
+    ],
+    "popularity": 88,
+    "adult": false,
+    "isKannada": true,
+    "hasKannadaDub": true,
+    "age_rating": "U/A 13+",
+    "quality": "Full HD 1080p • Dolby 5.1",
+    "audio": "ಕನ್ನಡ (Original)",
+    "subtitles": "English",
+    "highlights": [
+      "Contemporary Youth Mass Revolution",
+      "Naveen Shankar Intense Performance",
+      "Gripping Social Action Drama",
+      "Ravi Basrur Background Score"
+    ],
+    "director": "Shrikant Katagi",
+    "cast": [
+      "Naveen Shankar",
+      "Archana Jois",
+      "Achyuth Kumar",
+      "Rahul Ainapur"
+    ],
+    "trailer_youtube_id": "UPDvOo75FV8",
+    "scene_clip": "Basava Powerful Collector Office Mass Confrontation (30s Spotlight)",
+    "hero_name": "Naveen Shankar",
+    "watchProviders": {
+      "link": "https://www.hotstar.com/in/movies/kshetrapati/1260156942",
+      "flatrate": [
+        {
+          "provider_id": 122,
+          "provider_name": "JioHotstar",
+          "logo_path": "",
+          "display_priority": 1,
+          "directUrl": "https://www.hotstar.com/in/movies/kshetrapati/1260156942"
         }
       ]
     }
@@ -949,215 +793,6 @@ export const CURATED_MOVIES: (MovieWithProviders & { isUpcoming?: boolean })[] =
           "logo_path": "",
           "display_priority": 1,
           "directUrl": "https://www.hotstar.com/in/movies/vikram/1260106598"
-        }
-      ]
-    }
-  },
-  {
-    "id": 207,
-    "title": "Sita Ramam",
-    "original_title": "Sita Ramam",
-    "original_language": "te",
-    "overview": "Lieutenant Ram, an orphaned army officer serving at Kashmir border, receives an anonymous letter from a girl named Sita Mahalakshmi. Love blossoms across distances and borders.",
-    "poster_path": "/posters/207.jpg",
-    "backdrop_path": "/posters/207.jpg",
-    "vote_average": 8.6,
-    "vote_count": 14200,
-    "release_date": "2022-08-05",
-    "genre_ids": [
-      18,
-      10749
-    ],
-    "popularity": 93,
-    "adult": false,
-    "isKannada": false,
-    "hasKannadaDub": true,
-    "age_rating": "U",
-    "quality": "Full HD 1080p • Dolby 5.1",
-    "audio": "ಕನ್ನಡ (Dubbed)",
-    "subtitles": "English",
-    "highlights": [
-      "Pure Poetic Romance",
-      "Dulquer Salmaan & Mrunal Thakur",
-      "Timeless Music by Vishal Chandrashekhar",
-      "Verified Kannada Audio on JioHotstar"
-    ],
-    "director": "Hanu Raghavapudi",
-    "cast": [
-      "Dulquer Salmaan",
-      "Mrunal Thakur",
-      "Rashmika Mandanna",
-      "Sumanth"
-    ],
-    "trailer_youtube_id": "qYgjjBg_84w",
-    "scene_clip": "Ram Writing Letter to Sita (30s Spotlight)",
-    "hero_name": "Dulquer Salmaan",
-    "watchProviders": {
-      "link": "https://www.hotstar.com/in/movies/sita-ramam/1260117823",
-      "flatrate": [
-        {
-          "provider_id": 122,
-          "provider_name": "JioHotstar",
-          "logo_path": "",
-          "display_priority": 1,
-          "directUrl": "https://www.hotstar.com/in/movies/sita-ramam/1260117823"
-        }
-      ]
-    }
-  },
-  {
-    "id": 208,
-    "title": "Bramayugam",
-    "original_title": "Bramayugam",
-    "original_language": "ml",
-    "overview": "In 17th-century Malabar, Thevan, a folk singer escaping slavery, stumbles upon a mysterious, decaying manor ruled by Kodumon Potti, where sinister secrets bind him to the house.",
-    "poster_path": "/posters/208.jpg",
-    "backdrop_path": "/posters/208.jpg",
-    "vote_average": 8.2,
-    "vote_count": 10500,
-    "release_date": "2024-02-15",
-    "genre_ids": [
-      27,
-      9648,
-      53
-    ],
-    "popularity": 90,
-    "adult": false,
-    "isKannada": false,
-    "hasKannadaDub": true,
-    "age_rating": "U/A 16+",
-    "quality": "Full HD 1080p • Monochrome B&W",
-    "audio": "ಕನ್ನಡ (Dubbed)",
-    "subtitles": "English",
-    "highlights": [
-      "Mammootty Iconic Negative Masterpiece",
-      "Unique Black-and-White Atmospheric Horror",
-      "Folklore Chaathan Mystery",
-      "Verified Kannada Audio on SonyLIV"
-    ],
-    "director": "Rahul Sadasivan",
-    "cast": [
-      "Mammootty",
-      "Arjun Ashokan",
-      "Sidharth Bharathan",
-      "Amalda Liz"
-    ],
-    "trailer_youtube_id": "oBs5uFJqb8U",
-    "scene_clip": "Kodumon Potti Dice Game & Laughter (30s Spotlight)",
-    "hero_name": "Mammootty",
-    "watchProviders": {
-      "link": "https://www.sonyliv.com/movies/bramayugam-kannada-1000268815",
-      "flatrate": [
-        {
-          "provider_id": 237,
-          "provider_name": "SonyLIV",
-          "logo_path": "",
-          "display_priority": 1,
-          "directUrl": "https://www.sonyliv.com/movies/bramayugam-kannada-1000268815"
-        }
-      ]
-    }
-  },
-  {
-    "id": 209,
-    "title": "Boxing Parampare (Sarpatta)",
-    "original_title": "Sarpatta Parambarai",
-    "original_language": "ta",
-    "overview": "In 1970s North Madras, Kabilan, a young port worker belonging to the Sarpatta clan, rises above systemic oppression and personal setbacks to reclaim his clan’s boxing legacy.",
-    "poster_path": "/posters/209.jpg",
-    "backdrop_path": "/posters/209.jpg",
-    "vote_average": 8.4,
-    "vote_count": 12500,
-    "release_date": "2021-07-22",
-    "genre_ids": [
-      28,
-      18
-    ],
-    "popularity": 88,
-    "adult": false,
-    "isKannada": false,
-    "hasKannadaDub": true,
-    "age_rating": "U/A 16+",
-    "quality": "Full HD 1080p • Dolby 5.1",
-    "audio": "ಕನ್ನಡ (Dubbed)",
-    "subtitles": "English",
-    "highlights": [
-      "Pa. Ranjith Directorial Powerhouse",
-      "Arya Peak Physical Transformation",
-      "Rangan Vaathiyar Iconic Role",
-      "Verified Kannada Audio on Zee5"
-    ],
-    "director": "Pa. Ranjith",
-    "cast": [
-      "Arya",
-      "Pasupathy",
-      "John Kokken",
-      "Dushara Vijayan"
-    ],
-    "trailer_youtube_id": "4CBqbZchVwM",
-    "scene_clip": "Kabilan Ring Entrance & Boxing Climax Round (30s Spotlight)",
-    "hero_name": "Arya",
-    "watchProviders": {
-      "link": "https://www.zee5.com/movies/details/boxing-parampare/0-0-1z5113598",
-      "flatrate": [
-        {
-          "provider_id": 232,
-          "provider_name": "Zee5",
-          "logo_path": "",
-          "display_priority": 1,
-          "directUrl": "https://www.zee5.com/movies/details/boxing-parampare/0-0-1z5113598"
-        }
-      ]
-    }
-  },
-  {
-    "id": 210,
-    "title": "Har Har Mahadev",
-    "original_title": "Har Har Mahadev",
-    "original_language": "mr",
-    "overview": "The inspiring historical tale of Baji Prabhu Deshpande and Chhatrapati Shivaji Maharaj, culminating in the heroic last stand at the Battle of Pavan Khind.",
-    "poster_path": "/posters/210.jpg",
-    "backdrop_path": "/posters/210.jpg",
-    "vote_average": 7.7,
-    "vote_count": 4900,
-    "release_date": "2022-10-25",
-    "genre_ids": [
-      28,
-      18,
-      36
-    ],
-    "popularity": 80,
-    "adult": false,
-    "isKannada": false,
-    "hasKannadaDub": true,
-    "age_rating": "U/A 13+",
-    "quality": "Full HD 1080p • Dolby 5.1",
-    "audio": "ಕನ್ನಡ (Dubbed)",
-    "subtitles": "English",
-    "highlights": [
-      "First Marathi Film Dubbed in Kannada",
-      "Sharad Kelkar Magnificent Performance",
-      "Authentic Maratha History",
-      "Verified Kannada Audio on Zee5"
-    ],
-    "director": "Abhijeet Deshpande",
-    "cast": [
-      "Sharad Kelkar",
-      "Subodh Bhave",
-      "Amruta Khanvilkar"
-    ],
-    "trailer_youtube_id": "vo2tqdXvI6M",
-    "scene_clip": "Pavan Khind Pass Defense War Cry (30s Spotlight)",
-    "hero_name": "Sharad Kelkar",
-    "watchProviders": {
-      "link": "https://www.zee5.com/movies/details/har-har-mahadev-kannada/0-0-1z5264530",
-      "flatrate": [
-        {
-          "provider_id": 232,
-          "provider_name": "Zee5",
-          "logo_path": "",
-          "display_priority": 1,
-          "directUrl": "https://www.zee5.com/movies/details/har-har-mahadev-kannada/0-0-1z5264530"
         }
       ]
     }
@@ -1740,7 +1375,8 @@ export const CURATED_MOVIES: (MovieWithProviders & { isUpcoming?: boolean })[] =
         }
       ]
     }
-  },  {
+  },
+  {
     "id": 222,
     "title": "Lover",
     "original_title": "Lover",
@@ -2109,22 +1745,232 @@ export const CURATED_MOVIES: (MovieWithProviders & { isUpcoming?: boolean })[] =
     }
   },
   {
-    "id": 229,
-    "title": "Bimbisara",
-    "original_title": "Bimbisara",
-    "original_language": "te",
-    "overview": "A ruthless and tyrannical 5th-century BC emperor is cursed and time-transported into modern-day Hyderabad, where he must confront the consequences of his cruelty.",
-    "poster_path": "/posters/229.jpg",
-    "backdrop_path": "/posters/229.jpg",
+    "id": 230,
+    "title": "Turbo",
+    "original_title": "Turbo",
+    "original_language": "ml",
+    "overview": "Turbo Jose, an affable jeep driver with brute fighting strength, gets embroiled in a high-stakes financial conspiracy in Chennai and takes on a ruthless corporate kingpin with unstoppable mass action.",
+    "poster_path": "/posters/230.jpg",
+    "backdrop_path": "/posters/230.jpg",
     "vote_average": 7.9,
-    "vote_count": 10400,
-    "release_date": "2022-08-05",
+    "vote_count": 8900,
+    "release_date": "2024-05-23",
     "genre_ids": [
-      14,
       28,
-      12
+      35
     ],
-    "popularity": 93,
+    "popularity": 96,
+    "adult": false,
+    "isKannada": false,
+    "hasKannadaDub": true,
+    "age_rating": "U/A 16+",
+    "quality": "Full HD 1080p • Dolby 5.1",
+    "audio": "ಕನ್ನಡ (Dubbed), മലയാളം",
+    "subtitles": "English, ಕನ್ನಡ",
+    "highlights": [
+      "Mammootty Electrifying Mass Action",
+      "High Voltage Chase & Fight Sequences",
+      "Raj B. Shetty Slick Villain Avatar",
+      "Modern Action Comedy Blockbuster"
+    ],
+    "director": "Vysakh",
+    "cast": [
+      "Mammootty",
+      "Raj B. Shetty",
+      "Sunil",
+      "Anjana Jayaprakash"
+    ],
+    "trailer_youtube_id": "LOE8ESPIMpE",
+    "scene_clip": "Turbo Jose Epic Market Mass Brawl Sequence (30s Spotlight)",
+    "hero_name": "Mammootty",
+    "watchProviders": {
+      "link": "https://www.sonyliv.com/movies/turbo-1000282464",
+      "flatrate": [
+        {
+          "provider_id": 237,
+          "provider_name": "SonyLIV",
+          "logo_path": "",
+          "display_priority": 1,
+          "directUrl": "https://www.sonyliv.com/movies/turbo-1000282464"
+        }
+      ]
+    }
+  },
+  {
+    "id": 231,
+    "title": "Salute",
+    "original_title": "Salute",
+    "original_language": "ml",
+    "overview": "A principled police sub-inspector goes on voluntary leave after being coerced into framing an innocent man, embarking on a gritty, solitary investigation to hunt down a phantom serial killer.",
+    "poster_path": "/posters/231.jpg",
+    "backdrop_path": "/posters/231.jpg",
+    "vote_average": 7.8,
+    "vote_count": 7600,
+    "release_date": "2022-03-18",
+    "genre_ids": [
+      80,
+      53,
+      9648
+    ],
+    "popularity": 92,
+    "adult": false,
+    "isKannada": false,
+    "hasKannadaDub": true,
+    "age_rating": "U/A 13+",
+    "quality": "Full HD 1080p • Dolby 5.1",
+    "audio": "ಕನ್ನಡ (Dubbed), മലയാളം",
+    "subtitles": "English, ಕನ್ನಡ",
+    "highlights": [
+      "Dulquer Salmaan Gripping Police Procedural",
+      "Realistic Investigation Thriller",
+      "Written by Bobby-Sanjay Duo",
+      "Tense Mystery & Twist Narrative"
+    ],
+    "director": "Rosshan Andrrews",
+    "cast": [
+      "Dulquer Salmaan",
+      "Diana Penty",
+      "Manoj K. Jayan",
+      "Alencier Ley Lopez"
+    ],
+    "trailer_youtube_id": "wuzVooauynQ",
+    "scene_clip": "Aravind Karunakar Breakthrough Police Case Clue (30s Spotlight)",
+    "hero_name": "Dulquer Salmaan",
+    "watchProviders": {
+      "link": "https://www.sonyliv.com/movies/salute-1000164803",
+      "flatrate": [
+        {
+          "provider_id": 237,
+          "provider_name": "SonyLIV",
+          "logo_path": "",
+          "display_priority": 1,
+          "directUrl": "https://www.sonyliv.com/movies/salute-1000164803"
+        }
+      ]
+    }
+  },
+  {
+    "id": 232,
+    "title": "Agent",
+    "original_title": "Agent",
+    "original_language": "te",
+    "overview": "A daring, rogue ethical hacker recruited by RAW chief Mahadev is tasked with infiltrating a lethal syndicate and neutralizing a rogue operative before an international cyber-terror threat unfolds.",
+    "poster_path": "/posters/232.jpg",
+    "backdrop_path": "/posters/232.jpg",
+    "vote_average": 7.2,
+    "vote_count": 6800,
+    "release_date": "2023-04-28",
+    "genre_ids": [
+      28,
+      53
+    ],
+    "popularity": 90,
+    "adult": false,
+    "isKannada": false,
+    "hasKannadaDub": true,
+    "age_rating": "U/A 16+",
+    "quality": "Full HD 1080p • Dolby 5.1",
+    "audio": "ಕನ್ನಡ (Dubbed), తెలుగు",
+    "subtitles": "English, ಕನ್ನಡ",
+    "highlights": [
+      "High-Octane RAW Espionage Action",
+      "Mammootty Commanding RAW Chief Role",
+      "Akhil Akkineni Wild Action Stunts",
+      "Slick Modern Spy Thriller"
+    ],
+    "director": "Surender Reddy",
+    "cast": [
+      "Akhil Akkineni",
+      "Mammootty",
+      "Dino Morea",
+      "Sakshi Vaidya"
+    ],
+    "trailer_youtube_id": "XlWUh3nxIuk",
+    "scene_clip": "Wild Saala Heavy Gunfight & Roof Chase (30s Spotlight)",
+    "hero_name": "Akhil Akkineni",
+    "watchProviders": {
+      "link": "https://www.sonyliv.com/movies/agent-1000241031",
+      "flatrate": [
+        {
+          "provider_id": 237,
+          "provider_name": "SonyLIV",
+          "logo_path": "",
+          "display_priority": 1,
+          "directUrl": "https://www.sonyliv.com/movies/agent-1000241031"
+        }
+      ]
+    }
+  },
+  {
+    "id": 233,
+    "title": "Kisi Ka Bhai Kisi Ki Jaan",
+    "original_title": "Kisi Ka Bhai Kisi Ki Jaan",
+    "original_language": "hi",
+    "overview": "A devoted elder brother who sacrificed romance to raise his three younger brothers falls in love with an antique restorer, only to unleash his lethal fighting skills when her traditional family is threatened by ruthless mobsters.",
+    "poster_path": "/posters/233.jpg",
+    "backdrop_path": "/posters/233.jpg",
+    "vote_average": 7.4,
+    "vote_count": 9400,
+    "release_date": "2023-04-21",
+    "genre_ids": [
+      28,
+      35,
+      10751
+    ],
+    "popularity": 94,
+    "adult": false,
+    "isKannada": false,
+    "hasKannadaDub": true,
+    "age_rating": "U/A 13+",
+    "quality": "Full HD 1080p • Dolby 5.1",
+    "audio": "ಕನ್ನಡ (Dubbed), हिन्दी",
+    "subtitles": "English, ಕನ್ನಡ",
+    "highlights": [
+      "Salman Khan & Venkatesh Mega Mass Entertainer",
+      "High-Energy Family Action & Comedy",
+      "Grand Festive Songs & Fights",
+      "Pooja Hegde Romance Track"
+    ],
+    "director": "Farhad Samji",
+    "cast": [
+      "Salman Khan",
+      "Venkatesh Daggubati",
+      "Pooja Hegde",
+      "Jagapathi Babu"
+    ],
+    "trailer_youtube_id": "jVgAMJc4s9M",
+    "scene_clip": "Bhaijaan Metro Train High-Voltage Action Scene (30s Spotlight)",
+    "hero_name": "Salman Khan",
+    "watchProviders": {
+      "link": "https://www.zee5.com/movies/details/kisi-ka-bhai-kisi-ki-jaan/0-0-1z5372338",
+      "flatrate": [
+        {
+          "provider_id": 232,
+          "provider_name": "Zee5",
+          "logo_path": "",
+          "display_priority": 1,
+          "directUrl": "https://www.zee5.com/movies/details/kisi-ka-bhai-kisi-ki-jaan/0-0-1z5372338"
+        }
+      ]
+    }
+  },
+  {
+    "id": 234,
+    "title": "Karthikeya 2",
+    "original_title": "Karthikeya 2",
+    "original_language": "te",
+    "overview": "Dr. Karthikeya, an inquisitive young medical researcher, embarks on an adrenaline-fueled quest across Dwarka and the Himalayas to unearth a sacred legendary artifact possessing monumental secrets, pursued by a lethal syndicate.",
+    "poster_path": "/posters/234.jpg",
+    "backdrop_path": "/posters/234.jpg",
+    "vote_average": 8.2,
+    "vote_count": 13400,
+    "release_date": "2022-08-13",
+    "genre_ids": [
+      9648,
+      12,
+      53
+    ],
+    "popularity": 97,
     "adult": false,
     "isKannada": false,
     "hasKannadaDub": true,
@@ -2133,35 +1979,297 @@ export const CURATED_MOVIES: (MovieWithProviders & { isUpcoming?: boolean })[] =
     "audio": "ಕನ್ನಡ (Dubbed), తెలుగు",
     "subtitles": "English, ಕನ್ನಡ",
     "highlights": [
-      "Time-Travel Fantasy Action",
-      "Kalyan Ram Ferocious Performance",
-      "Visual Effects Spectacle",
-      "Redemption Arc"
+      "National Award Winning Adventure Thriller",
+      "Mystical Mystery & Scientific Research",
+      "Anupam Kher Powerful Monologue",
+      "Huge Box Office Blockbuster"
     ],
-    "director": "Mallidi Vasishta",
+    "director": "Chandoo Mondeti",
     "cast": [
-      "Nandamuri Kalyan Ram",
-      "Catherine Tresa",
-      "Samyuktha Menon",
-      "Prakash Raj"
+      "Nikhil Siddhartha",
+      "Anupama Parameswaran",
+      "Anupam Kher",
+      "Srinivasa Reddy"
     ],
-    "trailer_youtube_id": "gpb2H-WWfBE",
-    "scene_clip": "Emperor Bimbisara Modern World Shock Scene (30s Spotlight)",
-    "hero_name": "Nandamuri Kalyan Ram",
+    "trailer_youtube_id": "0o0zIXHf2-s",
+    "scene_clip": "Dwarka Sea Expedition & Discovery Moment (30s Spotlight)",
+    "hero_name": "Nikhil Siddhartha",
     "watchProviders": {
-      "link": "https://www.zee5.com/movies/details/bimbisara/0-0-1z5117406",
+      "link": "https://www.zee5.com/movies/details/karthikeya-2/0-0-1z5220379",
       "flatrate": [
         {
           "provider_id": 232,
           "provider_name": "Zee5",
           "logo_path": "",
           "display_priority": 1,
-          "directUrl": "https://www.zee5.com/movies/details/bimbisara/0-0-1z5117406"
+          "directUrl": "https://www.zee5.com/movies/details/karthikeya-2/0-0-1z5220379"
         }
       ]
     }
   },
-
+  {
+    "id": 235,
+    "title": "Bangarraju",
+    "original_title": "Bangarraju",
+    "original_language": "te",
+    "overview": "When conspirators threaten a sacred village temple, celestial guardian Bangarraju descends into the body of his modern, flamboyant grandson to protect their family and land with hilarious supernatural tricks.",
+    "poster_path": "/posters/235.jpg",
+    "backdrop_path": "/posters/235.jpg",
+    "vote_average": 7.5,
+    "vote_count": 8200,
+    "release_date": "2022-01-14",
+    "genre_ids": [
+      35,
+      14,
+      10751
+    ],
+    "popularity": 91,
+    "adult": false,
+    "isKannada": false,
+    "hasKannadaDub": true,
+    "age_rating": "U/A 13+",
+    "quality": "Full HD 1080p • Dolby 5.1",
+    "audio": "ಕನ್ನಡ (Dubbed), తెలుగు",
+    "subtitles": "English, ಕನ್ನಡ",
+    "highlights": [
+      "Nagarjuna & Naga Chaitanya Delightful Chemistry",
+      "Color-Filled Festive Mass Family Entertainer",
+      "Krithi Shetty Charming Comedy",
+      "Superhit Songs & Modern Village Humor"
+    ],
+    "director": "Kalyan Krishna Kurasala",
+    "cast": [
+      "Akkineni Nagarjuna",
+      "Naga Chaitanya",
+      "Krithi Shetty",
+      "Ramya Krishna"
+    ],
+    "trailer_youtube_id": "X2loT15m5Vw",
+    "scene_clip": "Nagarjuna & Chaitanya Mass Dance & Banter (30s Spotlight)",
+    "hero_name": "Nagarjuna",
+    "watchProviders": {
+      "link": "https://www.zee5.com/movies/details/bangarraju/0-0-1z596001",
+      "flatrate": [
+        {
+          "provider_id": 232,
+          "provider_name": "Zee5",
+          "logo_path": "",
+          "display_priority": 1,
+          "directUrl": "https://www.zee5.com/movies/details/bangarraju/0-0-1z596001"
+        }
+      ]
+    }
+  },
+  {
+    "id": 236,
+    "title": "Falimy",
+    "original_title": "Falimy",
+    "original_language": "ml",
+    "overview": "A perpetually bickering, dysfunctional middle-class family embarks on a chaotic, laugh-out-loud road trip across India to Varanasi to fulfill their quirky grandfather's bucket list.",
+    "poster_path": "/posters/236.jpg",
+    "backdrop_path": "/posters/236.jpg",
+    "vote_average": 8,
+    "vote_count": 8600,
+    "release_date": "2023-11-17",
+    "genre_ids": [
+      35,
+      18,
+      10751
+    ],
+    "popularity": 93,
+    "adult": false,
+    "isKannada": false,
+    "hasKannadaDub": true,
+    "age_rating": "U/A 13+",
+    "quality": "Full HD 1080p • Dolby 5.1",
+    "audio": "ಕನ್ನಡ (Dubbed), മലയാളം",
+    "subtitles": "English, ಕನ್ನಡ",
+    "highlights": [
+      "Basil Joseph Riotous Family Comedy",
+      "Relatable Modern Road Trip Misadventures",
+      "Heartwarming Family Reconciliation",
+      "Superhit Critical & Audience Favorite"
+    ],
+    "director": "Nithish Sahadev",
+    "cast": [
+      "Basil Joseph",
+      "Jagadish",
+      "Manju Pillai",
+      "Sandeep Pradeep"
+    ],
+    "trailer_youtube_id": "upgFiKwsv8o",
+    "scene_clip": "Train Station Missing Grandfather Chaos (30s Spotlight)",
+    "hero_name": "Basil Joseph",
+    "watchProviders": {
+      "link": "https://www.hotstar.com/in/movies/falimy/1260159751",
+      "flatrate": [
+        {
+          "provider_id": 122,
+          "provider_name": "JioHotstar",
+          "logo_path": "",
+          "display_priority": 1,
+          "directUrl": "https://www.hotstar.com/in/movies/falimy/1260159751"
+        }
+      ]
+    }
+  },
+  {
+    "id": 237,
+    "title": "Veera Simha Reddy",
+    "original_title": "Veera Simha Reddy",
+    "original_language": "te",
+    "overview": "Jai, living peacefully in Istanbul, discovers the truth about his estranged mass leader father Veera Simha Reddy and returns home to carry forward his father's fierce legacy against ruthless oppressors.",
+    "poster_path": "/posters/237.jpg",
+    "backdrop_path": "/posters/237.jpg",
+    "vote_average": 7.3,
+    "vote_count": 9100,
+    "release_date": "2023-01-12",
+    "genre_ids": [
+      28,
+      18
+    ],
+    "popularity": 95,
+    "adult": false,
+    "isKannada": false,
+    "hasKannadaDub": true,
+    "age_rating": "U/A 16+",
+    "quality": "Full HD 1080p • Dolby 5.1",
+    "audio": "ಕನ್ನಡ (Dubbed), తెలుగు",
+    "subtitles": "English, ಕನ್ನಡ",
+    "highlights": [
+      "Nandamuri Balakrishna Unstoppable Mass Avatar",
+      "Thaman S Thumping Mass Background Score",
+      "Shruti Haasan & Varalaxmi Powerful Cast",
+      "Sankranti Mega Blockbuster"
+    ],
+    "director": "Gopichand Malineni",
+    "cast": [
+      "Nandamuri Balakrishna",
+      "Shruti Haasan",
+      "Varalaxmi Sarathkumar",
+      "Honey Rose"
+    ],
+    "trailer_youtube_id": "XUdcXkvYJs0",
+    "scene_clip": "Balakrishna Mass Swords & Jeeps Entry Scene (30s Spotlight)",
+    "hero_name": "Balakrishna",
+    "watchProviders": {
+      "link": "https://www.hotstar.com/in/movies/veera-simha-reddy/1260129206",
+      "flatrate": [
+        {
+          "provider_id": 122,
+          "provider_name": "JioHotstar",
+          "logo_path": "",
+          "display_priority": 1,
+          "directUrl": "https://www.hotstar.com/in/movies/veera-simha-reddy/1260129206"
+        }
+      ]
+    }
+  },
+  {
+    "id": 238,
+    "title": "Selfiee",
+    "original_title": "Selfiee",
+    "original_language": "hi",
+    "overview": "An unassuming, die-hard RTO inspector fan agrees to arrange a driver's license for his idol superstar Vijay Kumar, but an ego-fueled misunderstanding explodes into an escalating media warfare and public showdown.",
+    "poster_path": "/posters/238.jpg",
+    "backdrop_path": "/posters/238.jpg",
+    "vote_average": 7.2,
+    "vote_count": 7800,
+    "release_date": "2023-02-24",
+    "genre_ids": [
+      35,
+      18
+    ],
+    "popularity": 89,
+    "adult": false,
+    "isKannada": false,
+    "hasKannadaDub": true,
+    "age_rating": "U/A 13+",
+    "quality": "Full HD 1080p • Dolby 5.1",
+    "audio": "ಕನ್ನಡ (Dubbed), हिन्दी",
+    "subtitles": "English, ಕನ್ನಡ",
+    "highlights": [
+      "Akshay Kumar & Emraan Hashmi High Stakes Face-Off",
+      "Superstar vs Everyday Fan Ego Clash",
+      "Entertaining Modern Media Satire",
+      "Energetic Music & Rapid Pacing"
+    ],
+    "director": "Raj Mehta",
+    "cast": [
+      "Akshay Kumar",
+      "Emraan Hashmi",
+      "Nushrratt Bharuccha",
+      "Diana Penty"
+    ],
+    "trailer_youtube_id": "lS1KScfdr70",
+    "scene_clip": "Superstar Vijay Kumar RTO Driving Test Drama (30s Spotlight)",
+    "hero_name": "Akshay Kumar",
+    "watchProviders": {
+      "link": "https://www.hotstar.com/in/movies/selfiee/1260137785",
+      "flatrate": [
+        {
+          "provider_id": 122,
+          "provider_name": "JioHotstar",
+          "logo_path": "",
+          "display_priority": 1,
+          "directUrl": "https://www.hotstar.com/in/movies/selfiee/1260137785"
+        }
+      ]
+    }
+  },
+  {
+    "id": 239,
+    "title": "Govinda Naam Mera",
+    "original_title": "Govinda Naam Mera",
+    "original_language": "hi",
+    "overview": "Govinda Waghmare, a struggling Bollywood background dancer trapped between an abusive wife and a quirky girlfriend, finds himself entangled in a bizarre murder investigation filled with hilarious twists and double-crosses.",
+    "poster_path": "/posters/239.jpg",
+    "backdrop_path": "/posters/239.jpg",
+    "vote_average": 7.5,
+    "vote_count": 8400,
+    "release_date": "2022-12-16",
+    "genre_ids": [
+      35,
+      53,
+      9648
+    ],
+    "popularity": 91,
+    "adult": false,
+    "isKannada": false,
+    "hasKannadaDub": true,
+    "age_rating": "U/A 16+",
+    "quality": "Full HD 1080p • Dolby 5.1",
+    "audio": "ಕನ್ನಡ (Dubbed), हिन्दी",
+    "subtitles": "English, ಕನ್ನಡ",
+    "highlights": [
+      "Vicky Kaushal Comic Timing & Dancing",
+      "Unpredictable Murder Mystery Twists & Tricks",
+      "Kiara Advani & Bhumi Pednekar Dynamite Roles",
+      "Pop-Culture Bollywood Comedy Thriller"
+    ],
+    "director": "Shashank Khaitan",
+    "cast": [
+      "Vicky Kaushal",
+      "Kiara Advani",
+      "Bhumi Pednekar",
+      "Sayaji Shinde"
+    ],
+    "trailer_youtube_id": "VArgIuiwxig",
+    "scene_clip": "Govinda & Suku Crazy Bungalow Escape Plan (30s Spotlight)",
+    "hero_name": "Vicky Kaushal",
+    "watchProviders": {
+      "link": "https://www.hotstar.com/in/movies/govinda-naam-mera/1260124317",
+      "flatrate": [
+        {
+          "provider_id": 122,
+          "provider_name": "JioHotstar",
+          "logo_path": "",
+          "display_priority": 1,
+          "directUrl": "https://www.hotstar.com/in/movies/govinda-naam-mera/1260124317"
+        }
+      ]
+    }
+  },
   {
     "id": 301,
     "title": "Premalu",
@@ -2425,109 +2533,6 @@ export const CURATED_MOVIES: (MovieWithProviders & { isUpcoming?: boolean })[] =
     }
   },
   {
-    "id": 308,
-    "title": "Sirf Ek Bandaa Kaafi Hai",
-    "original_title": "Sirf Ek Bandaa Kaafi Hai",
-    "original_language": "hi",
-    "overview": "A courageous, ordinary sessions court lawyer wages a solitary, five-year legal war against a powerful, politically connected godman to deliver justice to a minor girl.",
-    "poster_path": "/posters/308.jpg",
-    "backdrop_path": "/posters/308.jpg",
-    "vote_average": 8.3,
-    "vote_count": 9100,
-    "release_date": "2023-05-23",
-    "genre_ids": [
-      18,
-      80
-    ],
-    "popularity": 88,
-    "adult": false,
-    "isKannada": false,
-    "hasKannadaDub": true,
-    "age_rating": "U/A 16+",
-    "quality": "Full HD 1080p • Dolby 5.1",
-    "audio": "ಕನ್ನಡ (Dubbed)",
-    "subtitles": "English",
-    "highlights": [
-      "Manoj Bajpayee Career-Best Performance",
-      "Riveting Realistic Courtroom Drama",
-      "Standing Ovation Monologue",
-      "Verified Kannada Audio on Zee5"
-    ],
-    "director": "Apoorv Singh Karki",
-    "cast": [
-      "Manoj Bajpayee",
-      "Vipin Sharma",
-      "Adrija Sinha",
-      "Surya Mohan Kulshreshtha"
-    ],
-    "trailer_youtube_id": "MWH7lfZdP-8",
-    "scene_clip": "Final Nuance Argument on POCSO Act (30s Spotlight)",
-    "hero_name": "Manoj Bajpayee",
-    "watchProviders": {
-      "link": "https://www.zee5.com/movies/details/sirf-ek-bandaa-kaafi-hai/0-0-1z5359029",
-      "flatrate": [
-        {
-          "provider_id": 232,
-          "provider_name": "Zee5",
-          "logo_path": "",
-          "display_priority": 1,
-          "directUrl": "https://www.zee5.com/movies/details/sirf-ek-bandaa-kaafi-hai/0-0-1z5359029"
-        }
-      ]
-    }
-  },
-  {
-    "id": 309,
-    "title": "Tarla",
-    "original_title": "Tarla",
-    "original_language": "hi",
-    "overview": "The heartwarming true story of Tarla Dalal, an ordinary homemaker who revolutionized Indian home cooking, cookbooks, and culinary shows through her passion.",
-    "poster_path": "/posters/309.jpg",
-    "backdrop_path": "/posters/309.jpg",
-    "vote_average": 7.3,
-    "vote_count": 3900,
-    "release_date": "2023-07-07",
-    "genre_ids": [
-      18,
-      35
-    ],
-    "popularity": 78,
-    "adult": false,
-    "isKannada": false,
-    "hasKannadaDub": true,
-    "age_rating": "U",
-    "quality": "Full HD 1080p • Stereo",
-    "audio": "ಕನ್ನಡ (Dubbed)",
-    "subtitles": "English",
-    "highlights": [
-      "Inspiring Female Entrepreneur Journey",
-      "Wholesome Family Feel-Good",
-      "Huma Qureshi Charming Performance",
-      "Verified Kannada Audio on Zee5"
-    ],
-    "director": "Piyush Gupta",
-    "cast": [
-      "Huma Qureshi",
-      "Sharib Hashmi",
-      "Bharati Achrekar"
-    ],
-    "trailer_youtube_id": "n0-_OZDjU2g",
-    "scene_clip": "Tarla First Cooking Class Breakthrough (30s Spotlight)",
-    "hero_name": "Huma Qureshi",
-    "watchProviders": {
-      "link": "https://www.zee5.com/movies/details/tarla/0-0-1z5368704",
-      "flatrate": [
-        {
-          "provider_id": 232,
-          "provider_name": "Zee5",
-          "logo_path": "",
-          "display_priority": 1,
-          "directUrl": "https://www.zee5.com/movies/details/tarla/0-0-1z5368704"
-        }
-      ]
-    }
-  },
-  {
     "id": 310,
     "title": "Zara Hatke Zara Bachke",
     "original_title": "Zara Hatke Zara Bachke",
@@ -2723,7 +2728,6 @@ export const CURATED_MOVIES: (MovieWithProviders & { isUpcoming?: boolean })[] =
   }
 ];
 
-// Helper functions for catalog queries
 export function getMovieById(id: number): (MovieWithProviders & { isUpcoming?: boolean }) | undefined {
   return CURATED_MOVIES.find((m) => m.id === id);
 }
