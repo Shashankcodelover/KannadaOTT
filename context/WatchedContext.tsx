@@ -59,6 +59,12 @@ export const DEFAULT_PURGED_TITLES: TrackedMovie[] = [
   { id: 238, title: 'Selfiee', status: 'deleted', reason: 'No Kannada dubbed audio on Hotstar (Hindi only)', trackedAt: 1725580800000, expiresAt: 1725580800000 + TWO_YEARS_MS },
   { id: 239, title: 'Govinda Naam Mera', status: 'deleted', reason: 'No Kannada dubbed audio on Hotstar (Hindi only)', trackedAt: 1725580800000, expiresAt: 1725580800000 + TWO_YEARS_MS },
   { id: 302, title: 'Manjummel Boys', status: 'deleted', reason: 'No Kannada dubbed audio on Hotstar (Malayalam/Tamil/Telugu/Hindi only)', trackedAt: 1725580800000, expiresAt: 1725580800000 + TWO_YEARS_MS },
+  { id: 213, title: 'Rekke', status: 'deleted', reason: 'Catalog page mismatch with TV serial episode format on Zee5', trackedAt: 1725580800000, expiresAt: 1725580800000 + TWO_YEARS_MS },
+  { id: 214, title: 'Valimai', status: 'deleted', reason: 'Catalog page redirects to Hindi version on Zee5', trackedAt: 1725580800000, expiresAt: 1725580800000 + TWO_YEARS_MS },
+  { id: 231, title: 'Salute', status: 'deleted', reason: 'No confirmed Kannada dubbed audio on SonyLIV (Malayalam with English subtitles)', trackedAt: 1725580800000, expiresAt: 1725580800000 + TWO_YEARS_MS },
+  { id: 301, title: 'Premalu', status: 'deleted', reason: 'No Kannada dubbed audio on Hotstar (Malayalam, Tamil & Hindi only)', trackedAt: 1725580800000, expiresAt: 1725580800000 + TWO_YEARS_MS },
+  { id: 303, title: 'Gargi', status: 'deleted', reason: 'No confirmed Kannada dubbed audio stream on SonyLIV', trackedAt: 1725580800000, expiresAt: 1725580800000 + TWO_YEARS_MS },
+  { id: 307, title: 'Adiyae', status: 'deleted', reason: 'No confirmed Kannada dubbed audio stream on SonyLIV', trackedAt: 1725580800000, expiresAt: 1725580800000 + TWO_YEARS_MS },
   { id: 310, title: 'Zara Hatke Zara Bachke', status: 'deleted', reason: 'No Kannada dubbed audio on JioCinema (Hindi only)', trackedAt: 1725580800000, expiresAt: 1725580800000 + TWO_YEARS_MS },
   { id: 311, title: 'Bhediya', status: 'deleted', reason: 'No Kannada dubbed audio on JioCinema (Hindi only)', trackedAt: 1725580800000, expiresAt: 1725580800000 + TWO_YEARS_MS },
 ];
