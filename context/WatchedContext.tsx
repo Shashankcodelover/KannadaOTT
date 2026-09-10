@@ -23,6 +23,7 @@ export const TWO_YEARS_MS = 2 * 365 * 24 * 60 * 60 * 1000;
 // Pre-registered deleted/purged titles (Historical, B&W, and Biopics)
 // Permanently tracked so sync and repeat runs will never re-import them within the 2-year cycle
 export const DEFAULT_PURGED_TITLES: TrackedMovie[] = [
+  // Period / Biopic / Historical (Excluded per user instructions)
   { id: 102, title: 'Kaatera', status: 'deleted', reason: '1970s feudal landlord rural period story', trackedAt: 1725580800000, expiresAt: 1725580800000 + TWO_YEARS_MS },
   { id: 106, title: 'Vedha', status: 'deleted', reason: '1980s rural period revenge drama', trackedAt: 1725580800000, expiresAt: 1725580800000 + TWO_YEARS_MS },
   { id: 111, title: 'Bhajarangi 2', status: 'deleted', reason: 'Ancient fantasy black magic period drama', trackedAt: 1725580800000, expiresAt: 1725580800000 + TWO_YEARS_MS },
@@ -35,6 +36,31 @@ export const DEFAULT_PURGED_TITLES: TrackedMovie[] = [
   { id: 229, title: 'Bimbisara', status: 'deleted', reason: '5th-century BC ancient emperor fantasy', trackedAt: 1725580800000, expiresAt: 1725580800000 + TWO_YEARS_MS },
   { id: 308, title: 'Sirf Ek Bandaa Kaafi Hai', status: 'deleted', reason: 'Courtroom trial true story biopic', trackedAt: 1725580800000, expiresAt: 1725580800000 + TWO_YEARS_MS },
   { id: 309, title: 'Tarla', status: 'deleted', reason: '1970s culinary homemaker biopic', trackedAt: 1725580800000, expiresAt: 1725580800000 + TWO_YEARS_MS },
+  // Purged for Lack of Kannada Audio on Streaming Platform / Broken Links / Mismatches
+  { id: 211, title: 'Solo Brathuke So Better', status: 'deleted', reason: 'Inaccessible/404 on Zee5 and unverified Kannada dub', trackedAt: 1725580800000, expiresAt: 1725580800000 + TWO_YEARS_MS },
+  { id: 212, title: 'Kaari', status: 'deleted', reason: 'Catalog page mismatch with TV serial episode format on Zee5', trackedAt: 1725580800000, expiresAt: 1725580800000 + TWO_YEARS_MS },
+  { id: 215, title: 'Saba Nayagan', status: 'deleted', reason: 'Visited/watched by user & Tamil/Telugu only on Hotstar', trackedAt: 1725580800000, expiresAt: 1725580800000 + TWO_YEARS_MS },
+  { id: 218, title: 'Bro Daddy', status: 'deleted', reason: 'No Kannada dubbed audio on Hotstar (Malayalam only)', trackedAt: 1725580800000, expiresAt: 1725580800000 + TWO_YEARS_MS },
+  { id: 219, title: '12th Man', status: 'deleted', reason: 'No Kannada dubbed audio on Hotstar (Malayalam only)', trackedAt: 1725580800000, expiresAt: 1725580800000 + TWO_YEARS_MS },
+  { id: 220, title: 'Darbar', status: 'deleted', reason: 'No Kannada dubbed audio on Hotstar (Tamil/Telugu/Hindi only)', trackedAt: 1725580800000, expiresAt: 1725580800000 + TWO_YEARS_MS },
+  { id: 221, title: 'Vikram Vedha', status: 'deleted', reason: 'No Kannada dubbed audio on JioCinema (Hindi only)', trackedAt: 1725580800000, expiresAt: 1725580800000 + TWO_YEARS_MS },
+  { id: 222, title: 'Lover', status: 'deleted', reason: 'No Kannada dubbed audio on Hotstar (Tamil/Telugu only)', trackedAt: 1725580800000, expiresAt: 1725580800000 + TWO_YEARS_MS },
+  { id: 223, title: 'Kishkindha Kaandam', status: 'deleted', reason: 'No Kannada dubbed audio on Hotstar (Malayalam/Tamil/Telugu only)', trackedAt: 1725580800000, expiresAt: 1725580800000 + TWO_YEARS_MS },
+  { id: 224, title: 'Good Night', status: 'deleted', reason: 'No Kannada dubbed audio on Hotstar (Tamil/Telugu only)', trackedAt: 1725580800000, expiresAt: 1725580800000 + TWO_YEARS_MS },
+  { id: 225, title: 'Por Thozhil', status: 'deleted', reason: 'No Kannada dubbed audio on SonyLIV (Tamil/Telugu/Malayalam only)', trackedAt: 1725580800000, expiresAt: 1725580800000 + TWO_YEARS_MS },
+  { id: 226, title: 'Parking', status: 'deleted', reason: 'No Kannada dubbed audio on Hotstar (Tamil/Telugu only)', trackedAt: 1725580800000, expiresAt: 1725580800000 + TWO_YEARS_MS },
+  { id: 227, title: 'Joe', status: 'deleted', reason: 'No Kannada dubbed audio on Hotstar (Tamil/Telugu only)', trackedAt: 1725580800000, expiresAt: 1725580800000 + TWO_YEARS_MS },
+  { id: 228, title: 'Bloody Daddy', status: 'deleted', reason: 'No Kannada dubbed audio on JioCinema (Hindi only)', trackedAt: 1725580800000, expiresAt: 1725580800000 + TWO_YEARS_MS },
+  { id: 233, title: 'Kisi Ka Bhai Kisi Ki Jaan', status: 'deleted', reason: 'Inaccessible/404 on Zee5 & Hindi only', trackedAt: 1725580800000, expiresAt: 1725580800000 + TWO_YEARS_MS },
+  { id: 234, title: 'Karthikeya 2', status: 'deleted', reason: 'Inaccessible/404 on Zee5 & Telugu/Hindi only', trackedAt: 1725580800000, expiresAt: 1725580800000 + TWO_YEARS_MS },
+  { id: 235, title: 'Bangarraju', status: 'deleted', reason: 'Inaccessible/404 on Zee5 & Telugu only', trackedAt: 1725580800000, expiresAt: 1725580800000 + TWO_YEARS_MS },
+  { id: 236, title: 'Falimy', status: 'deleted', reason: 'No Kannada dubbed audio on Hotstar (Malayalam/Tamil/Telugu only)', trackedAt: 1725580800000, expiresAt: 1725580800000 + TWO_YEARS_MS },
+  { id: 237, title: 'Veera Simha Reddy', status: 'deleted', reason: 'No Kannada dubbed audio on Hotstar (Telugu/Tamil/Hindi only)', trackedAt: 1725580800000, expiresAt: 1725580800000 + TWO_YEARS_MS },
+  { id: 238, title: 'Selfiee', status: 'deleted', reason: 'No Kannada dubbed audio on Hotstar (Hindi only)', trackedAt: 1725580800000, expiresAt: 1725580800000 + TWO_YEARS_MS },
+  { id: 239, title: 'Govinda Naam Mera', status: 'deleted', reason: 'No Kannada dubbed audio on Hotstar (Hindi only)', trackedAt: 1725580800000, expiresAt: 1725580800000 + TWO_YEARS_MS },
+  { id: 302, title: 'Manjummel Boys', status: 'deleted', reason: 'No Kannada dubbed audio on Hotstar (Malayalam/Tamil/Telugu/Hindi only)', trackedAt: 1725580800000, expiresAt: 1725580800000 + TWO_YEARS_MS },
+  { id: 310, title: 'Zara Hatke Zara Bachke', status: 'deleted', reason: 'No Kannada dubbed audio on JioCinema (Hindi only)', trackedAt: 1725580800000, expiresAt: 1725580800000 + TWO_YEARS_MS },
+  { id: 311, title: 'Bhediya', status: 'deleted', reason: 'No Kannada dubbed audio on JioCinema (Hindi only)', trackedAt: 1725580800000, expiresAt: 1725580800000 + TWO_YEARS_MS },
 ];
 
 interface WatchedContextType {

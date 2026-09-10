@@ -106,7 +106,7 @@ export async function GET(req: NextRequest) {
       periodic_interval: 'hourly (3600s)',
       dns_safeguard: 'Zero-latency local fallback enabled against ISP domain blocks',
       anti_repeat_cycle: '2-years (730 days)',
-      purged_titles_tracked: 12,
+      purged_titles_tracked: 36,
       retention_rule: 'Never repeat visited, watched, or purged films within 2-year cycle unless user marks as Liked/Recollections',
     },
   });
