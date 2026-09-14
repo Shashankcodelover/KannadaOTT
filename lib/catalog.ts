@@ -586,6 +586,550 @@ export const CURATED_MOVIES: (MovieWithProviders & { isUpcoming?: boolean })[] =
     }
   },
   {
+    "id": 116,
+    "title": "Natasaarvabhowma",
+    "original_title": "Natasaarvabhowma",
+    "original_language": "kn",
+    "overview": "Gagan Dixit, an investigative journalist, arrives in Bengaluru for an assignment and moves into a haunted house. Soon, he begins experiencing strange paranormal occurrences that take control of his actions.",
+    "poster_path": "/posters/116.jpg",
+    "backdrop_path": "/posters/116.jpg",
+    "vote_average": 7.9,
+    "vote_count": 11200,
+    "release_date": "2019-02-07",
+    "genre_ids": [
+      28,
+      9648,
+      27,
+      35
+    ],
+    "popularity": 94,
+    "adult": false,
+    "isKannada": true,
+    "hasKannadaDub": true,
+    "age_rating": "U/A 13+",
+    "quality": "Full HD 1080p • Dolby 5.1",
+    "audio": "ಕನ್ನಡ (Original)",
+    "subtitles": "English",
+    "highlights": [
+      "Power Star Puneeth Rajkumar Blockbuster",
+      "Paranormal Investigative Mystery",
+      "D. Imman Chartbuster Music",
+      "High-Octane Action Sequences"
+    ],
+    "director": "Pavan Wadeyar",
+    "cast": [
+      "Puneeth Rajkumar",
+      "Anupama Parameswaran",
+      "Rachita Ram",
+      "Chikkanna",
+      "P. Ravishankar"
+    ],
+    "trailer_youtube_id": "Npjuny2MrSY",
+    "scene_clip": "Gagan Dixit High-Intensity Ghost Possession Revelation (30s Spotlight)",
+    "hero_name": "Puneeth Rajkumar",
+    "watchProviders": {
+      "link": "https://www.zee5.com/movies/details/natasaarvabhowma/0-0-51732",
+      "flatrate": [
+        {
+          "provider_id": 232,
+          "provider_name": "Zee5",
+          "logo_path": "",
+          "display_priority": 1,
+          "directUrl": "https://www.zee5.com/movies/details/natasaarvabhowma/0-0-51732"
+        }
+      ]
+    }
+  },
+  {
+    "id": 117,
+    "title": "Doddmane Hudga",
+    "original_title": "Doddmane Hudga",
+    "original_language": "kn",
+    "overview": "Surya, a cooking expert estranged from his influential lineage, returns home to save his ancestral family from the clutches of a corrupt local syndicate and protect the Doddmane legacy.",
+    "poster_path": "/posters/117.jpg",
+    "backdrop_path": "/posters/117.jpg",
+    "vote_average": 7.7,
+    "vote_count": 9800,
+    "release_date": "2016-09-30",
+    "genre_ids": [
+      28,
+      18,
+      10751
+    ],
+    "popularity": 92,
+    "adult": false,
+    "isKannada": true,
+    "hasKannadaDub": true,
+    "age_rating": "U/A 13+",
+    "quality": "Full HD 1080p • Dolby 5.1",
+    "audio": "ಕನ್ನಡ (Original)",
+    "subtitles": "English",
+    "highlights": [
+      "Puneeth Rajkumar 25th Milestone Film",
+      "Ambareesh & Sumalatha Powerful Presence",
+      "Suri Directorial Masterstroke",
+      "Blockbuster Family Mass Drama"
+    ],
+    "director": "Duniya Soori",
+    "cast": [
+      "Puneeth Rajkumar",
+      "Radhika Pandit",
+      "Ambareesh",
+      "Sumalatha",
+      "P. Ravishankar"
+    ],
+    "trailer_youtube_id": "S0kLxoV20aI",
+    "scene_clip": "Surya Grand Entrance & Market Yard Action Sequence (30s Spotlight)",
+    "hero_name": "Puneeth Rajkumar",
+    "watchProviders": {
+      "link": "https://www.zee5.com/movies/details/doddmane-hudga/0-0-2677",
+      "flatrate": [
+        {
+          "provider_id": 232,
+          "provider_name": "Zee5",
+          "logo_path": "",
+          "display_priority": 1,
+          "directUrl": "https://www.zee5.com/movies/details/doddmane-hudga/0-0-2677"
+        }
+      ]
+    }
+  },
+  {
+    "id": 118,
+    "title": "Milana",
+    "original_title": "Milana",
+    "original_language": "kn",
+    "overview": "Aakash is pressured into an arranged marriage with Anitha, who loves someone else. Understanding her situation, Aakash helps her while rediscovering true emotional connection and companionship.",
+    "poster_path": "/posters/118.jpg",
+    "backdrop_path": "/posters/118.jpg",
+    "vote_average": 8.5,
+    "vote_count": 15300,
+    "release_date": "2007-09-14",
+    "genre_ids": [
+      10749,
+      18,
+      35,
+      10751
+    ],
+    "popularity": 96,
+    "adult": false,
+    "isKannada": true,
+    "hasKannadaDub": true,
+    "age_rating": "U",
+    "quality": "Full HD 1080p • Stereo",
+    "audio": "ಕನ್ನಡ (Original)",
+    "subtitles": "English",
+    "highlights": [
+      "Evergreen Romantic Classic",
+      "Sonu Nigam Ninnindale Musical Sensation",
+      "Puneeth Rajkumar Charming Romance",
+      "500-Day Golden Jubilee Run"
+    ],
+    "director": "Prakash",
+    "cast": [
+      "Puneeth Rajkumar",
+      "Parvathy Thiruvothu",
+      "Pooja Gandhi",
+      "Dileep Raj"
+    ],
+    "trailer_youtube_id": "csx6Xr-bwNM",
+    "scene_clip": "Aakash and Anitha Heartfelt Rain Dialogue (30s Spotlight)",
+    "hero_name": "Puneeth Rajkumar",
+    "watchProviders": {
+      "link": "https://www.zee5.com/movies/details/milana/0-0-2608",
+      "flatrate": [
+        {
+          "provider_id": 232,
+          "provider_name": "Zee5",
+          "logo_path": "",
+          "display_priority": 1,
+          "directUrl": "https://www.zee5.com/movies/details/milana/0-0-2608"
+        }
+      ]
+    }
+  },
+  {
+    "id": 119,
+    "title": "Rajadhani",
+    "original_title": "Rajadhani",
+    "original_language": "kn",
+    "overview": "Five unemployed, ambitious youths led by Raja get trapped in the criminal underworld after accepting an assignment from a corrupt political fixer, spiraling into a police manhunt.",
+    "poster_path": "/posters/119.jpg",
+    "backdrop_path": "/posters/119.jpg",
+    "vote_average": 7.8,
+    "vote_count": 8900,
+    "release_date": "2011-06-03",
+    "genre_ids": [
+      28,
+      80,
+      53,
+      18
+    ],
+    "popularity": 91.5,
+    "adult": false,
+    "isKannada": true,
+    "hasKannadaDub": true,
+    "age_rating": "A",
+    "quality": "Full HD 1080p • Dolby 5.1",
+    "audio": "ಕನ್ನಡ (Original)",
+    "subtitles": "English",
+    "highlights": [
+      "Rocking Star Yash Raw Mass Action",
+      "Prakash Raj Intense Police Investigation",
+      "Gripping Crime Syndicate Thriller",
+      "Youth Realism & High Stakes"
+    ],
+    "director": "Raghu Jaya",
+    "cast": [
+      "Yash",
+      "Prakash Raj",
+      "Chethan Chandra",
+      "Sathyanarayan",
+      "Umashree"
+    ],
+    "trailer_youtube_id": "rm6Jkc1EqqI",
+    "scene_clip": "Raja Confronts Corrupt Fixer at Warehouse (30s Spotlight)",
+    "hero_name": "Yash",
+    "watchProviders": {
+      "link": "https://www.zee5.com/movies/details/rajadhani/0-0-2648",
+      "flatrate": [
+        {
+          "provider_id": 232,
+          "provider_name": "Zee5",
+          "logo_path": "",
+          "display_priority": 1,
+          "directUrl": "https://www.zee5.com/movies/details/rajadhani/0-0-2648"
+        }
+      ]
+    }
+  },
+  {
+    "id": 120,
+    "title": "Premier Padmini",
+    "original_title": "Premier Padmini",
+    "original_language": "kn",
+    "overview": "Vinayaka, facing a painful midlife divorce, finds unexpected solace in his vintage Premier Padmini car and forms a heartwarming bond of wisdom and humor with his young driver Nanjundi.",
+    "poster_path": "/posters/120.jpg",
+    "backdrop_path": "/posters/120.jpg",
+    "vote_average": 8.3,
+    "vote_count": 7600,
+    "release_date": "2019-04-26",
+    "genre_ids": [
+      35,
+      18,
+      10751
+    ],
+    "popularity": 87,
+    "adult": false,
+    "isKannada": true,
+    "hasKannadaDub": true,
+    "age_rating": "U/A 13+",
+    "quality": "Full HD 1080p • Dolby 5.1",
+    "audio": "ಕನ್ನಡ (Original)",
+    "subtitles": "English",
+    "highlights": [
+      "Navarasa Nayaka Jaggesh Subtle Masterclass",
+      "Heartwarming Slice-of-Life Family Drama",
+      "Pramod Standout Breakout Role",
+      "Arjun Janya Soulful Melodies"
+    ],
+    "director": "Ramesh Indira",
+    "cast": [
+      "Jaggesh",
+      "Pramod",
+      "Sudharani",
+      "Madhubala",
+      "Dattanna"
+    ],
+    "trailer_youtube_id": "HxdL4wRLvrM",
+    "scene_clip": "Vinayaka and Nanjundi Car Ride Conversation (30s Spotlight)",
+    "hero_name": "Jaggesh",
+    "watchProviders": {
+      "link": "https://www.zee5.com/movies/details/premier-padmini/0-0-82601",
+      "flatrate": [
+        {
+          "provider_id": 232,
+          "provider_name": "Zee5",
+          "logo_path": "",
+          "display_priority": 1,
+          "directUrl": "https://www.zee5.com/movies/details/premier-padmini/0-0-82601"
+        }
+      ]
+    }
+  },
+  {
+    "id": 121,
+    "title": "Galate Aliyandru",
+    "original_title": "Galate Aliyandru",
+    "original_language": "kn",
+    "overview": "Two best friends pose as sons-in-law to save an innocent family from villainous moneylenders, setting off an avalanche of laugh-out-loud misunderstandings and comic twists.",
+    "poster_path": "/posters/121.jpg",
+    "backdrop_path": "/posters/121.jpg",
+    "vote_average": 7.6,
+    "vote_count": 6500,
+    "release_date": "2000-10-18",
+    "genre_ids": [
+      35,
+      10751,
+      28
+    ],
+    "popularity": 85,
+    "adult": false,
+    "isKannada": true,
+    "hasKannadaDub": true,
+    "age_rating": "U",
+    "quality": "Full HD 1080p • Stereo",
+    "audio": "ಕನ್ನಡ (Original)",
+    "subtitles": "English",
+    "highlights": [
+      "Century Star Shivarajkumar Classic Comedy",
+      "Non-Stop Family Laughter Riot",
+      "Superhit Deva Melodies",
+      "Evergreen Humorous Performances"
+    ],
+    "director": "S. Narayan",
+    "cast": [
+      "Dr. Shiva Rajkumar",
+      "Sakshi Shivanand",
+      "S. Narayan",
+      "Tara",
+      "Mukhyamantri Chandru"
+    ],
+    "trailer_youtube_id": "Nil0-ZJBnN8",
+    "scene_clip": "Aliyandru Palace Misunderstanding Comedy Encounter (30s Spotlight)",
+    "hero_name": "Dr. Shiva Rajkumar",
+    "watchProviders": {
+      "link": "https://www.zee5.com/movies/details/galate-aliyandru/0-0-101641",
+      "flatrate": [
+        {
+          "provider_id": 232,
+          "provider_name": "Zee5",
+          "logo_path": "",
+          "display_priority": 1,
+          "directUrl": "https://www.zee5.com/movies/details/galate-aliyandru/0-0-101641"
+        }
+      ]
+    }
+  },
+  {
+    "id": 122,
+    "title": "Pogaru",
+    "original_title": "Pogaru",
+    "original_language": "kn",
+    "overview": "Shiva is a defiant youth driven by deep resentment towards his estranged family. As neighborhood enforcers threaten his town, he unleashes his raw power in a high-voltage clash.",
+    "poster_path": "/posters/122.jpg",
+    "backdrop_path": "/posters/122.jpg",
+    "vote_average": 7.5,
+    "vote_count": 13500,
+    "release_date": "2021-02-19",
+    "genre_ids": [
+      28,
+      18,
+      10749
+    ],
+    "popularity": 93,
+    "adult": false,
+    "isKannada": true,
+    "hasKannadaDub": true,
+    "age_rating": "U/A 16+",
+    "quality": "Full HD 1080p • Dolby 5.1",
+    "audio": "ಕನ್ನಡ (Original)",
+    "subtitles": "English",
+    "highlights": [
+      "Action Prince Dhruva Sarja Beast Transformation",
+      "Rashmika Mandanna Lead Romance",
+      "Viral Karabuu Mass Anthem",
+      "High-Voltage Theatrical Hit"
+    ],
+    "director": "Nanda Kishore",
+    "cast": [
+      "Dhruva Sarja",
+      "Rashmika Mandanna",
+      "Chikkanna",
+      "P. Ravishankar",
+      "Kai Greene"
+    ],
+    "trailer_youtube_id": "KJMjE0igb3I",
+    "scene_clip": "Shiva Epic Gym Climax Showdown (30s Spotlight)",
+    "hero_name": "Dhruva Sarja",
+    "watchProviders": {
+      "link": "https://www.hotstar.com/in/movies/pogaru/1971004136",
+      "flatrate": [
+        {
+          "provider_id": 122,
+          "provider_name": "JioHotstar",
+          "logo_path": "",
+          "display_priority": 1,
+          "directUrl": "https://www.hotstar.com/in/movies/pogaru/1971004136"
+        }
+      ]
+    }
+  },
+  {
+    "id": 123,
+    "title": "Godhi Banna Sadharana Mykattu",
+    "original_title": "Godhi Banna Sadharana Mykattu",
+    "original_language": "kn",
+    "overview": "Venkov Rao, an elderly Alzheimer's patient, goes missing in Bengaluru. His busy techie son Shiva embarks on a desperate search, unknowingly intersecting with a dangerous criminal syndicate.",
+    "poster_path": "/posters/123.jpg",
+    "backdrop_path": "/posters/123.jpg",
+    "vote_average": 8.7,
+    "vote_count": 14200,
+    "release_date": "2016-06-03",
+    "genre_ids": [
+      18,
+      9648,
+      53
+    ],
+    "popularity": 95,
+    "adult": false,
+    "isKannada": true,
+    "hasKannadaDub": true,
+    "age_rating": "U",
+    "quality": "Full HD 1080p • Dolby 5.1",
+    "audio": "ಕನ್ನಡ (Original)",
+    "subtitles": "English",
+    "highlights": [
+      "National Award & Critics Acclaim",
+      "Anant Nag Legendary Performance",
+      "Rakshit Shetty Intense Journey",
+      "Deeply Moving Father-Son Investigation"
+    ],
+    "director": "Hemanth M. Rao",
+    "cast": [
+      "Anant Nag",
+      "Rakshit Shetty",
+      "Sruthi Hariharan",
+      "Achyuth Kumar",
+      "Vasishta N. Simha"
+    ],
+    "trailer_youtube_id": "aPk9fBdtugg",
+    "scene_clip": "Venkov Rao and Manga Crime Hideout Conversation (30s Spotlight)",
+    "hero_name": "Rakshit Shetty",
+    "watchProviders": {
+      "link": "https://www.hotstar.com/in/movies/godhi-banna-sadharana-mykattu/1000112990",
+      "flatrate": [
+        {
+          "provider_id": 122,
+          "provider_name": "JioHotstar",
+          "logo_path": "",
+          "display_priority": 1,
+          "directUrl": "https://www.hotstar.com/in/movies/godhi-banna-sadharana-mykattu/1000112990"
+        }
+      ]
+    }
+  },
+  {
+    "id": 124,
+    "title": "Galipata",
+    "original_title": "Galipata",
+    "original_language": "kn",
+    "overview": "Three carefree college friends head to the misty hills of Mugilupete to escape the city, where each falls in love and discovers life lessons against picturesque mountain backdrops.",
+    "poster_path": "/posters/124.jpg",
+    "backdrop_path": "/posters/124.jpg",
+    "vote_average": 8.4,
+    "vote_count": 12800,
+    "release_date": "2008-01-18",
+    "genre_ids": [
+      35,
+      10749,
+      18,
+      10751
+    ],
+    "popularity": 93,
+    "adult": false,
+    "isKannada": true,
+    "hasKannadaDub": true,
+    "age_rating": "U",
+    "quality": "Full HD 1080p • Stereo",
+    "audio": "ಕನ್ನಡ (Original)",
+    "subtitles": "English",
+    "highlights": [
+      "Yogaraj Bhat Cult Blockbuster",
+      "Ganesh & Diganth Hilarious Chemistry",
+      "Mano Murthy Sensational Music",
+      "Breathtaking Malnad Landscapes"
+    ],
+    "director": "Yogaraj Bhat",
+    "cast": [
+      "Ganesh",
+      "Diganth",
+      "Rajesh Krishnan",
+      "Anant Nag",
+      "Neethu",
+      "Daisy Bopanna"
+    ],
+    "trailer_youtube_id": "TkjJeZjk3Mc",
+    "scene_clip": "Mugilupete Boar Hunt Comedy Sequence (30s Spotlight)",
+    "hero_name": "Ganesh",
+    "watchProviders": {
+      "link": "https://www.hotstar.com/in/movies/galipata/1000044072",
+      "flatrate": [
+        {
+          "provider_id": 122,
+          "provider_name": "JioHotstar",
+          "logo_path": "",
+          "display_priority": 1,
+          "directUrl": "https://www.hotstar.com/in/movies/galipata/1000044072"
+        }
+      ]
+    }
+  },
+  {
+    "id": 125,
+    "title": "Mungaru Male",
+    "original_title": "Mungaru Male",
+    "original_language": "kn",
+    "overview": "Preetham meets Nandini at a shopping mall and falls head over heels. When they meet again in the rain-drenched Western Ghats of Madikeri, he realizes she is already engaged to someone else.",
+    "poster_path": "/posters/125.jpg",
+    "backdrop_path": "/posters/125.jpg",
+    "vote_average": 8.8,
+    "vote_count": 18500,
+    "release_date": "2006-12-29",
+    "genre_ids": [
+      10749,
+      18,
+      35
+    ],
+    "popularity": 98,
+    "adult": false,
+    "isKannada": true,
+    "hasKannadaDub": true,
+    "age_rating": "U",
+    "quality": "Full HD 1080p • Stereo",
+    "audio": "ಕನ್ನಡ (Original)",
+    "subtitles": "English",
+    "highlights": [
+      "All-Time Box Office History Milestone",
+      "First South Indian Film to Cross 865 Days in Multiplex",
+      "Immortal Rain Romance & Mano Murthy Music",
+      "Golden Star Ganesh Phenomenon"
+    ],
+    "director": "Yogaraj Bhat",
+    "cast": [
+      "Ganesh",
+      "Pooja Gandhi",
+      "Anant Nag",
+      "Padmaja Rao",
+      "Diganth"
+    ],
+    "trailer_youtube_id": "J_tzXAD193E",
+    "scene_clip": "Preetham Jog Falls Rain Confession Scene (30s Spotlight)",
+    "hero_name": "Ganesh",
+    "watchProviders": {
+      "link": "https://www.hotstar.com/in/movies/mungaru-male/1000044082",
+      "flatrate": [
+        {
+          "provider_id": 122,
+          "provider_name": "JioHotstar",
+          "logo_path": "",
+          "display_priority": 1,
+          "directUrl": "https://www.hotstar.com/in/movies/mungaru-male/1000044082"
+        }
+      ]
+    }
+  },
+  {
     "id": 203,
     "title": "Hanu-Man",
     "original_title": "Hanu-Man",

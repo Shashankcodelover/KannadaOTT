@@ -17,6 +17,42 @@ export async function GET(req: NextRequest) {
   const upcomingCount = CURATED_MOVIES.filter((m) => new Date(m.release_date) > new Date()).length;
 
   const superstarsBreakdown = {
+    'Puneeth Rajkumar': CURATED_MOVIES.filter((m) => m.hero_name === 'Puneeth Rajkumar').map((m) => ({
+      id: m.id,
+      title: m.title,
+      trailer: m.trailer_youtube_id,
+      ott: m.watchProviders?.flatrate?.map((p) => p.provider_name) || [],
+    })),
+    'Yash': CURATED_MOVIES.filter((m) => m.hero_name === 'Yash').map((m) => ({
+      id: m.id,
+      title: m.title,
+      trailer: m.trailer_youtube_id,
+      ott: m.watchProviders?.flatrate?.map((p) => p.provider_name) || [],
+    })),
+    'Shivarajkumar': CURATED_MOVIES.filter((m) => m.hero_name === 'Shivarajkumar').map((m) => ({
+      id: m.id,
+      title: m.title,
+      trailer: m.trailer_youtube_id,
+      ott: m.watchProviders?.flatrate?.map((p) => p.provider_name) || [],
+    })),
+    'Dhruva Sarja': CURATED_MOVIES.filter((m) => m.hero_name === 'Dhruva Sarja').map((m) => ({
+      id: m.id,
+      title: m.title,
+      trailer: m.trailer_youtube_id,
+      ott: m.watchProviders?.flatrate?.map((p) => p.provider_name) || [],
+    })),
+    'Ganesh': CURATED_MOVIES.filter((m) => m.hero_name === 'Ganesh').map((m) => ({
+      id: m.id,
+      title: m.title,
+      trailer: m.trailer_youtube_id,
+      ott: m.watchProviders?.flatrate?.map((p) => p.provider_name) || [],
+    })),
+    'Rakshit Shetty': CURATED_MOVIES.filter((m) => m.hero_name === 'Rakshit Shetty').map((m) => ({
+      id: m.id,
+      title: m.title,
+      trailer: m.trailer_youtube_id,
+      ott: m.watchProviders?.flatrate?.map((p) => p.provider_name) || [],
+    })),
     'Prabhas': CURATED_MOVIES.filter((m) => m.hero_name === 'Prabhas').map((m) => ({
       id: m.id,
       title: m.title,
