@@ -113,6 +113,24 @@ export async function GET(req: NextRequest) {
       trailer: m.trailer_youtube_id,
       ott: m.watchProviders?.flatrate?.map((p) => p.provider_name) || [],
     })),
+    'Mohanlal': CURATED_MOVIES.filter((m) => m.hero_name === 'Mohanlal').map((m) => ({
+      id: m.id,
+      title: m.title,
+      trailer: m.trailer_youtube_id,
+      ott: m.watchProviders?.flatrate?.map((p) => p.provider_name) || [],
+    })),
+    'Mammootty': CURATED_MOVIES.filter((m) => m.hero_name === 'Mammootty').map((m) => ({
+      id: m.id,
+      title: m.title,
+      trailer: m.trailer_youtube_id,
+      ott: m.watchProviders?.flatrate?.map((p) => p.provider_name) || [],
+    })),
+    'Ram Pothineni': CURATED_MOVIES.filter((m) => m.hero_name === 'Ram Pothineni').map((m) => ({
+      id: m.id,
+      title: m.title,
+      trailer: m.trailer_youtube_id,
+      ott: m.watchProviders?.flatrate?.map((p) => p.provider_name) || [],
+    })),
   };
 
   return NextResponse.json({

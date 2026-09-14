@@ -1604,6 +1604,534 @@ export const CURATED_MOVIES: (MovieWithProviders & { isUpcoming?: boolean })[] =
     }
   },
   {
+    "id": 240,
+    "title": "Neru",
+    "original_title": "Neru",
+    "original_language": "ml",
+    "overview": "Sara, a visually impaired sculptor, is assaulted in her home. When the suspect is protected by an influential family, former advocate Vijayamohan returns to court in a high-stakes battle to deliver justice.",
+    "poster_path": "/posters/240.jpg",
+    "backdrop_path": "/posters/240.jpg",
+    "vote_average": 7.9,
+    "vote_count": 3200,
+    "release_date": "2023-12-21",
+    "genre_ids": [
+      18,
+      80,
+      53
+    ],
+    "popularity": 91,
+    "adult": false,
+    "isKannada": false,
+    "hasKannadaDub": true,
+    "age_rating": "U/A",
+    "quality": "Full HD • 5.1 Audio",
+    "audio": "ಕನ್ನಡ (Dubbed)",
+    "subtitles": "English",
+    "highlights": [
+      "Official Kannada Audio Track on JioHotstar",
+      "Mohanlal & Jeethu Joseph Courtroom Masterpiece",
+      "Sensational 100 Crore Critical & Box Office Blockbuster",
+      "Gripping Legal Investigation Drama"
+    ],
+    "director": "Jeethu Joseph",
+    "cast": [
+      "Mohanlal",
+      "Priyamani",
+      "Anaswara Rajan",
+      "Siddique"
+    ],
+    "trailer_youtube_id": "80ffPA2yOPY",
+    "scene_clip": "Courtroom Final Climax Argument (30s Spotlight)",
+    "hero_name": "Mohanlal",
+    "watchProviders": {
+      "link": "https://www.hotstar.com/in/movies/neru/1260166606",
+      "flatrate": [
+        {
+          "provider_id": 122,
+          "provider_name": "JioHotstar",
+          "logo_path": "",
+          "display_priority": 1,
+          "directUrl": "https://www.hotstar.com/in/movies/neru/1260166606"
+        }
+      ]
+    }
+  },
+  {
+    "id": 241,
+    "title": "Abraham Ozler",
+    "original_title": "Abraham Ozler",
+    "original_language": "ml",
+    "overview": "ACP Abraham Ozler, an insomniac veteran investigator traumatised by the disappearance of his family, is drawn into a serial killing spree dubbed the Birthday Murders.",
+    "poster_path": "/posters/241.jpg",
+    "backdrop_path": "/posters/241.jpg",
+    "vote_average": 7.2,
+    "vote_count": 2400,
+    "release_date": "2024-01-11",
+    "genre_ids": [
+      80,
+      9648,
+      53
+    ],
+    "popularity": 88,
+    "adult": false,
+    "isKannada": false,
+    "hasKannadaDub": true,
+    "age_rating": "U/A",
+    "quality": "Full HD • 5.1 Audio",
+    "audio": "ಕನ್ನಡ (Dubbed)",
+    "subtitles": "English",
+    "highlights": [
+      "Official Kannada Dubbed Stream on JioHotstar",
+      "Megastar Mammootty High-Voltage Special Appearance",
+      "Midhun Manuel Thomas Gripping Serial Killer Whodunit",
+      "Intense Medical Forensics & Detective Investigation"
+    ],
+    "director": "Midhun Manuel Thomas",
+    "cast": [
+      "Jayaram",
+      "Mammootty",
+      "Anaswara Rajan",
+      "Arjun Ashokan"
+    ],
+    "trailer_youtube_id": "cvXvKD3_Ao8",
+    "scene_clip": "Alexander Entry Scene (30s Spotlight)",
+    "hero_name": "Mammootty",
+    "watchProviders": {
+      "link": "https://www.hotstar.com/in/movies/abraham-ozler/1271270322",
+      "flatrate": [
+        {
+          "provider_id": 122,
+          "provider_name": "JioHotstar",
+          "logo_path": "",
+          "display_priority": 1,
+          "directUrl": "https://www.hotstar.com/in/movies/abraham-ozler/1271270322"
+        }
+      ]
+    }
+  },
+  {
+    "id": 242,
+    "title": "Vaazha: Biopic of a Billion Boys",
+    "original_title": "Vaazha: Biopic of a Billion Boys",
+    "original_language": "ml",
+    "overview": "A hilarious youth comedy about five carefree slackers navigating parental expectations, backbench academic life, career failures, romance, and growing up.",
+    "poster_path": "/posters/242.jpg",
+    "backdrop_path": "/posters/242.jpg",
+    "vote_average": 7.4,
+    "vote_count": 1800,
+    "release_date": "2024-08-15",
+    "genre_ids": [
+      35,
+      18
+    ],
+    "popularity": 87,
+    "adult": false,
+    "isKannada": false,
+    "hasKannadaDub": true,
+    "age_rating": "U/A",
+    "quality": "Full HD • 5.1 Audio",
+    "audio": "ಕನ್ನಡ (Dubbed)",
+    "subtitles": "English",
+    "highlights": [
+      "Official Kannada Audio Track on JioHotstar",
+      "Superhit College & Youth Slacker Comedy Blockbuster",
+      "Relatable Middle-Class Family Humour & Friendship",
+      "Vipin Das Screenplay (Jaya Jaya Jaya Jaya Hey Creator)"
+    ],
+    "director": "Anand Menen",
+    "cast": [
+      "Jeemon Joseph",
+      "Joemon Jyothir",
+      "Siju Sunny",
+      "Amith Mohan Rajeshwari"
+    ],
+    "trailer_youtube_id": "1CyHMlo41vU",
+    "scene_clip": "Backbenchers Comedy Classroom Confrontation (30s Spotlight)",
+    "hero_name": "Jeemon Joseph",
+    "watchProviders": {
+      "link": "https://www.hotstar.com/in/movies/vaazha/1261191060",
+      "flatrate": [
+        {
+          "provider_id": 122,
+          "provider_name": "JioHotstar",
+          "logo_path": "",
+          "display_priority": 1,
+          "directUrl": "https://www.hotstar.com/in/movies/vaazha/1261191060"
+        }
+      ]
+    }
+  },
+  {
+    "id": 243,
+    "title": "Skanda: The Attacker",
+    "original_title": "Skanda",
+    "original_language": "te",
+    "overview": "A fierce young man takes on the corrupt political mafia across two southern states to rescue his family, executing high-voltage action sequences with mind-blowing twists.",
+    "poster_path": "/posters/243.jpg",
+    "backdrop_path": "/posters/243.jpg",
+    "vote_average": 6.8,
+    "vote_count": 2100,
+    "release_date": "2023-09-28",
+    "genre_ids": [
+      28,
+      18
+    ],
+    "popularity": 89,
+    "adult": false,
+    "isKannada": false,
+    "hasKannadaDub": true,
+    "age_rating": "U/A",
+    "quality": "Full HD • 5.1 Audio",
+    "audio": "ಕನ್ನಡ (Dubbed)",
+    "subtitles": "English",
+    "highlights": [
+      "Official Kannada Audio on JioHotstar",
+      "Boyapati Sreenu Signature High-Voltage Mass Masala",
+      "Ram Pothineni & Sreeleela Mass Dance & Action",
+      "S. Thaman High-Octane Background Score"
+    ],
+    "director": "Boyapati Srinu",
+    "cast": [
+      "Ram Pothineni",
+      "Sreeleela",
+      "Saiee Manjrekar",
+      "Srikanth"
+    ],
+    "trailer_youtube_id": "aeziuLFCkVY",
+    "scene_clip": "Mass Temple Action & Dialogue Sequence (30s Spotlight)",
+    "hero_name": "Ram Pothineni",
+    "watchProviders": {
+      "link": "https://www.hotstar.com/in/movies/skanda/1260141205",
+      "flatrate": [
+        {
+          "provider_id": 122,
+          "provider_name": "JioHotstar",
+          "logo_path": "",
+          "display_priority": 1,
+          "directUrl": "https://www.hotstar.com/in/movies/skanda/1260141205"
+        }
+      ]
+    }
+  },
+  {
+    "id": 244,
+    "title": "Thudarum",
+    "original_title": "Thudarum",
+    "original_language": "ml",
+    "overview": "An evocative emotional and investigative drama directed by Tharun Moorthy depicting life, human bonds, and unforeseen challenges starring Mohanlal and Shobana.",
+    "poster_path": "/posters/244.jpg",
+    "backdrop_path": "/posters/244.jpg",
+    "vote_average": 7.5,
+    "vote_count": 1500,
+    "release_date": "2025-05-30",
+    "genre_ids": [
+      18,
+      10751
+    ],
+    "popularity": 86,
+    "adult": false,
+    "isKannada": false,
+    "hasKannadaDub": true,
+    "age_rating": "U/A",
+    "quality": "Full HD • 5.1 Audio",
+    "audio": "ಕನ್ನಡ (Dubbed)",
+    "subtitles": "English",
+    "highlights": [
+      "Official Kannada Audio on JioHotstar",
+      "Mohanlal & Shobana Reunion Drama",
+      "Directed by Tharun Moorthy (Operation Java)",
+      "Deep Human Drama & Investigation"
+    ],
+    "director": "Tharun Moorthy",
+    "cast": [
+      "Mohanlal",
+      "Shobana",
+      "Maniyanpilla Raju",
+      "Binu Pappu"
+    ],
+    "trailer_youtube_id": "3eVlpGmuoTM",
+    "scene_clip": "Emotional Reunion Spotlight (30s Spotlight)",
+    "hero_name": "Mohanlal",
+    "watchProviders": {
+      "link": "https://www.hotstar.com/in/movies/thudarum/1754975720",
+      "flatrate": [
+        {
+          "provider_id": 122,
+          "provider_name": "JioHotstar",
+          "logo_path": "",
+          "display_priority": 1,
+          "directUrl": "https://www.hotstar.com/in/movies/thudarum/1754975720"
+        }
+      ]
+    }
+  },
+  {
+    "id": 245,
+    "title": "Ronth",
+    "original_title": "Ronth",
+    "original_language": "ml",
+    "overview": "A gritty, atmospheric police thriller following a veteran officer and a rookie constable during a fateful night patrol that unravels dark crimes and systemic injustice.",
+    "poster_path": "/posters/245.jpg",
+    "backdrop_path": "/posters/245.jpg",
+    "vote_average": 7.6,
+    "vote_count": 1600,
+    "release_date": "2025-07-22",
+    "genre_ids": [
+      80,
+      53,
+      9648
+    ],
+    "popularity": 87,
+    "adult": false,
+    "isKannada": false,
+    "hasKannadaDub": true,
+    "age_rating": "U/A",
+    "quality": "Full HD • 5.1 Audio",
+    "audio": "ಕನ್ನಡ (Dubbed)",
+    "subtitles": "English",
+    "highlights": [
+      "Official Kannada Dubbed Stream on JioHotstar",
+      "Directed by Shahi Kabir (Writer of Nayattu & Joseph)",
+      "Realistic & Suspenseful Night Patrol Police Thriller",
+      "Dileesh Pothan & Roshan Mathew Powerhouse Performances"
+    ],
+    "director": "Shahi Kabir",
+    "cast": [
+      "Dileesh Pothan",
+      "Roshan Mathew",
+      "Lakshmi Menon",
+      "Krisha Kurup"
+    ],
+    "trailer_youtube_id": "irsxTla3iDg",
+    "scene_clip": "Night Patrol Confrontation (30s Spotlight)",
+    "hero_name": "Dileesh Pothan",
+    "watchProviders": {
+      "link": "https://www.hotstar.com/in/movies/ronth/1271344194",
+      "flatrate": [
+        {
+          "provider_id": 122,
+          "provider_name": "JioHotstar",
+          "logo_path": "",
+          "display_priority": 1,
+          "directUrl": "https://www.hotstar.com/in/movies/ronth/1271344194"
+        }
+      ]
+    }
+  },
+  {
+    "id": 246,
+    "title": "Avatar: The Way of Water",
+    "original_title": "Avatar: The Way of Water",
+    "original_language": "en",
+    "overview": "Set more than a decade after the events of the first film, Jake Sully and Neytiri fight to protect their family and Pandora against returning threats, seeking sanctuary among oceanic reef clans.",
+    "poster_path": "/posters/246.jpg",
+    "backdrop_path": "/posters/246.jpg",
+    "vote_average": 7.7,
+    "vote_count": 11000,
+    "release_date": "2022-12-16",
+    "genre_ids": [
+      878,
+      12,
+      28
+    ],
+    "popularity": 98,
+    "adult": false,
+    "isKannada": false,
+    "hasKannadaDub": true,
+    "age_rating": "U/A",
+    "quality": "4K Dolby Vision • Kannada Audio",
+    "audio": "ಕನ್ನಡ (Dubbed)",
+    "subtitles": "English",
+    "highlights": [
+      "Official Kannada Dubbed Audio on JioHotstar",
+      "James Cameron Record-Breaking Sci-Fi Visual Masterpiece",
+      "Pandora Oceanic Metkayina Clan Ocean Spectacle",
+      "Highest Grossing Global Cinema Release"
+    ],
+    "director": "James Cameron",
+    "cast": [
+      "Sam Worthington",
+      "Zoe Saldana",
+      "Sigourney Weaver",
+      "Stephen Lang"
+    ],
+    "trailer_youtube_id": "wQi8aWVKsHE",
+    "scene_clip": "Ocean Reef Flight & Tulku Sequence (30s Spotlight)",
+    "hero_name": "Sam Worthington",
+    "watchProviders": {
+      "link": "https://www.hotstar.com/in/movies/avatar-the-way-of-water/1260143194",
+      "flatrate": [
+        {
+          "provider_id": 122,
+          "provider_name": "JioHotstar",
+          "logo_path": "",
+          "display_priority": 1,
+          "directUrl": "https://www.hotstar.com/in/movies/avatar-the-way-of-water/1260143194"
+        }
+      ]
+    }
+  },
+  {
+    "id": 247,
+    "title": "Thor: Love and Thunder",
+    "original_title": "Thor: Love and Thunder",
+    "original_language": "en",
+    "overview": "Thor teams up with King Valkyrie, Korg, and his ex-girlfriend Jane Foster, who has become the Mighty Thor, to stop Gorr the God Butcher from eliminating the gods.",
+    "poster_path": "/posters/247.jpg",
+    "backdrop_path": "/posters/247.jpg",
+    "vote_average": 6.5,
+    "vote_count": 7200,
+    "release_date": "2022-07-08",
+    "genre_ids": [
+      28,
+      12,
+      35
+    ],
+    "popularity": 94,
+    "adult": false,
+    "isKannada": false,
+    "hasKannadaDub": true,
+    "age_rating": "U/A",
+    "quality": "Full HD • Kannada Audio",
+    "audio": "ಕನ್ನಡ (Dubbed)",
+    "subtitles": "English",
+    "highlights": [
+      "Official Kannada Audio on JioHotstar",
+      "Marvel Studios High-Octane Action Comedy Spectacle",
+      "Chris Hemsworth & Natalie Portman Mighty Thor Duo",
+      "Christian Bale as Terrifying Gorr the God Butcher"
+    ],
+    "director": "Taika Waititi",
+    "cast": [
+      "Chris Hemsworth",
+      "Natalie Portman",
+      "Christian Bale",
+      "Tessa Thompson"
+    ],
+    "trailer_youtube_id": "tgB1wUcmbbw",
+    "scene_clip": "Guns N Roses Battle Scene (30s Spotlight)",
+    "hero_name": "Chris Hemsworth",
+    "watchProviders": {
+      "link": "https://www.hotstar.com/in/movies/thor-love-and-thunder/1260111166",
+      "flatrate": [
+        {
+          "provider_id": 122,
+          "provider_name": "JioHotstar",
+          "logo_path": "",
+          "display_priority": 1,
+          "directUrl": "https://www.hotstar.com/in/movies/thor-love-and-thunder/1260111166"
+        }
+      ]
+    }
+  },
+  {
+    "id": 248,
+    "title": "Doctor Strange in the Multiverse of Madness",
+    "original_title": "Doctor Strange in the Multiverse of Madness",
+    "original_language": "en",
+    "overview": "Doctor Strange journeys into the multiverse alongside America Chavez to safeguard reality from the Wanda Maximoff Scarlet Witch crisis, facing alternate realities and cosmic sorcery.",
+    "poster_path": "/posters/248.jpg",
+    "backdrop_path": "/posters/248.jpg",
+    "vote_average": 7.3,
+    "vote_count": 8500,
+    "release_date": "2022-05-06",
+    "genre_ids": [
+      14,
+      28,
+      12
+    ],
+    "popularity": 95,
+    "adult": false,
+    "isKannada": false,
+    "hasKannadaDub": true,
+    "age_rating": "U/A",
+    "quality": "Full HD • Kannada Audio",
+    "audio": "ಕನ್ನಡ (Dubbed)",
+    "subtitles": "English",
+    "highlights": [
+      "Official Kannada Audio on JioHotstar",
+      "Sam Raimi Direction & Multiverse Mind-Bending Twists",
+      "Benedict Cumberbatch vs Elizabeth Olsen Scarlet Witch",
+      "Illuminati Cameos & Cosmic Action Setpieces"
+    ],
+    "director": "Sam Raimi",
+    "cast": [
+      "Benedict Cumberbatch",
+      "Elizabeth Olsen",
+      "Chiwetel Ejiofor",
+      "Benedict Wong"
+    ],
+    "trailer_youtube_id": "aWzlQ2N6qqg",
+    "scene_clip": "Multiverse Realm Jumping Sequence (30s Spotlight)",
+    "hero_name": "Benedict Cumberbatch",
+    "watchProviders": {
+      "link": "https://www.hotstar.com/in/movies/doctor-strange-in-the-multiverse-of-madness/1260101859",
+      "flatrate": [
+        {
+          "provider_id": 122,
+          "provider_name": "JioHotstar",
+          "logo_path": "",
+          "display_priority": 1,
+          "directUrl": "https://www.hotstar.com/in/movies/doctor-strange-in-the-multiverse-of-madness/1260101859"
+        }
+      ]
+    }
+  },
+  {
+    "id": 249,
+    "title": "Eternals",
+    "original_title": "Eternals",
+    "original_language": "en",
+    "overview": "The Eternals, a secret society of immortal cosmic beings living in human disguise for millennia, re-emerge to confront ancient Deviants and protect humanity from an apocalyptic emergence.",
+    "poster_path": "/posters/249.jpg",
+    "backdrop_path": "/posters/249.jpg",
+    "vote_average": 6.9,
+    "vote_count": 7800,
+    "release_date": "2021-11-05",
+    "genre_ids": [
+      28,
+      12,
+      878
+    ],
+    "popularity": 92,
+    "adult": false,
+    "isKannada": false,
+    "hasKannadaDub": true,
+    "age_rating": "U/A",
+    "quality": "Full HD • Kannada Audio",
+    "audio": "ಕನ್ನಡ (Dubbed)",
+    "subtitles": "English",
+    "highlights": [
+      "Official Kannada Audio on JioHotstar",
+      "Academy Award Winner Chloé Zhao Direction",
+      "Grand Cosmic Superhero Ensemble & Celestial Mythos",
+      "Visual Effects Marvel Epic"
+    ],
+    "director": "Chloé Zhao",
+    "cast": [
+      "Gemma Chan",
+      "Richard Madden",
+      "Kumail Nanjiani",
+      "Angelina Jolie"
+    ],
+    "trailer_youtube_id": "0WVDKZJkGlY",
+    "scene_clip": "Celestials Emergence Action Scene (30s Spotlight)",
+    "hero_name": "Richard Madden",
+    "watchProviders": {
+      "link": "https://www.hotstar.com/in/movies/eternals/1260074215",
+      "flatrate": [
+        {
+          "provider_id": 122,
+          "provider_name": "JioHotstar",
+          "logo_path": "",
+          "display_priority": 1,
+          "directUrl": "https://www.hotstar.com/in/movies/eternals/1260074215"
+        }
+      ]
+    }
+  },
+  
+  {
     "id": 501,
     "title": "Kantara: Chapter 1",
     "original_title": "Kantara: Chapter 1",
