@@ -66,6 +66,20 @@ export default function Navbar() {
             Home
           </Link>
           <Link
+            href="/mesh"
+            className={`text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded
+              ${pathname === '/mesh' ? 'text-white' : 'text-zinc-400 hover:text-white'}`}
+          >
+            🌐 Topology Mesh
+          </Link>
+          <Link
+            href="/ingest"
+            className={`text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded
+              ${pathname === '/ingest' ? 'text-white' : 'text-zinc-400 hover:text-white'}`}
+          >
+            📥 Ingestion Studio
+          </Link>
+          <Link
             href="/search"
             className={`text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded
               ${pathname === '/search' ? 'text-white' : 'text-zinc-400 hover:text-white'}`}
