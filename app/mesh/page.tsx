@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { sounds } from '@/lib/soundEffects';
 
 interface PlatformNode {
   id: string;
@@ -72,11 +73,13 @@ export default function MeshPage() {
   }, []);
 
   const handleSever = async (id: string) => {
+    sounds.sever();
     await fetch('/api/topology/corridors/' + id + '/sever', { method: 'POST' });
     fetchOverview();
   };
 
   const handleRestore = async (id: string) => {
+    sounds.restore();
     await fetch('/api/topology/corridors/' + id + '/restore', { method: 'POST' });
     fetchOverview();
   };

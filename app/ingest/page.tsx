@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { sounds } from '@/lib/soundEffects';
 
 export default function IngestPage() {
   const [entity, setEntity] = useState<'corridors' | 'platforms'>('corridors');
@@ -92,8 +93,10 @@ export default function IngestPage() {
       });
       const data = await res.json();
       if (data.success) {
+        sounds.success();
         appendLog('[SUCCESS] Successfully ingested ' + data.count + ' ' + entity + ' records into topology mesh!');
       } else {
+        sounds.sever();
         appendLog('[ERROR] Batch ingestion rejected: ' + data.error);
       }
     } catch (err: any) {

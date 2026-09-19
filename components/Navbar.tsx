@@ -6,6 +6,7 @@ import { useRouter, usePathname } from 'next/navigation';
 import { useState, useRef, KeyboardEvent } from 'react';
 import { OTT_PLATFORMS } from '@/lib/constants';
 import { useWatched } from '@/context/WatchedContext';
+import { sounds } from '@/lib/soundEffects';
 
 export default function Navbar() {
   const router = useRouter();
@@ -13,6 +14,8 @@ export default function Navbar() {
   const { watchedList, likedList, setDraftsOpen, hideWatched, setHideWatched } = useWatched();
   const [searchQuery, setSearchQuery] = useState('');
   const [showSearch, setShowSearch] = useState(false);
+  const [showOperatorModal, setShowOperatorModal] = useState(false);
+  const [operatorPersona, setOperatorPersona] = useState<'architect' | 'evaluator'>('architect');
   const searchRef = useRef<HTMLInputElement>(null);
 
   const handleSearch = (e: React.FormEvent) => {
@@ -134,9 +137,28 @@ export default function Navbar() {
             </button>
           )}
 
+          {/* 1-Click Fast-Track Operator Login / Evaluation Access */}
+          <button
+            onClick={() => {
+              sounds.click();
+              setShowOperatorModal(true);
+            }}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-black bg-gradient-to-r from-amber-500/20 to-orange-500/20 border border-amber-500/40 hover:border-amber-400 text-amber-300 hover:text-white transition-all cursor-pointer shadow-lg hover:shadow-amber-500/10"
+            title="1-Click Fast-Track Operator Gateway"
+          >
+            <span className="text-amber-400 animate-pulse">⚡</span>
+            <span className="hidden sm:inline">Operator</span> Demo
+            <span className="bg-amber-400 text-black text-[9px] font-black px-1.5 py-0.2 rounded uppercase">
+              {operatorPersona === 'architect' ? 'Lead' : 'Guest'}
+            </span>
+          </button>
+
           {/* 2-Year Anti-Repeat Tracker & Recollections Button */}
           <button
-            onClick={() => setDraftsOpen(true)}
+            onClick={() => {
+              sounds.click();
+              setDraftsOpen(true);
+            }}
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-zinc-900 border border-zinc-700 hover:border-zinc-500 text-zinc-300 hover:text-white transition-all cursor-pointer shadow"
             title="View 2-Year Anti-Repeat Tracker & Recollections"
           >
@@ -154,6 +176,99 @@ export default function Navbar() {
           </button>
         </div>
       </div>
+
+      {/* 1-Click Fast-Track Evaluation Gateway Modal */}
+      {showOperatorModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
+          <div className="bg-zinc-950 border border-zinc-800 w-full max-w-md rounded-2xl p-6 shadow-2xl relative animate-in fade-in zoom-in duration-200">
+            <button
+              onClick={() => {
+                sounds.click();
+                setShowOperatorModal(false);
+              }}
+              className="absolute top-4 right-4 text-zinc-400 hover:text-white transition-colors p-1"
+              aria-label="Close"
+            >
+              ✕
+            </button>
+
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-xl">
+                ⚡
+              </div>
+              <div>
+                <h3 className="text-white font-black text-lg tracking-tight">
+                  Fast-Track Operator Gateway
+                </h3>
+                <p className="text-zinc-400 text-xs">
+                  Instant Zero-Credential Evaluation Access
+                </p>
+              </div>
+            </div>
+
+            <div className="space-y-3 bg-zinc-900/70 p-4 rounded-xl border border-zinc-800 text-xs mb-5">
+              <div className="flex justify-between items-center py-1 border-b border-zinc-800">
+                <span className="text-zinc-400">Authenticated Persona:</span>
+                <span className="text-white font-bold">
+                  {operatorPersona === 'architect'
+                    ? 'Chief Streaming Architect & Curator'
+                    : 'Regional Content Evaluator'}
+                </span>
+              </div>
+              <div className="flex justify-between items-center py-1 border-b border-zinc-800">
+                <span className="text-zinc-400">Network Tier:</span>
+                <span className="text-emerald-400 font-semibold flex items-center gap-1">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping inline-block"></span>
+                  Widevine L1 DRM Certified
+                </span>
+              </div>
+              <div className="flex justify-between items-center py-1 border-b border-zinc-800">
+                <span className="text-zinc-400">Governed Corridors:</span>
+                <span className="text-amber-300 font-bold">42 Verified Streams (100% 5.1/Atmos)</span>
+              </div>
+              <div className="flex justify-between items-center py-1">
+                <span className="text-zinc-400">Edge Platform Mesh:</span>
+                <span className="text-sky-300 font-semibold">JioHotstar, Zee5, SonyLIV, JioCinema</span>
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <button
+                onClick={() => {
+                  sounds.success();
+                  setOperatorPersona(operatorPersona === 'architect' ? 'evaluator' : 'architect');
+                }}
+                className="w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-black font-black text-xs transition-all shadow cursor-pointer flex items-center justify-center gap-2"
+              >
+                <span>🔄</span> Switch Evaluation Persona ({operatorPersona === 'architect' ? 'To Evaluator' : 'To Lead Architect'})
+              </button>
+
+              <div className="grid grid-cols-2 gap-2 mt-1">
+                <Link
+                  href="/mesh"
+                  onClick={() => {
+                    sounds.click();
+                    setShowOperatorModal(false);
+                  }}
+                  className="py-2 px-3 text-center rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-white text-xs font-bold transition-all"
+                >
+                  🌐 Open Mesh
+                </Link>
+                <Link
+                  href="/ingest"
+                  onClick={() => {
+                    sounds.click();
+                    setShowOperatorModal(false);
+                  }}
+                  className="py-2 px-3 text-center rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-white text-xs font-bold transition-all"
+                >
+                  📥 Open Ingestion
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* OTT Platform Strip */}
       <div className="flex items-center gap-2 px-4 sm:px-6 lg:px-8 pb-3 overflow-x-auto"

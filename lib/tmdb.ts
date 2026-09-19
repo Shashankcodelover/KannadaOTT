@@ -363,6 +363,22 @@ export async function getWatchProviders(movieId: number): Promise<WatchProviders
 
 // ─── Search Movies ───────────────────────────────────────────────
 export async function searchMovies(query: string, page = 1): Promise<TMDBResponse<Movie>> {
+  const q = query.toLowerCase().trim();
+  const localMatches = filterCatalog(
+    (m) =>
+      Boolean(
+        m.title.toLowerCase().includes(q) ||
+        m.original_title.toLowerCase().includes(q) ||
+        m.overview.toLowerCase().includes(q) ||
+        (m.cast && m.cast.some((c) => c.toLowerCase().includes(q))) ||
+        (m.director && m.director.toLowerCase().includes(q))
+      )
+  );
+
+  if (localMatches.results.length > 0) {
+    return localMatches;
+  }
+
   try {
     return await tmdbFetch<TMDBResponse<Movie>>('/search/movie', {
       query,
@@ -372,13 +388,7 @@ export async function searchMovies(query: string, page = 1): Promise<TMDBRespons
       include_adult: false,
     });
   } catch {
-    const q = query.toLowerCase().trim();
-    return filterCatalog(
-      (m) =>
-        m.title.toLowerCase().includes(q) ||
-        m.original_title.toLowerCase().includes(q) ||
-        m.overview.toLowerCase().includes(q)
-    );
+    return localMatches;
   }
 }
 

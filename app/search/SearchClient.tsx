@@ -63,6 +63,14 @@ export default function SearchClient() {
     }
   }, []);
 
+  // Debounce user text input for sub-100ms live filtering
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setQuery(inputValue.trim());
+    }, 200);
+    return () => clearTimeout(timer);
+  }, [inputValue]);
+
   useEffect(() => {
     setPage(1);
     fetchMovies(query, filters, 1);
@@ -70,9 +78,9 @@ export default function SearchClient() {
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    setQuery(inputValue);
-    if (inputValue) {
-      router.push(`/search?q=${encodeURIComponent(inputValue)}`, { scroll: false });
+    setQuery(inputValue.trim());
+    if (inputValue.trim()) {
+      router.push(`/search?q=${encodeURIComponent(inputValue.trim())}`, { scroll: false });
     }
   };
 
