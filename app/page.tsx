@@ -1,5 +1,6 @@
 // Home Page — Mobile-first, direct film posters at the top, high-peak Kannada dubbed cinema
 import HeroSection from '@/components/HeroSection';
+import QuantumCineMatrix from '@/components/QuantumCineMatrix';
 import MovieRow from '@/components/MovieRow';
 import SyncAndDraftsStatusBar from '@/components/SyncAndDraftsStatusBar';
 import {
@@ -113,6 +114,8 @@ export default async function HomePage() {
           <HeroSection movie={hero} />
         </div>
       )}
+
+      <QuantumCineMatrix />
 
       {/* Slim 1-Line Dynamic Catalog Status Bar */}
       <SyncAndDraftsStatusBar totalCount={52} />
