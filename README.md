@@ -178,3 +178,12 @@ node --test tests/enterpriseMesh.test.js
 
 ## 📜 License
 MIT License. Developed as a modern Indian streaming discovery and distribution platform.
+
+
+## User Flow Verification
+
+![User Flow](docs/kannadaott_home_verified.png)
+![User Flow](docs/kannadaott_quantum_verified.png)
+![User Flow](docs/kannada_ott_detail_verified.png)
+![User Flow](docs/kannada_ott_home_verified.png)
+
