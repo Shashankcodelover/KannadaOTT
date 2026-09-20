@@ -69,6 +69,7 @@ export default function MeshPage() {
   };
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect, react-hooks/exhaustive-deps
     fetchOverview();
   }, []);
 

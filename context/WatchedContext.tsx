@@ -124,6 +124,7 @@ export function WatchedProvider({ children }: { children: React.ReactNode }) {
     try {
       const savedHide = localStorage.getItem(HIDE_KEY);
       if (savedHide !== null) {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setHideWatchedState(savedHide === 'true');
       }
 

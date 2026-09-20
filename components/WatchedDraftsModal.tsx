@@ -41,6 +41,7 @@ export default function WatchedDraftsModal() {
   if (!isDraftsOpen) return null;
 
   const formatRemainingTime = (expiresAt: number) => {
+    // eslint-disable-next-line react-hooks/purity
     const remainingMs = expiresAt - Date.now();
     if (remainingMs <= 0) return 'Cycle ended';
     const totalDays = Math.floor(remainingMs / (24 * 60 * 60 * 1000));

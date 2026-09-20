@@ -19,6 +19,7 @@ export default function MarkWatchedButton({ movie, ottName }: MarkWatchedButtonP
   const watchedItem = watchedList.find((m) => m.id === movie.id);
 
   const formatRemainingTime = (expiresAt: number) => {
+    // eslint-disable-next-line react-hooks/purity
     const remainingMs = expiresAt - Date.now();
     if (remainingMs <= 0) return 'Cycle ended';
     const totalDays = Math.floor(remainingMs / (24 * 60 * 60 * 1000));

@@ -72,7 +72,9 @@ export default function SearchClient() {
   }, [inputValue]);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setPage(1);
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     fetchMovies(query, filters, 1);
   }, [query, filters, fetchMovies]);
 

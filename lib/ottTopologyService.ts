@@ -154,7 +154,7 @@ class OTTTopologyService {
       const headers = lines[0].split(',').map(h => h.trim());
       for (let i = 1; i < lines.length; i++) {
         const parts = lines[i].split(',').map(p => p.trim());
-        const row: any = {};
+        const row: Record<string, string> = {};
         headers.forEach((h, idx) => { row[h] = parts[idx]; });
         imported.push(this.addPlatform({
           id: row.id,
@@ -163,7 +163,7 @@ class OTTTopologyService {
           cdnRegion: row.cdnRegion || 'ap-south-1',
           drmLevel: row.drmLevel || 'Widevine L1',
           maxResolution: row.maxResolution || '4K UHD',
-          status: (row.status as any) || 'ONLINE',
+          status: (row.status as 'ONLINE' | 'DEGRADED' | 'MAINTENANCE') || 'ONLINE',
           webUrl: row.webUrl || 'https://www.hotstar.com',
           color: row.color || '#0c57d4'
         }));
