@@ -152,7 +152,7 @@ export default function MeshPage() {
             </button>
             <Link
               href="/ingest"
-              className="bg-purple-900/60 hover:bg-purple-800/80 text-purple-200 border border-purple-700 text-sm font-medium px-4 py-2 rounded-lg transition-colors"
+              className="bg-blue-900/60 hover:bg-blue-800/80 text-blue-200 border border-blue-700 text-sm font-medium px-4 py-2 rounded-lg transition-colors"
             >
               📥 Ingestion Studio →
             </Link>
@@ -174,7 +174,7 @@ export default function MeshPage() {
             </div>
             <div className="bg-zinc-900/80 border border-zinc-800 p-4 rounded-xl">
               <div className="text-xs uppercase text-zinc-400 font-semibold tracking-wider">Governed Platforms</div>
-              <div className="text-2xl font-black text-purple-400 font-mono mt-1">{telemetry.governedPlatformsCount}</div>
+              <div className="text-2xl font-black text-blue-400 font-mono mt-1">{telemetry.governedPlatformsCount}</div>
               <div className="text-[11px] text-zinc-500 mt-1">Widevine L1 DRM</div>
             </div>
             <div className="bg-zinc-900/80 border border-zinc-800 p-4 rounded-xl">

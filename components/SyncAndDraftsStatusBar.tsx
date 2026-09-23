@@ -58,7 +58,7 @@ export default function SyncAndDraftsStatusBar({ totalCount = 39 }: SyncAndDraft
           <div className="hidden lg:flex items-center gap-1.5 text-[11px] text-zinc-400 pl-2 border-l border-zinc-800">
             <span>On:</span>
             <span className="bg-blue-600/20 text-blue-400 px-2 py-0.5 rounded font-semibold">Hotstar</span>
-            <span className="bg-purple-600/20 text-purple-400 px-2 py-0.5 rounded font-semibold">Zee5</span>
+            <span className="bg-blue-600/20 text-blue-400 px-2 py-0.5 rounded font-semibold">Zee5</span>
             <span className="bg-sky-600/20 text-sky-400 px-2 py-0.5 rounded font-semibold">SonyLIV</span>
             <span className="bg-cyan-600/20 text-cyan-400 px-2 py-0.5 rounded font-semibold">JioCinema</span>
           </div>

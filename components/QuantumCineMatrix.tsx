@@ -21,16 +21,16 @@ export default function QuantumCineMatrix() {
   }, [active]);
 
   return (
-    <div className="relative w-full border-b border-purple-900/50 bg-black/90 p-4 sm:p-6 overflow-hidden">
+    <div className="relative w-full border-b border-blue-900/50 bg-black/90 p-4 sm:p-6 overflow-hidden">
       {/* Background grid */}
       <div 
         className="absolute inset-0 opacity-10" 
-        style={{ backgroundImage: 'radial-gradient(circle at center, #9333ea 1px, transparent 1px)', backgroundSize: '24px 24px' }}
+        style={{ backgroundImage: 'radial-gradient(circle at center, #2563eb 1px, transparent 1px)', backgroundSize: '24px 24px' }}
       />
       
       <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6 max-w-7xl mx-auto">
         <div>
-          <h2 className="text-xl sm:text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 flex items-center gap-2">
+          <h2 className="text-xl sm:text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-pink-600 flex items-center gap-2">
             <span>✨</span> Quantum Cine-Matrix Engine
           </h2>
           <p className="text-xs sm:text-sm text-zinc-400 mt-1 max-w-xl">
@@ -38,7 +38,7 @@ export default function QuantumCineMatrix() {
           </p>
           <button 
             onClick={() => setActive(!active)}
-            className={`mt-4 px-4 py-2 rounded-md text-xs font-bold border transition-colors ${active ? 'bg-purple-900/50 border-purple-500 text-purple-200' : 'bg-zinc-800 border-zinc-700 text-zinc-300 hover:bg-zinc-700'}`}
+            className={`mt-4 px-4 py-2 rounded-md text-xs font-bold border transition-colors ${active ? 'bg-blue-900/50 border-blue-500 text-blue-200' : 'bg-zinc-800 border-zinc-700 text-zinc-300 hover:bg-zinc-700'}`}
           >
             {active ? "TERMINATE MATRIX" : "INITIALIZE QUANTUM SCAN"}
           </button>
