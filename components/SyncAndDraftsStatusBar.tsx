@@ -31,7 +31,7 @@ export default function SyncAndDraftsStatusBar({ totalCount = 39 }: SyncAndDraft
   return (
     <div className="mx-3.5 sm:mx-6 lg:mx-8 mb-3 sm:mb-5 space-y-2">
       {/* Top Status Strip */}
-      <div className="flex flex-wrap items-center justify-between gap-2 bg-zinc-900/90 border border-zinc-800 rounded-xl px-3 py-2 sm:px-4 sm:py-2.5 shadow-md">
+      <div className="flex flex-wrap items-center justify-between gap-2 bg-white/10/90 border border-zinc-800 rounded-xl px-3 py-2 sm:px-4 sm:py-2.5 shadow-md">
         <div className="flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
           <span className="text-white text-xs sm:text-sm font-semibold">

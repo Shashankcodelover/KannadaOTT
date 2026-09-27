@@ -94,7 +94,7 @@ export default function MovieCard({ movie }: MovieCardProps) {
       <Link
         href={`/movie/${movie.id}`}
         className="group relative flex-shrink-0 w-36 sm:w-44 md:w-48 rounded-xl overflow-hidden
-          bg-zinc-900 border border-zinc-800
+          bg-zinc-900 border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.1)]
           transition-all duration-300 ease-out
           hover:scale-105 hover:border-zinc-500 hover:shadow-2xl hover:shadow-black/70
           focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black
@@ -103,7 +103,7 @@ export default function MovieCard({ movie }: MovieCardProps) {
         tabIndex={0}
       >
         {/* Poster Container */}
-        <div className="relative aspect-[2/3] w-full bg-zinc-950 overflow-hidden">
+        <div className="relative aspect-[2/3] w-full bg-transparent overflow-hidden">
         <Image
           src={posterUrl}
           alt={movie.title}
@@ -197,7 +197,7 @@ export default function MovieCard({ movie }: MovieCardProps) {
       </div>
 
       {/* Info Section */}
-      <div className="p-2.5 sm:p-3">
+      <div className="p-2.5 sm:p-2">
         <h3 className="text-white text-xs sm:text-sm font-bold line-clamp-1 leading-tight mb-1 group-hover:text-amber-400 transition-colors">
           {movie.title}
         </h3>

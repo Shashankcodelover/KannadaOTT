@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kannada-ott.shashankj.tech/sitemap.xml

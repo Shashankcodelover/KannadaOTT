@@ -55,6 +55,10 @@ export default function RootLayout({
             </a>
             . Built personally for Kannada movie lovers. 🎬
           </p>
+          <div className="flex justify-center gap-4 text-xs text-zinc-600 mt-4">
+            <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a>
+          </div>
         </footer>
       </body>
     </html>

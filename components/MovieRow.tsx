@@ -41,8 +41,8 @@ export default function MovieRow({ title, emoji, movies, emptyMessage }: MovieRo
   }
 
   return (
-    <section className="mb-10">
-      <div className="flex items-center justify-between mb-4 px-4 sm:px-6 lg:px-8">
+    <section className="mb-4">
+      <div className="flex items-center justify-between mb-2 px-4 sm:px-6 lg:px-8">
         <h2 className="text-white text-xl sm:text-2xl font-bold">
           {emoji && <span className="mr-2">{emoji}</span>}
           {title}
